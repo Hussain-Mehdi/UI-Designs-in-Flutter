@@ -9,7 +9,7 @@ class Dashboard extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      color: Color(0xff12151e),
+      color: const Color(0xff12151e),
       home: MyApp(),
     );
   }
@@ -19,17 +19,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xff12151e),
+        backgroundColor: const Color(0xff12151e),
         body: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 70,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 15),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+                children: const [
                   Text(
                     "Hello,\nKristen",
                     style: TextStyle(
@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
                 ],
               ),
             ),
-            Container(
+            SizedBox(
               height: 50,
               child: ListView(
                 scrollDirection: Axis.horizontal,
@@ -56,7 +56,7 @@ class MyApp extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 15, left: 8.0, right: 8.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+                children: const [
                   Text(
                     "Popular 3253",
                     style: TextStyle(color: Colors.white),
@@ -70,10 +70,8 @@ class MyApp extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: Container(
-                child: ListView(
-                  children: recommendList(),
-                ),
+              child: ListView(
+                children: createFoodCard(context),
               ),
             )
           ],
@@ -104,7 +102,7 @@ class MyApp extends StatelessWidget {
     int i = 0;
     while (i < food.length) {
       Padding pill = Padding(
-        padding: EdgeInsets.all(5),
+        padding: const EdgeInsets.all(5),
         child: Container(
           decoration: BoxDecoration(
               border: Border.all(color: Colors.white54),
@@ -114,13 +112,13 @@ class MyApp extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
+                SizedBox(
                   height: 20,
                   child: Image(image: NetworkImage(foodIconLink[i])),
                 ),
                 Text(
                   food[i],
-                  style: TextStyle(color: Colors.white),
+                  style: const TextStyle(color: Colors.white),
                 )
               ],
             ),
@@ -147,9 +145,9 @@ class MyApp extends StatelessWidget {
 
     while (i < 5) {
       Padding foodcard = Padding(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: Material(
-          color: Color(0xff12151e),
+          color: const Color(0xff12151e),
           child: InkWell(
             onTap: () {
               Navigator.push(
@@ -160,7 +158,7 @@ class MyApp extends StatelessWidget {
             },
             child: Ink(
               decoration: BoxDecoration(
-                  color: Color(0xff171f2c),
+                  color: const Color(0xff171f2c),
                   borderRadius: BorderRadius.circular(20)),
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
@@ -173,7 +171,7 @@ class MyApp extends StatelessWidget {
                           radius: 45,
                           backgroundImage: AssetImage(foodImages[i])),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     Column(
@@ -181,7 +179,7 @@ class MyApp extends StatelessWidget {
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
+                          children: const [
                             Text(
                               "60kcl",
                               style: TextStyle(
@@ -195,15 +193,15 @@ class MyApp extends StatelessWidget {
                                     color: Color(0xffd1f64f), fontSize: 12))
                           ],
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 5, bottom: 5),
+                        const Padding(
+                          padding: EdgeInsets.only(top: 5, bottom: 5),
                           child: Text("Slicing with Fruit",
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold)),
                         ),
-                        Text(
+                        const Text(
                             "This is good food to eat\n Food with lots of benifits\n Try this out now",
                             style: TextStyle(
                                 fontSize: 12,
@@ -224,19 +222,18 @@ class MyApp extends StatelessWidget {
   }
 
   Widget openFood(String imagelink) {
-    BuildContext context;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff12151e),
+        backgroundColor: const Color(0xff12151e),
         actions: [
           IconButton(
               onPressed: () {},
-              icon: ImageIcon(NetworkImage(
+              icon: const ImageIcon(NetworkImage(
                   "https://cdn-icons-png.flaticon.com/512/2961/2961957.png")))
         ],
-        title: Center(child: Text("Fresh Rice")),
+        title: const Center(child: Text("Fresh Rice")),
       ),
-      backgroundColor: Color(0xff12151e),
+      backgroundColor: const Color(0xff12151e),
       body: Column(
         children: [
           CircleAvatar(
@@ -248,10 +245,12 @@ class MyApp extends StatelessWidget {
           //   child: Image.asset(),
           // ),
           Container(
-            margin: EdgeInsets.only(top: 5, left: 10, right: 10, bottom: 10),
+            margin:
+                const EdgeInsets.only(top: 5, left: 10, right: 10, bottom: 10),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
-                border: Border.all(color: Color.fromARGB(255, 187, 187, 187))),
+                border: Border.all(
+                    color: const Color.fromARGB(255, 187, 187, 187))),
             child: Padding(
               padding: const EdgeInsets.all(12.0),
               child: Row(
@@ -259,7 +258,7 @@ class MyApp extends StatelessWidget {
                 children: [
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
+                    children: const [
                       Text(
                         "799",
                         style: TextStyle(color: Colors.white, fontSize: 12),
@@ -272,7 +271,7 @@ class MyApp extends StatelessWidget {
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
+                    children: const [
                       Text(
                         "799",
                         style: TextStyle(color: Colors.white),
@@ -285,7 +284,7 @@ class MyApp extends StatelessWidget {
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
+                    children: const [
                       Text(
                         "799",
                         style: TextStyle(color: Colors.white),
@@ -298,7 +297,7 @@ class MyApp extends StatelessWidget {
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
+                    children: const [
                       Text(
                         "799",
                         style: TextStyle(color: Colors.white),
@@ -311,7 +310,7 @@ class MyApp extends StatelessWidget {
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
+                    children: const [
                       Text(
                         "799",
                         style: TextStyle(color: Colors.white),
@@ -328,7 +327,7 @@ class MyApp extends StatelessWidget {
           ),
           Expanded(
               child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 color: Color.fromARGB(255, 52, 59, 80),
                 borderRadius:
                     BorderRadius.vertical(top: Radius.elliptical(50, 50))),
@@ -358,9 +357,9 @@ class MyApp extends StatelessWidget {
         padding:
             const EdgeInsets.only(left: 15.0, right: 15, top: 2, bottom: 2),
         child: Container(
-          margin: EdgeInsets.only(top: 20),
+          margin: const EdgeInsets.only(top: 20),
           decoration: BoxDecoration(
-              color: Color(0xff171f2c),
+              color: const Color(0xff171f2c),
               borderRadius: BorderRadius.circular(20)),
           child: Padding(
             padding: const EdgeInsets.all(10.0),
@@ -372,7 +371,7 @@ class MyApp extends StatelessWidget {
                   child: CircleAvatar(
                       radius: 45, backgroundImage: AssetImage(foodImages[i])),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 Column(
@@ -380,7 +379,7 @@ class MyApp extends StatelessWidget {
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
+                      children: const [
                         Text(
                           "60kcl",
                           style:
@@ -394,15 +393,15 @@ class MyApp extends StatelessWidget {
                                 color: Color(0xffd1f64f), fontSize: 12))
                       ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 5, bottom: 5),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 5, bottom: 5),
                       child: Text("Slicing with Fruit",
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 16,
                               fontWeight: FontWeight.bold)),
                     ),
-                    Text(
+                    const Text(
                         "This is good food to eat\n Food with lots of benifits\n Try this out now",
                         style: TextStyle(
                             fontSize: 12,
