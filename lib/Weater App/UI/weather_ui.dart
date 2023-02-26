@@ -27,7 +27,7 @@ class WeatherUI extends StatelessWidget {
                   image: DecorationImage(
                 fit: BoxFit.contain,
                 image: AssetImage(
-                  "./images/weather.png",
+                  "./images/27.png",
                 ),
               )),
             )),
@@ -101,7 +101,9 @@ class WeatherUI extends StatelessWidget {
             child: Row(
               children: [
                 IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
                     icon: Icon(
                       Icons.arrow_back,
                       color: Colors.white,
@@ -160,7 +162,7 @@ class WeatherUI extends StatelessWidget {
                         margin: EdgeInsets.fromLTRB(150, 0, 0, 10),
                         decoration: BoxDecoration(
                             image: DecorationImage(
-                                image: AssetImage("./images/weather.png"))),
+                                image: AssetImage("./images/27.png"))),
                       ),
                     ),
                     Positioned(
@@ -189,7 +191,128 @@ class WeatherUI extends StatelessWidget {
                 ),
               ),
             ),
+          ),
+          Positioned(
+            top: 380,
+            child: Container(
+              width: 250,
+              height: 20,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text(
+                    "Today",
+                    style: TextStyle(color: Colors.white, fontSize: 12),
+                  ),
+                  Text(
+                    "Tomorrow",
+                    style: TextStyle(color: Colors.white, fontSize: 12),
+                  ),
+                  Text(
+                    "Next 7 Days",
+                    style: TextStyle(color: Colors.white, fontSize: 12),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Positioned(
+            top: 400,
+            child: Container(
+              height: 140,
+              width: MediaQuery.of(context).size.width,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: 10,
+                itemBuilder: (context, index) {
+                  return weatherCards();
+                },
+              ),
+            ),
           )
+        ],
+      ),
+    );
+  }
+
+  Widget weatherCards() {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        width: 100,
+        height: 120,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15),
+          color: Color(0xff23234e),
+        ),
+        child: Stack(
+          children: [
+            Container(
+              margin: EdgeInsets.only(left: 35),
+              height: 60,
+              width: 60,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("./images/weather.png"),
+                      fit: BoxFit.cover)),
+            ),
+            Positioned(
+              top: 60,
+              child: Container(
+                height: 50,
+                width: 50,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "10:50 AM",
+                      style: TextStyle(color: Colors.white70, fontSize: 9),
+                    ),
+                    Text(
+                      "26",
+                      style: TextStyle(
+                          color: Colors.white70,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Positioned(top: 85, left: 30, child: celsiusIcon()),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget celsiusIcon() {
+    return Container(
+      width: 20,
+      height: 20,
+      child: Stack(
+        fit: StackFit.loose,
+        children: [
+          Positioned(
+            top: 2,
+            left: 12,
+            child: Align(
+              alignment: Alignment.center,
+              child: Icon(
+                Icons.circle_outlined,
+                color: Color(0xffffd059),
+                size: 3,
+              ),
+            ),
+          ),
+          Align(
+            alignment: Alignment.center,
+            child: Text(
+              "C",
+              style: TextStyle(fontSize: 12, color: Color(0xffffd059)),
+            ),
+          ),
         ],
       ),
     );
