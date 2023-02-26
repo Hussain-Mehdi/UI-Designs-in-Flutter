@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'Weater App/UI/weather_ui.dart';
+
 void main() {
   runApp(Dashboard());
 }
@@ -10,7 +12,7 @@ class Dashboard extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       color: const Color(0xff12151e),
-      home: MyApp(),
+      home: WeatherUI(),
     );
   }
 }
@@ -417,5 +419,14 @@ class MyApp extends StatelessWidget {
       i++;
     }
     return foodList;
+  }
+
+  Widget HeroEffect(String tag, String path, double width) {
+    return Hero(
+        tag: tag,
+        child: Container(
+          width: width,
+          child: Image(image: AssetImage(path)),
+        ));
   }
 }
