@@ -38,7 +38,7 @@ class WeatherUI extends StatelessWidget {
                   style: TextStyle(fontSize: 23),
                   children: [
                     TextSpan(
-                      text: "News \n\t\t\t\t\t\t\t& Feed",
+                      text: "News \n\t\t\t\t\t\t\t& Feeds",
                       style: TextStyle(
                           color: Color(0xffffd059),
                           fontWeight: FontWeight.w700),
@@ -118,11 +118,12 @@ class WeatherUI extends StatelessWidget {
                       color: Colors.white,
                     )),
                 SizedBox(
-                  width: 80,
+                  width: 90,
                 ),
                 Text(
                   "Weather Forcast",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(
+                      color: Colors.white, fontWeight: FontWeight.bold),
                 )
               ],
             ),
@@ -153,6 +154,38 @@ class WeatherUI extends StatelessWidget {
                             style: TextStyle(color: Colors.white, fontSize: 12),
                           ),
                         ],
+                      ),
+                    ),
+                    Positioned(
+                      top: 80,
+                      left: 110,
+                      child: Container(
+                        width: 40,
+                        height: 40,
+                        child: Stack(
+                          fit: StackFit.loose,
+                          children: [
+                            Positioned(
+                              top: 8,
+                              child: Align(
+                                alignment: Alignment.center,
+                                child: Icon(
+                                  Icons.circle_outlined,
+                                  color: Color(0xffffd059),
+                                  size: 12,
+                                ),
+                              ),
+                            ),
+                            Align(
+                              alignment: Alignment.center,
+                              child: Text(
+                                "C",
+                                style: TextStyle(
+                                    fontSize: 30, color: Color(0xffffd059)),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     Positioned(
@@ -232,10 +265,21 @@ class WeatherUI extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
-                itemCount: 10,
+                itemCount: images.length,
                 itemBuilder: (context, index) {
                   return weatherCards(images[index]);
                 },
+              ),
+            ),
+          ),
+          Positioned(
+            top: 550,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                height: 200,
+                child: rainDetail(),
               ),
             ),
           )
@@ -288,14 +332,14 @@ class WeatherUI extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned(top: 85, left: 30, child: celsiusIcon()),
+            Positioned(top: 85, left: 30, child: celsiusIcon(12, 3)),
           ],
         ),
       ),
     );
   }
 
-  Widget celsiusIcon() {
+  Widget celsiusIcon(double cSize, double iconSize) {
     return Container(
       width: 20,
       height: 20,
@@ -310,7 +354,7 @@ class WeatherUI extends StatelessWidget {
               child: Icon(
                 Icons.circle_outlined,
                 color: Color(0xffffd059),
-                size: 3,
+                size: iconSize,
               ),
             ),
           ),
@@ -318,11 +362,87 @@ class WeatherUI extends StatelessWidget {
             alignment: Alignment.center,
             child: Text(
               "C",
-              style: TextStyle(fontSize: 12, color: Color(0xffffd059)),
+              style: TextStyle(fontSize: cSize, color: Color(0xffffd059)),
             ),
           ),
         ],
       ),
+    );
+  }
+
+  Widget rainDetail() {
+    return Stack(
+      children: [
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Text(
+              "Monday",
+              style: TextStyle(
+                  fontSize: 10, color: Color.fromARGB(255, 155, 155, 155)),
+            ),
+            Text(
+              "Tuesday",
+              style: TextStyle(
+                  fontSize: 10, color: Color.fromARGB(255, 155, 155, 155)),
+            ),
+            Text(
+              "Wednessday",
+              style: TextStyle(
+                  fontSize: 10, color: Color.fromARGB(255, 155, 155, 155)),
+            ),
+            Text(
+              "Thursday",
+              style: TextStyle(
+                  fontSize: 10, color: Color.fromARGB(255, 155, 155, 155)),
+            ),
+          ],
+        ),
+        Positioned(
+          top: 170,
+          left: 40,
+          child: Container(
+            width: 400,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text(
+                  "10:30 AM",
+                  style: TextStyle(
+                      fontSize: 10, color: Color.fromARGB(255, 155, 155, 155)),
+                ),
+                Text(
+                  "10:30 AM",
+                  style: TextStyle(
+                      fontSize: 10, color: Color.fromARGB(255, 155, 155, 155)),
+                ),
+                Text(
+                  "10:30 AM",
+                  style: TextStyle(
+                      fontSize: 10, color: Color.fromARGB(255, 155, 155, 155)),
+                ),
+                Text(
+                  "10:30 AM",
+                  style: TextStyle(
+                      fontSize: 10, color: Color.fromARGB(255, 155, 155, 155)),
+                ),
+                Text(
+                  "10:30 AM",
+                  style: TextStyle(
+                      fontSize: 10, color: Color.fromARGB(255, 155, 155, 155)),
+                ),
+              ],
+            ),
+          ),
+        ),
+        Container(
+          margin: EdgeInsets.only(bottom: 30),
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("./images/graph.png"), fit: BoxFit.cover)),
+        )
+      ],
     );
   }
 }
