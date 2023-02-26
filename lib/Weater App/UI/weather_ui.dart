@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 class WeatherUI extends StatelessWidget {
-  const WeatherUI({super.key});
-
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -90,6 +88,17 @@ class WeatherUI extends StatelessWidget {
       ],
     );
   }
+
+  List<String> images = [
+    './images/4.png',
+    './images/6.png',
+    './images/8.png',
+    './images/13.png',
+    './images/16.png',
+    './images/26.png',
+    './images/28.png',
+    './images/30.png',
+  ];
 
   Widget weatherDetail(BuildContext context) {
     return Material(
@@ -225,7 +234,7 @@ class WeatherUI extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 itemCount: 10,
                 itemBuilder: (context, index) {
-                  return weatherCards();
+                  return weatherCards(images[index]);
                 },
               ),
             ),
@@ -235,7 +244,7 @@ class WeatherUI extends StatelessWidget {
     );
   }
 
-  Widget weatherCards() {
+  Widget weatherCards(String path) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
@@ -253,8 +262,7 @@ class WeatherUI extends StatelessWidget {
               width: 60,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage("./images/weather.png"),
-                      fit: BoxFit.cover)),
+                      image: AssetImage(path), fit: BoxFit.cover)),
             ),
             Positioned(
               top: 60,
