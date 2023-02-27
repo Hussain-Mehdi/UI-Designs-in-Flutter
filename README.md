@@ -22,3 +22,8 @@ samples, guidance on mobile development, and a full API reference.
   <h2>Weather App Design</h2>
  <img src="images\weather1.png" width="350" title="hover text"></br>
   <img src="images\weather2.png" width="350" alt="accessibility text">
+  
+  <hr>
+  <h2>Woman Beauty Product</h2>
+ <img src="images\normal1.png" width="350" title="hover text"></br>
+  <img src="images\normal2.png" width="350" alt="accessibility text">
