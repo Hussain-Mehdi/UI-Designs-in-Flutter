@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'Beauty Products/product_screen.dart';
+import 'Beauty Products/profile_screen.dart';
 import 'Weater App/UI/weather_ui.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class Dashboard extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       color: const Color(0xff12151e),
-      home: SkinProductScreen(),
+      home: UserProfile(),
     );
   }
 }

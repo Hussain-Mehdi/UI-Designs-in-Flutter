@@ -66,7 +66,7 @@ class SkinProductScreen extends StatelessWidget {
                     width: 80,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5),
-                        color: Color.fromARGB(255, 228, 228, 228)),
+                        color: Color(0xfff8f8f8)),
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -84,10 +84,9 @@ class SkinProductScreen extends StatelessWidget {
           ),
           Expanded(
             child: GridView.builder(
-              physics: ScrollPhysics(),
               itemCount: ProductModel.productsSender().length,
-              gridDelegate:
-                  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  mainAxisSpacing: 15, crossAxisCount: 2),
               itemBuilder: (context, index) => createProducts(index),
             ),
           ),
@@ -96,7 +95,7 @@ class SkinProductScreen extends StatelessWidget {
 
   Widget createProducts(int index) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.only(left: 20, right: 20, bottom: 10),
       child: Container(
         width: 100,
         height: 150,
