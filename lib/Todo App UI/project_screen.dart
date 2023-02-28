@@ -8,6 +8,7 @@ class MyProject extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -16,19 +17,85 @@ class MyProject extends StatelessWidget {
           ),
           Row(
             children: [
-              CircleAvatar(
-                backgroundImage: AssetImage("./images/pot1.jpg"),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: CircleAvatar(
+                  radius: 30,
+                  backgroundImage: AssetImage("./images/pot1.jpg"),
+                ),
               ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Good Day"),
+                    Text(
+                      "Adam Smith",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 26,
+                          color: Colors.black),
+                    )
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: 70),
+                child: CircleAvatar(
+                  backgroundColor: Color.fromARGB(218, 236, 236, 236),
+                  child: IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.settings_outlined,
+                        color: Color(0xffa5a9ac),
+                      )),
+                ),
+              )
             ],
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 8.0, right: 8),
+            child: TextField(
+                decoration: InputDecoration(
+                    prefixIcon: IconButton(
+                        onPressed: () {}, icon: Icon(Icons.search_outlined)),
+                    hintText: "Search Task",
+                    filled: true,
+                    fillColor: Color(0xfff8f8f8),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: BorderSide.none))),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("Projects",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(249, 51, 51, 51),
+                    )),
+                Text(
+                  "See All",
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: Color.fromARGB(248, 143, 143, 143),
+                  ),
+                )
+              ],
+            ),
           ),
           Expanded(
             flex: 1,
             child: Container(
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
-                itemCount: 10,
+                itemCount: 4,
                 itemBuilder: (context, index) {
-                  return createProjectCard();
+                  return createProjectCard(index);
                 },
               ),
             ),
@@ -40,7 +107,7 @@ class MyProject extends StatelessWidget {
               children: [
                 Text("Progress",
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 16,
                       fontWeight: FontWeight.bold,
                       color: Color.fromARGB(249, 51, 51, 51),
                     )),
@@ -54,46 +121,45 @@ class MyProject extends StatelessWidget {
               ],
             ),
           ),
-          Expanded(
-            child: Container(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 18.0, right: 18),
-                        child: Text(
-                          "Create and Check Daily Task",
-                          style: TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold,
-                            color: Color.fromARGB(248, 53, 53, 53),
-                          ),
+          Container(
+            height: 200,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 18.0, right: 18),
+                      child: Text(
+                        "Create and Check Daily Task",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(248, 53, 53, 53),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 18.0, right: 18),
-                        child: Text(
-                          "You can control the execution of a task by command in the application",
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: Color.fromARGB(248, 117, 117, 117),
-                          ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 18.0, right: 18),
+                      child: Text(
+                        "You can control the execution of a task by command in the application",
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Color.fromARGB(248, 117, 117, 117),
                         ),
                       ),
-                      Divider(),
-                      Expanded(
-                        child: ListView.builder(
-                          scrollDirection: Axis.horizontal,
-                          itemCount: 10,
-                          itemBuilder: (context, index) {
-                            return createShortCard();
-                          },
-                        ),
-                      )
-                    ]),
-              ),
+                    ),
+                    Divider(),
+                    Expanded(
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: 7,
+                        itemBuilder: (context, index) {
+                          return createShortCard(index);
+                        },
+                      ),
+                    )
+                  ]),
             ),
           ),
           Row(
@@ -108,29 +174,45 @@ class MyProject extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 10.0, right: 10),
                 child: CircleAvatar(
-                  backgroundImage: AssetImage("./images/pot1.jpg"),
+                  backgroundImage: AssetImage("./images/pot2.jpg"),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 10.0, right: 10),
                 child: CircleAvatar(
-                  backgroundImage: AssetImage("./images/pot1.jpg"),
+                  backgroundImage: AssetImage("./images/pot3.jpg"),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 10.0, right: 10),
                 child: CircleAvatar(
-                  backgroundImage: AssetImage("./images/pot1.jpg"),
+                  backgroundImage: AssetImage("./images/pot4.jpg"),
                 ),
               ),
             ],
+          ),
+          SizedBox(
+            height: 40,
           )
         ],
       ),
     );
   }
 
-  Widget createProjectCard() {
+  Widget createProjectCard(int index) {
+    List<String> Project = [
+      'Redeign Main Page',
+      'UI/UX Medical Dashboard',
+      'Morning Traning With Anna',
+      'Team Meeting',
+      'Call Nikita About Buying Car'
+    ];
+    List<Color> colors = [
+      Colors.amber,
+      Colors.blue,
+      Colors.indigo,
+      Colors.pink
+    ];
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
@@ -147,7 +229,7 @@ class MyProject extends StatelessWidget {
                 height: 40,
                 width: 7,
                 decoration: BoxDecoration(
-                    color: Colors.amber,
+                    color: colors[index],
                     borderRadius: BorderRadius.only(
                         topRight: Radius.circular(5),
                         bottomRight: Radius.circular(5))),
@@ -174,7 +256,7 @@ class MyProject extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    "Redesign Main\nPage",
+                    "${Project[index]}",
                     style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
@@ -189,6 +271,7 @@ class MyProject extends StatelessWidget {
                 )),
             Positioned(
               top: 120,
+              left: 15,
               child: CircleAvatar(
                 radius: 15,
                 backgroundImage: AssetImage("./images/pot1.jpg"),
@@ -196,7 +279,7 @@ class MyProject extends StatelessWidget {
             ),
             Positioned(
               top: 120,
-              left: 20,
+              left: 28,
               child: CircleAvatar(
                 radius: 15,
                 backgroundImage: AssetImage("./images/pot2.jpg"),
@@ -204,7 +287,7 @@ class MyProject extends StatelessWidget {
             ),
             Positioned(
               top: 120,
-              left: 40,
+              left: 45,
               child: CircleAvatar(
                 radius: 15,
                 backgroundImage: AssetImage("./images/pot3.jpg"),
@@ -258,7 +341,24 @@ class MyProject extends StatelessWidget {
     );
   }
 
-  Widget createShortCard() {
+  Widget createShortCard(int index) {
+    List<String> days = [
+      'Mon',
+      'Tue',
+      'Wed',
+      'Thurs',
+      'Fri',
+      'Sat',
+      'Sun',
+      '12',
+      '15',
+      '20',
+      '23',
+      '25',
+      '27',
+      '29',
+      '31'
+    ];
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
@@ -268,15 +368,15 @@ class MyProject extends StatelessWidget {
           BoxShadow(color: Color(0xffe8e9ed), blurRadius: 12, spreadRadius: 5)
         ], color: Color(0xfffefefe), borderRadius: BorderRadius.circular(25)),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text("Mon"),
+              child: Text("${days[index]}"),
             ),
             Divider(),
             Text(
-              "20",
+              "${days[index + 7]}",
               style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
