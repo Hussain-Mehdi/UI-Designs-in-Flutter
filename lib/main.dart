@@ -1,26 +1,27 @@
 import 'package:flutter/material.dart';
 
-import 'Beauty Products/product_screen.dart';
-import 'Beauty Products/profile_screen.dart';
-import 'Todo App UI/project_screen.dart';
-import 'Weater App/UI/weather_ui.dart';
+import 'Todo App UI/project_dashboard.dart';
 
 void main() {
-  runApp(Dashboard());
+  runApp(const Dashboard());
 }
 
 class Dashboard extends StatelessWidget {
+  const Dashboard({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      color: const Color(0xff12151e),
-      home: MyProject(),
+      color: Color(0xff12151e),
+      home: ProjectDashBoard(),
     );
   }
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -427,7 +428,7 @@ class MyApp extends StatelessWidget {
   Widget HeroEffect(String tag, String path, double width) {
     return Hero(
         tag: tag,
-        child: Container(
+        child: SizedBox(
           width: width,
           child: Image(image: AssetImage(path)),
         ));

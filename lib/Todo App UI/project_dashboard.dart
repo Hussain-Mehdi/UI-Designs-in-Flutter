@@ -1,7 +1,11 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: unnecessary_import, unused_import
 
-class MyProject extends StatelessWidget {
-  const MyProject({super.key});
+import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/src/widgets/placeholder.dart';
+
+class ProjectDashBoard extends StatelessWidget {
+  const ProjectDashBoard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,125 +14,20 @@ class MyProject extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const SizedBox(
-            height: 50,
-          ),
-          Row(
-            children: [
-              const Padding(
-                padding: EdgeInsets.all(8.0),
-                child: CircleAvatar(
-                  radius: 30,
-                  backgroundImage: AssetImage("./images/pot1.jpg"),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    Text("Good Day"),
-                    Text(
-                      "Adam Smith",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 26,
-                          color: Colors.black),
-                    )
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 70),
-                child: CircleAvatar(
-                  backgroundColor: const Color.fromARGB(218, 236, 236, 236),
-                  child: IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.settings_outlined,
-                        color: Color(0xffa5a9ac),
-                      )),
-                ),
-              )
-            ],
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 8.0, right: 8),
-            child: TextField(
-                decoration: InputDecoration(
-                    prefixIcon: IconButton(
-                        onPressed: () {},
-                        icon: const Icon(Icons.search_outlined)),
-                    hintText: "Search Task",
-                    filled: true,
-                    fillColor: const Color(0xfff8f8f8),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide.none))),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
-                Text("Projects",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(249, 51, 51, 51),
-                    )),
-                Text(
-                  "See All",
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: Color.fromARGB(248, 143, 143, 143),
-                  ),
-                )
-              ],
-            ),
-          ),
-          Expanded(
-            flex: 1,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: 4,
-              itemBuilder: (context, index) {
-                return createProjectCard(index);
-              },
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
-                Text("Progress",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(249, 51, 51, 51),
-                    )),
-                Text(
-                  "All Sats",
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: Color.fromARGB(248, 143, 143, 143),
-                  ),
-                )
-              ],
-            ),
-          ),
           Container(
             height: 300,
             decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
-                    topLeft: Radius.elliptical(30, 40),
-                    topRight: Radius.elliptical(30, 40)),
+                    bottomLeft: Radius.elliptical(30, 40),
+                    bottomRight: Radius.elliptical(30, 40)),
                 gradient: LinearGradient(colors: [
                   Color(0xffdbe2f4),
                   Color(0xffe9d2e2),
                 ])),
             child: Column(children: [
+              const SizedBox(
+                height: 50,
+              ),
               SizedBox(
                 height: 200,
                 child: Padding(
@@ -136,10 +35,43 @@ class MyProject extends StatelessWidget {
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left: 8),
+                              child: CircleAvatar(
+                                backgroundColor:
+                                    const Color.fromARGB(218, 236, 236, 236),
+                                child: IconButton(
+                                    onPressed: () {},
+                                    icon: const Icon(
+                                      Icons.arrow_back_ios,
+                                      size: 20,
+                                      color: Color(0xffa5a9ac),
+                                    )),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(right: 8),
+                              child: CircleAvatar(
+                                backgroundColor:
+                                    const Color.fromARGB(218, 236, 236, 236),
+                                child: IconButton(
+                                    onPressed: () {},
+                                    icon: const Icon(
+                                      Icons.settings_outlined,
+                                      color: Color(0xffa5a9ac),
+                                    )),
+                              ),
+                            )
+                          ],
+                        ),
                         const Padding(
-                          padding: EdgeInsets.only(left: 18.0, right: 18),
+                          padding:
+                              EdgeInsets.only(left: 18.0, right: 18, top: 20),
                           child: Text(
-                            "Create and Check Daily Task",
+                            "Tuesday,28 September 2023",
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
@@ -147,17 +79,6 @@ class MyProject extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const Padding(
-                          padding: EdgeInsets.only(left: 18.0, right: 18),
-                          child: Text(
-                            "You can control the execution of a task by command in the application",
-                            style: TextStyle(
-                              fontSize: 14,
-                              color: Color.fromARGB(248, 117, 117, 117),
-                            ),
-                          ),
-                        ),
-                        const Divider(),
                         Expanded(
                           child: ListView.builder(
                             scrollDirection: Axis.horizontal,
@@ -170,36 +91,16 @@ class MyProject extends StatelessWidget {
                       ]),
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Padding(
-                    padding: EdgeInsets.only(left: 10.0, right: 10),
-                    child: CircleAvatar(
-                      backgroundImage: AssetImage("./images/pot1.jpg"),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 10.0, right: 10),
-                    child: CircleAvatar(
-                      backgroundImage: AssetImage("./images/pot2.jpg"),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 10.0, right: 10),
-                    child: CircleAvatar(
-                      backgroundImage: AssetImage("./images/pot3.jpg"),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 10.0, right: 10),
-                    child: CircleAvatar(
-                      backgroundImage: AssetImage("./images/pot4.jpg"),
-                    ),
-                  ),
-                ],
-              ),
             ]),
+          ),
+          Expanded(
+            flex: 1,
+            child: ListView.builder(
+              itemCount: 4,
+              itemBuilder: (context, index) {
+                return createProjectCard(index);
+              },
+            ),
           ),
         ],
       ),
@@ -231,11 +132,11 @@ class MyProject extends StatelessWidget {
             color: const Color(0xfffefefe),
             borderRadius: BorderRadius.circular(10)),
         width: 240,
-        height: 190,
+        height: 150,
         child: Stack(
           children: [
             Positioned(
-              top: 40,
+              top: 20,
               child: Container(
                 height: 40,
                 width: 7,
@@ -247,7 +148,7 @@ class MyProject extends StatelessWidget {
               ),
             ),
             Positioned(
-                top: 100,
+                top: 80,
                 child: Padding(
                   padding: const EdgeInsets.only(left: 8.0, right: 9),
                   child: Container(
@@ -256,14 +157,14 @@ class MyProject extends StatelessWidget {
                       width: 220),
                 )),
             Positioned(
-                left: 180,
+                left: 280,
                 child: IconButton(
                     onPressed: () {},
                     icon: const Icon(
                       Icons.more_horiz,
                     ))),
             Positioned(
-                top: 30,
+                top: 20,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
@@ -281,7 +182,7 @@ class MyProject extends StatelessWidget {
                   ),
                 )),
             const Positioned(
-              top: 120,
+              top: 100,
               left: 15,
               child: CircleAvatar(
                 radius: 15,
@@ -289,7 +190,7 @@ class MyProject extends StatelessWidget {
               ),
             ),
             const Positioned(
-              top: 120,
+              top: 100,
               left: 28,
               child: CircleAvatar(
                 radius: 15,
@@ -297,7 +198,7 @@ class MyProject extends StatelessWidget {
               ),
             ),
             const Positioned(
-              top: 120,
+              top: 100,
               left: 45,
               child: CircleAvatar(
                 radius: 15,
@@ -305,8 +206,8 @@ class MyProject extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: 130,
-              top: 110,
+              left: 230,
+              top: 90,
               child: SizedBox(
                 height: 50,
                 width: 105,

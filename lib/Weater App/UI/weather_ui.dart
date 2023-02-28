@@ -7,7 +7,7 @@ class WeatherUI extends StatelessWidget {
     double height = MediaQuery.of(context).size.height;
     return Material(
         child: Container(
-            color: Color(0xff131542),
+            color: const Color(0xff131542),
             child: mainScreen(context, width, height)));
   }
 
@@ -21,7 +21,7 @@ class WeatherUI extends StatelessWidget {
             child: Container(
               height: 170,
               width: 170,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   image: DecorationImage(
                 fit: BoxFit.contain,
                 image: AssetImage(
@@ -33,7 +33,7 @@ class WeatherUI extends StatelessWidget {
             top: 500,
             left: 100,
             child: RichText(
-              text: TextSpan(
+              text: const TextSpan(
                   text: "Weather ",
                   style: TextStyle(fontSize: 23),
                   children: [
@@ -45,7 +45,7 @@ class WeatherUI extends StatelessWidget {
                     )
                   ]),
             )),
-        Positioned(
+        const Positioned(
           top: 570,
           left: 70,
           child: Text(
@@ -72,8 +72,8 @@ class WeatherUI extends StatelessWidget {
               width: 150,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Color(0xffffd059)),
-              child: Center(
+                  color: const Color(0xffffd059)),
+              child: const Center(
                 child: Text(
                   "Get Started",
                   style: TextStyle(
@@ -102,7 +102,7 @@ class WeatherUI extends StatelessWidget {
 
   Widget weatherDetail(BuildContext context) {
     return Material(
-      color: Color(0xff131542),
+      color: const Color(0xff131542),
       child: Stack(
         children: [
           Positioned(
@@ -113,14 +113,14 @@ class WeatherUI extends StatelessWidget {
                     onPressed: () {
                       Navigator.pop(context);
                     },
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.arrow_back,
                       color: Colors.white,
                     )),
-                SizedBox(
+                const SizedBox(
                   width: 90,
                 ),
-                Text(
+                const Text(
                   "Weather Forcast",
                   style: TextStyle(
                       color: Colors.white, fontWeight: FontWeight.bold),
@@ -136,7 +136,7 @@ class WeatherUI extends StatelessWidget {
                 height: 250,
                 width: 330,
                 decoration: BoxDecoration(
-                    color: Color(0xff1a1c49),
+                    color: const Color(0xff1a1c49),
                     borderRadius: BorderRadius.circular(15)),
                 child: Stack(
                   children: [
@@ -144,7 +144,7 @@ class WeatherUI extends StatelessWidget {
                       padding: const EdgeInsets.fromLTRB(40, 20, 20, 5),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
+                        children: const [
                           Text(
                             "Today",
                             style: TextStyle(color: Colors.white, fontSize: 16),
@@ -159,12 +159,12 @@ class WeatherUI extends StatelessWidget {
                     Positioned(
                       top: 80,
                       left: 110,
-                      child: Container(
+                      child: SizedBox(
                         width: 40,
                         height: 40,
                         child: Stack(
                           fit: StackFit.loose,
-                          children: [
+                          children: const [
                             Positioned(
                               top: 8,
                               child: Align(
@@ -188,7 +188,7 @@ class WeatherUI extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Positioned(
+                    const Positioned(
                         top: 80,
                         left: 30,
                         child: Text(
@@ -201,8 +201,8 @@ class WeatherUI extends StatelessWidget {
                     Align(
                       alignment: Alignment.centerRight,
                       child: Container(
-                        margin: EdgeInsets.fromLTRB(150, 0, 0, 10),
-                        decoration: BoxDecoration(
+                        margin: const EdgeInsets.fromLTRB(150, 0, 0, 10),
+                        decoration: const BoxDecoration(
                             image: DecorationImage(
                                 image: AssetImage("./images/27.png"))),
                       ),
@@ -212,7 +212,7 @@ class WeatherUI extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.only(left: 20, top: 10),
                         child: Row(
-                          children: [
+                          children: const [
                             Icon(
                               Icons.location_city,
                               color: Color(0xffffd059),
@@ -236,12 +236,12 @@ class WeatherUI extends StatelessWidget {
           ),
           Positioned(
             top: 380,
-            child: Container(
+            child: SizedBox(
               width: 250,
               height: 20,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
+                children: const [
                   Text(
                     "Today",
                     style: TextStyle(color: Colors.white, fontSize: 12),
@@ -260,7 +260,7 @@ class WeatherUI extends StatelessWidget {
           ),
           Positioned(
             top: 400,
-            child: Container(
+            child: SizedBox(
               height: 140,
               width: MediaQuery.of(context).size.width,
               child: ListView.builder(
@@ -276,7 +276,7 @@ class WeatherUI extends StatelessWidget {
             top: 550,
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Container(
+              child: SizedBox(
                 width: MediaQuery.of(context).size.width,
                 height: 200,
                 child: rainDetail(),
@@ -296,12 +296,12 @@ class WeatherUI extends StatelessWidget {
         height: 120,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
-          color: Color(0xff23234e),
+          color: const Color(0xff23234e),
         ),
         child: Stack(
           children: [
             Container(
-              margin: EdgeInsets.only(left: 35),
+              margin: const EdgeInsets.only(left: 35),
               height: 60,
               width: 60,
               decoration: BoxDecoration(
@@ -310,13 +310,13 @@ class WeatherUI extends StatelessWidget {
             ),
             Positioned(
               top: 60,
-              child: Container(
+              child: SizedBox(
                 height: 50,
                 width: 50,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
+                  children: const [
                     Text(
                       "10:50 AM",
                       style: TextStyle(color: Colors.white70, fontSize: 9),
@@ -340,7 +340,7 @@ class WeatherUI extends StatelessWidget {
   }
 
   Widget celsiusIcon(double cSize, double iconSize) {
-    return Container(
+    return SizedBox(
       width: 20,
       height: 20,
       child: Stack(
@@ -353,7 +353,7 @@ class WeatherUI extends StatelessWidget {
               alignment: Alignment.center,
               child: Icon(
                 Icons.circle_outlined,
-                color: Color(0xffffd059),
+                color: const Color(0xffffd059),
                 size: iconSize,
               ),
             ),
@@ -362,7 +362,7 @@ class WeatherUI extends StatelessWidget {
             alignment: Alignment.center,
             child: Text(
               "C",
-              style: TextStyle(fontSize: cSize, color: Color(0xffffd059)),
+              style: TextStyle(fontSize: cSize, color: const Color(0xffffd059)),
             ),
           ),
         ],
@@ -376,7 +376,7 @@ class WeatherUI extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
+          children: const [
             Text(
               "Monday",
               style: TextStyle(
@@ -402,11 +402,11 @@ class WeatherUI extends StatelessWidget {
         Positioned(
           top: 170,
           left: 40,
-          child: Container(
+          child: SizedBox(
             width: 400,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
+              children: const [
                 Text(
                   "10:30 AM",
                   style: TextStyle(
@@ -437,8 +437,8 @@ class WeatherUI extends StatelessWidget {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(bottom: 30),
-          decoration: BoxDecoration(
+          margin: const EdgeInsets.only(bottom: 30),
+          decoration: const BoxDecoration(
               image: DecorationImage(
                   image: AssetImage("./images/graph.png"), fit: BoxFit.cover)),
         )

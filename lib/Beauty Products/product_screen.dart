@@ -8,7 +8,7 @@ class SkinProductScreen extends StatelessWidget {
     return Scaffold(
         backgroundColor: Colors.white,
         body: Column(children: [
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           Padding(
@@ -16,8 +16,9 @@ class SkinProductScreen extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
-                Text(
+                IconButton(
+                    onPressed: () {}, icon: const Icon(Icons.arrow_back)),
+                const Text(
                   "Normal Skin",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
@@ -25,9 +26,9 @@ class SkinProductScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5),
                       border: Border.all(
-                          color: Color.fromARGB(255, 202, 202, 202))),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                          color: const Color.fromARGB(255, 202, 202, 202))),
+                  child: const Padding(
+                    padding: EdgeInsets.all(8.0),
                     child: Icon(
                       Icons.shopping_cart,
                       color: Color.fromARGB(255, 252, 225, 240),
@@ -42,10 +43,11 @@ class SkinProductScreen extends StatelessWidget {
             child: TextField(
                 decoration: InputDecoration(
                     suffixIcon: IconButton(
-                        onPressed: () {}, icon: Icon(Icons.search_outlined)),
+                        onPressed: () {},
+                        icon: const Icon(Icons.search_outlined)),
                     hintText: "Search products for skin",
                     filled: true,
-                    fillColor: Color(0xfff8f8f8),
+                    fillColor: const Color(0xfff8f8f8),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide: BorderSide.none))),
@@ -56,7 +58,7 @@ class SkinProductScreen extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "10 Products Result",
                   style: TextStyle(
                       fontSize: 12, color: Color.fromARGB(255, 173, 173, 173)),
@@ -66,10 +68,10 @@ class SkinProductScreen extends StatelessWidget {
                     width: 80,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5),
-                        color: Color(0xfff8f8f8)),
+                        color: const Color(0xfff8f8f8)),
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
+                        children: const [
                           Text(
                             "Sort by",
                             style: TextStyle(fontSize: 12),
@@ -85,7 +87,7 @@ class SkinProductScreen extends StatelessWidget {
           Expanded(
             child: GridView.builder(
               itemCount: ProductModel.productsSender().length,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   mainAxisSpacing: 15, crossAxisCount: 2),
               itemBuilder: (context, index) => createProducts(index),
             ),
@@ -100,37 +102,38 @@ class SkinProductScreen extends StatelessWidget {
         width: 100,
         height: 150,
         decoration: BoxDecoration(
-            boxShadow: [
+            boxShadow: const [
               BoxShadow(
                   color: Color.fromARGB(232, 214, 214, 214),
                   spreadRadius: 0.5,
                   offset: Offset(1, 1),
                   blurRadius: 1)
             ],
-            color: Color.fromARGB(255, 252, 225, 240),
+            color: const Color.fromARGB(255, 252, 225, 240),
             borderRadius: BorderRadius.circular(10)),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             Container(
-              margin: EdgeInsets.only(top: 10),
+              margin: const EdgeInsets.only(top: 10),
               height: 90,
               decoration: BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage(
                           ProductModel.productsSender()[index].productImage))),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
             Text(
-              "${ProductModel.productsSender()[1].productName.toString()}",
-              style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+              ProductModel.productsSender()[1].productName.toString(),
+              style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
             ),
-            Text("${ProductModel.productsSender()[1].productDetail.toString()}",
-                style: TextStyle(fontSize: 12)),
-            Text("${ProductModel.productsSender()[1].productPrice.toString()}",
-                style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
+            Text(ProductModel.productsSender()[1].productDetail.toString(),
+                style: const TextStyle(fontSize: 12)),
+            Text(ProductModel.productsSender()[1].productPrice.toString(),
+                style:
+                    const TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
           ],
         ),
       ),
