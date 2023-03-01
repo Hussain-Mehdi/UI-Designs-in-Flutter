@@ -16,19 +16,28 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 
-  <img src="images\mainscreen.png" width="350" title="hover text"></br>
+  <img src="images\mainscreen.png" width="350" title="hover text">
   <img src="images\secondscreen.png" width="350" alt="accessibility text">
   <hr>
+  <p>
   <h2>Weather App Design</h2>
- <img src="images\weather1.png" width="350" title="hover text"></br>
+ <img src="images\weather1.png" width="350" title="hover text">
   <img src="images\weather2.png" width="350" alt="accessibility text">
+  </p>
   
   <hr>
   <h2>Woman Beauty Product</h2>
- <img src="images\normal1.png" width="350" title="hover text"></br>
+ <img src="images\normal1.png" width="350" title="hover text">
   <img src="images\normal2.png" width="350" alt="accessibility text">
   
+
+  
   <hr>
   <h2>Woman Beauty Product</h2>
- <img src="images\todo2.png" width="350" title="hover text"></br>
+ <img src="images\todo2.png" width="350" title="hover text">
   <img src="images\todo1.png" width="350" alt="accessibility text">
+  
+    <hr>
+  <h2>Woman Beauty Product</h2>
+ <img src="images\doctordetaildone2.png" width="350" title="hover text">
+  <img src="images\doctordetaildone1.png" width="350" alt="accessibility text">
