@@ -7,9 +7,10 @@ class DoctorDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
-            height: 70,
+            height: 50,
           ),
           Padding(
             padding: const EdgeInsets.only(left: 18.0, right: 18),
@@ -37,10 +38,10 @@ class DoctorDetail extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(top: 28),
+            padding: EdgeInsets.only(top: 15, left: 20),
             child: Container(
               height: 160,
-              width: 300,
+              width: 320,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: Color.fromARGB(255, 242, 241, 247)),
@@ -74,21 +75,6 @@ class DoctorDetail extends StatelessWidget {
                           "Cardiologists",
                           style: TextStyle(fontSize: 12),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 2.0, top: 25),
-                          child: Row(
-                            children: [
-                              Icon(Icons.access_time_filled,
-                                  size: 20,
-                                  color: Color.fromARGB(255, 104, 85, 202)),
-                              Text(
-                                "04:30PM-07:00PM",
-                                style: TextStyle(
-                                    fontSize: 12, fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          ),
-                        ),
                       ],
                     ),
                   ),
@@ -97,13 +83,16 @@ class DoctorDetail extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 10, left: 18.0, right: 18),
+            padding: const EdgeInsets.only(top: 15, left: 18.0, right: 18),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   "About",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 104, 85, 202)),
                 ),
                 Text(
                   "Reviews",
@@ -116,14 +105,65 @@ class DoctorDetail extends StatelessWidget {
               ],
             ),
           ),
+          Divider(),
           Padding(
-            padding: EdgeInsets.only(top: 20, left: 18, right: 18),
+            padding: EdgeInsets.only(left: 18, right: 18),
             child: Text(
-                "Robert Mcbane is a Cardiologist in Rochester, Minnesota. Mcbane has been practicing medicine for over 35 years and is highly rated in 8 conditions, according to our data. His top areas of expertise are Venous Thromboembolism (VTE), Thoracic Aortic Aneurysm, Varicose Veins, and Arterial Insufficiency. Mcbane is currently accepting new patients."),
+              "Robert Mcbane is a Cardiologist in Rochester, Minnesota. Mcbane has been practicing medicine for over 35 years and is highly rated in 8 conditions, according to our data. His top areas of expertise are Venous Thromboembolism (VTE), Thoracic Aortic Aneurysm, Varicose Veins, and Arterial Insufficiency. Mcbane is currently accepting new patients.",
+              style: TextStyle(
+                  fontSize: 14, color: Color.fromARGB(255, 53, 53, 53)),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(
+                left: 18.0, right: 18, top: 10, bottom: 9),
+            child: Container(
+              height: 160,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage("./images/location.png"))),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 20.0),
+            child: Text(
+              "About",
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(
+              left: 20.0,
+            ),
+            child: Row(
+              children: [
+                Icon(Icons.access_time_filled,
+                    size: 20, color: Color.fromARGB(255, 104, 85, 202)),
+                Text(
+                  "04:30PM-07:00PM",
+                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
           ),
           Container(
+            margin: EdgeInsets.only(left: 25, top: 10),
+            height: 60,
+            width: 300,
             decoration: BoxDecoration(
-                image: DecorationImage(image: AssetImage("./images/"))),
+              borderRadius: BorderRadius.circular(10),
+              color: Color(0xff7d57c1),
+            ),
+            child: Center(
+                child: Text(
+              "Book an Appointment",
+              style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w700,
+                  color: Color.fromARGB(218, 255, 255, 255)),
+            )),
           )
         ],
       ),
