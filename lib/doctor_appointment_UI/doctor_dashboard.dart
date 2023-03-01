@@ -98,20 +98,20 @@ class Doctors {
             children: [
               CircleAvatar(
                 radius: 15,
-                backgroundImage: AssetImage("./images/pot1.jpg"),
+                backgroundImage: AssetImage("./images/doctor.png"),
               ),
               Positioned(
                 left: 20,
                 child: CircleAvatar(
                   radius: 15,
-                  backgroundImage: AssetImage("./images/pot2.jpg"),
+                  backgroundImage: AssetImage("./images/doctor1.png"),
                 ),
               ),
               Positioned(
                 left: 40,
                 child: CircleAvatar(
                   radius: 15,
-                  backgroundImage: AssetImage("./images/pot3.jpg"),
+                  backgroundImage: AssetImage("./images/doctor2.png"),
                 ),
               )
             ],
@@ -130,20 +130,148 @@ class Doctors {
             children: [
               CircleAvatar(
                 radius: 15,
-                backgroundImage: AssetImage("./images/pot1.png"),
+                backgroundImage: AssetImage("./images/doctor.png"),
               ),
               Positioned(
                 left: 20,
                 child: CircleAvatar(
                   radius: 15,
-                  backgroundImage: AssetImage("./images/pot1.png"),
+                  backgroundImage: AssetImage("./images/doctor1.png"),
                 ),
               ),
               Positioned(
                 left: 40,
                 child: CircleAvatar(
                   radius: 15,
-                  backgroundImage: AssetImage("./images/pot1.png"),
+                  backgroundImage: AssetImage("./images/doctor2.png"),
+                ),
+              )
+            ],
+          ),
+        ),
+        CircleAvatar(
+          radius: 25,
+          child: ImageIcon(AssetImage("./images/tooth.png")),
+        )));
+    doctorList.add(Doctors(
+        "Neurosurgery",
+        "12 doctors",
+        Container(
+          width: 200,
+          child: Stack(
+            children: [
+              CircleAvatar(
+                radius: 15,
+                backgroundImage: AssetImage("./images/doctor.png"),
+              ),
+              Positioned(
+                left: 20,
+                child: CircleAvatar(
+                  radius: 15,
+                  backgroundImage: AssetImage("./images/doctor1.png"),
+                ),
+              ),
+              Positioned(
+                left: 40,
+                child: CircleAvatar(
+                  radius: 15,
+                  backgroundImage: AssetImage("./images/doctor2.png"),
+                ),
+              )
+            ],
+          ),
+        ),
+        CircleAvatar(
+          radius: 25,
+          child: Icon(Icons.heart_broken_outlined),
+        )));
+    doctorList.add(Doctors(
+        "Neurosurgery",
+        "12 doctors",
+        Container(
+          width: 200,
+          child: Stack(
+            children: [
+              CircleAvatar(
+                radius: 15,
+                backgroundImage: AssetImage("./images/doctor.png"),
+              ),
+              Positioned(
+                left: 20,
+                child: CircleAvatar(
+                  radius: 15,
+                  backgroundImage: AssetImage("./images/doctor1.png"),
+                ),
+              ),
+              Positioned(
+                left: 40,
+                child: CircleAvatar(
+                  radius: 15,
+                  backgroundImage: AssetImage("./images/doctor2.png"),
+                ),
+              )
+            ],
+          ),
+        ),
+        CircleAvatar(
+          radius: 25,
+          child: Icon(Icons.heart_broken_outlined),
+        )));
+    doctorList.add(Doctors(
+        "Pediatrics",
+        "12 doctors",
+        Container(
+          width: 200,
+          child: Stack(
+            children: [
+              CircleAvatar(
+                radius: 15,
+                backgroundImage: AssetImage("./images/doctor.png"),
+              ),
+              Positioned(
+                left: 20,
+                child: CircleAvatar(
+                  radius: 15,
+                  backgroundImage: AssetImage("./images/doctor1.png"),
+                ),
+              ),
+              Positioned(
+                left: 40,
+                child: CircleAvatar(
+                  radius: 15,
+                  backgroundImage: AssetImage("./images/doctor2.png"),
+                ),
+              )
+            ],
+          ),
+        ),
+        CircleAvatar(
+          radius: 25,
+          child: Icon(Icons.heart_broken_outlined),
+        )));
+    doctorList.add(Doctors(
+        "Pulmonology",
+        "12 doctors",
+        Container(
+          width: 200,
+          child: Stack(
+            children: [
+              CircleAvatar(
+                radius: 15,
+                backgroundImage: AssetImage("./images/doctor.png"),
+              ),
+              Positioned(
+                left: 20,
+                child: CircleAvatar(
+                  radius: 15,
+                  backgroundImage: AssetImage("./images/doctor1.png"),
+                ),
+              ),
+              Positioned(
+                left: 40,
+                child: CircleAvatar(
+                  radius: 15,
+                  backgroundImage: AssetImage("./images/doctor2.png"),
                 ),
               )
             ],
@@ -162,116 +290,20 @@ class Doctors {
             children: [
               CircleAvatar(
                 radius: 15,
-                backgroundImage: AssetImage("./images/pot1.png"),
+                backgroundImage: AssetImage("./images/doctor.png"),
               ),
               Positioned(
                 left: 20,
                 child: CircleAvatar(
                   radius: 15,
-                  backgroundImage: AssetImage("./images/pot1.png"),
+                  backgroundImage: AssetImage("./images/doctor1.png"),
                 ),
               ),
               Positioned(
                 left: 40,
                 child: CircleAvatar(
                   radius: 15,
-                  backgroundImage: AssetImage("./images/pot1.png"),
-                ),
-              )
-            ],
-          ),
-        ),
-        CircleAvatar(
-          radius: 25,
-          child: Icon(Icons.heart_broken_outlined),
-        )));
-    doctorList.add(Doctors(
-        "Cardio",
-        "12 doctors",
-        Container(
-          width: 200,
-          child: Stack(
-            children: [
-              CircleAvatar(
-                radius: 15,
-                backgroundImage: AssetImage("./images/pot1.png"),
-              ),
-              Positioned(
-                left: 20,
-                child: CircleAvatar(
-                  radius: 15,
-                  backgroundImage: AssetImage("./images/pot1.png"),
-                ),
-              ),
-              Positioned(
-                left: 40,
-                child: CircleAvatar(
-                  radius: 15,
-                  backgroundImage: AssetImage("./images/pot1.png"),
-                ),
-              )
-            ],
-          ),
-        ),
-        CircleAvatar(
-          radius: 25,
-          child: Icon(Icons.heart_broken_outlined),
-        )));
-    doctorList.add(Doctors(
-        "Cardio",
-        "12 doctors",
-        Container(
-          width: 200,
-          child: Stack(
-            children: [
-              CircleAvatar(
-                radius: 15,
-                backgroundImage: AssetImage("./images/pot1.png"),
-              ),
-              Positioned(
-                left: 20,
-                child: CircleAvatar(
-                  radius: 15,
-                  backgroundImage: AssetImage("./images/pot1.png"),
-                ),
-              ),
-              Positioned(
-                left: 40,
-                child: CircleAvatar(
-                  radius: 15,
-                  backgroundImage: AssetImage("./images/pot1.png"),
-                ),
-              )
-            ],
-          ),
-        ),
-        CircleAvatar(
-          radius: 25,
-          child: Icon(Icons.heart_broken_outlined),
-        )));
-    doctorList.add(Doctors(
-        "Cardio",
-        "12 doctors",
-        Container(
-          width: 200,
-          child: Stack(
-            children: [
-              CircleAvatar(
-                radius: 15,
-                backgroundImage: AssetImage("./images/pot1.png"),
-              ),
-              Positioned(
-                left: 20,
-                child: CircleAvatar(
-                  radius: 15,
-                  backgroundImage: AssetImage("./images/pot1.png"),
-                ),
-              ),
-              Positioned(
-                left: 40,
-                child: CircleAvatar(
-                  radius: 15,
-                  backgroundImage: AssetImage("./images/pot1.png"),
+                  backgroundImage: AssetImage("./images/doctor2.png"),
                 ),
               )
             ],
