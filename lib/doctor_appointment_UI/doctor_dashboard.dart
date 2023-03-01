@@ -7,15 +7,78 @@ class DoctorDashboard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
-            height: 100,
+            height: 70,
           ),
-          Container(
-            height: 200,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: createDoctors(),
+          Padding(
+            padding: const EdgeInsets.only(left: 18.0, right: 18),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                CircleAvatar(
+                  radius: 35,
+                  backgroundImage: AssetImage("./images/pot1.jpg"),
+                ),
+                CircleAvatar(
+                  radius: 26,
+                  backgroundColor: Color.fromARGB(255, 231, 231, 231),
+                  child: Icon(
+                    Icons.notifications_outlined,
+                    color: Colors.black54,
+                    size: 25,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 18.0, left: 18, right: 18),
+            child: Text(
+              "Let's find\nyour suitable doctor",
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(
+              left: 5.0,
+              right: 5,
+            ),
+            child: Container(
+              height: 200,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: createDoctors(),
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 18, right: 18),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Top Doctors",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                ),
+                Text(
+                  "See All",
+                  style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w800,
+                      color: Colors.grey),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(18.0),
+            child: Container(
+              height: 279,
+              child: ListView(
+                children: createTopDoctor(),
+              ),
             ),
           )
         ],
@@ -41,7 +104,7 @@ class DoctorDashboard extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Container(
           height: 120,
-          width: 190,
+          width: 170,
           decoration: BoxDecoration(
             color: colors[i],
             borderRadius: BorderRadius.circular(12),
@@ -76,6 +139,91 @@ class DoctorDashboard extends StatelessWidget {
       i++;
     }
     return doctor;
+  }
+
+  List<Widget> createTopDoctor() {
+    List<Widget> topdoctors = [];
+    List<String> doctorImg = [
+      './images/doctor2.png',
+      './images/doctor1.png',
+      './images/doctor.png',
+      'Dr.Benjamin',
+      'Dr.Amelia',
+      'Dr.Lucas',
+      'Mayo Clinic',
+      "Bellevue Hospital",
+      'ACMH Hospital',
+      'Cardiologists',
+      'Ophthalmologists',
+      'Endocrinologists',
+    ];
+
+    int i = 0;
+    while (i < 3) {
+      Padding topdoctor = Padding(
+        padding: EdgeInsets.all(8),
+        child: Container(
+          height: 140,
+          width: 300,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              color: Color.fromARGB(255, 242, 241, 247)),
+          child: Row(
+            children: [
+              Container(
+                width: 150,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage(doctorImg[i]), fit: BoxFit.cover)),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 25.0, left: 8),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      doctorImg[3 + i],
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
+                    ),
+                    Text(
+                      doctorImg[i + 6],
+                      style: TextStyle(
+                          overflow: TextOverflow.ellipsis,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16),
+                    ),
+                    Text(
+                      doctorImg[i + 9],
+                      style: TextStyle(fontSize: 12),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 2.0, top: 25),
+                      child: Row(
+                        children: [
+                          Icon(Icons.access_time_filled,
+                              size: 20,
+                              color: Color.fromARGB(255, 104, 85, 202)),
+                          Text(
+                            "04:30PM-07:00PM",
+                            style: TextStyle(
+                                fontSize: 12, fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
+      );
+
+      topdoctors.add(topdoctor);
+      i++;
+    }
+    return topdoctors;
   }
 }
 
@@ -122,7 +270,7 @@ class Doctors {
           child: Icon(Icons.heart_broken_outlined),
         )));
     doctorList.add(Doctors(
-        "Cardio",
+        "Dentist",
         "12 doctors",
         Container(
           width: 200,
@@ -182,41 +330,8 @@ class Doctors {
           ),
         ),
         CircleAvatar(
-          radius: 25,
-          child: Icon(Icons.heart_broken_outlined),
-        )));
-    doctorList.add(Doctors(
-        "Neurosurgery",
-        "12 doctors",
-        Container(
-          width: 200,
-          child: Stack(
-            children: [
-              CircleAvatar(
-                radius: 15,
-                backgroundImage: AssetImage("./images/doctor.png"),
-              ),
-              Positioned(
-                left: 20,
-                child: CircleAvatar(
-                  radius: 15,
-                  backgroundImage: AssetImage("./images/doctor1.png"),
-                ),
-              ),
-              Positioned(
-                left: 40,
-                child: CircleAvatar(
-                  radius: 15,
-                  backgroundImage: AssetImage("./images/doctor2.png"),
-                ),
-              )
-            ],
-          ),
-        ),
-        CircleAvatar(
-          radius: 25,
-          child: Icon(Icons.heart_broken_outlined),
-        )));
+            radius: 25, child: ImageIcon(AssetImage("./images/brain.png")))));
+
     doctorList.add(Doctors(
         "Pediatrics",
         "12 doctors",
@@ -246,9 +361,8 @@ class Doctors {
           ),
         ),
         CircleAvatar(
-          radius: 25,
-          child: Icon(Icons.heart_broken_outlined),
-        )));
+            radius: 25,
+            child: ImageIcon(AssetImage("./images/pediatrics.png")))));
     doctorList.add(Doctors(
         "Pulmonology",
         "12 doctors",
@@ -278,11 +392,10 @@ class Doctors {
           ),
         ),
         CircleAvatar(
-          radius: 25,
-          child: Icon(Icons.heart_broken_outlined),
-        )));
+            radius: 25,
+            child: ImageIcon(AssetImage("./images/pulmonology.png")))));
     doctorList.add(Doctors(
-        "Cardio",
+        "Opthalmology",
         "12 doctors",
         Container(
           width: 200,
@@ -310,9 +423,7 @@ class Doctors {
           ),
         ),
         CircleAvatar(
-          radius: 25,
-          child: Icon(Icons.heart_broken_outlined),
-        )));
+            radius: 25, child: ImageIcon(AssetImage("./images/eye.png")))));
 
     return doctorList;
   }
