@@ -151,7 +151,7 @@ class DoctorDetail extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(left: 25, top: 10),
+            margin: EdgeInsets.only(left: 35, top: 10),
             height: 60,
             width: 300,
             decoration: BoxDecoration(
