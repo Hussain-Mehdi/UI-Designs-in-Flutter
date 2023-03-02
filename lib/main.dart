@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'Todo App UI/project_dashboard.dart';
 import 'doctor_appointment_UI/doctor_dashboard.dart';
 import 'doctor_appointment_UI/doctor_detail.dart';
+import 'project_management/daily_plan.dart';
 import 'project_management/project_dashboard.dart';
 
 void main() {
