@@ -21,7 +21,9 @@ class DoctorDetail extends StatelessWidget {
                   backgroundColor: Color.fromARGB(66, 150, 150, 150),
                   child: IconButton(
                       color: Colors.black,
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
                       icon: Icon(
                         Icons.arrow_back_ios,
                         size: 20,

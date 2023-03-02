@@ -16,7 +16,7 @@ class Dashboard extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       color: Color(0xff12151e),
-      home: DoctorDetail(),
+      home: DoctorDashboard(),
     );
   }
 }

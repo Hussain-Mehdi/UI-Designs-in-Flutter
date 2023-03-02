@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simple_food_ui/doctor_appointment_UI/doctor_detail.dart';
 
 class DoctorDashboard extends StatelessWidget {
   const DoctorDashboard({super.key});
@@ -77,7 +78,7 @@ class DoctorDashboard extends StatelessWidget {
             child: Container(
               height: 279,
               child: ListView(
-                children: createTopDoctor(),
+                children: createTopDoctor(context),
               ),
             ),
           )
@@ -141,7 +142,7 @@ class DoctorDashboard extends StatelessWidget {
     return doctor;
   }
 
-  List<Widget> createTopDoctor() {
+  List<Widget> createTopDoctor(BuildContext context) {
     List<Widget> topdoctors = [];
     List<String> doctorImg = [
       './images/doctor2.png',
@@ -162,60 +163,69 @@ class DoctorDashboard extends StatelessWidget {
     while (i < 3) {
       Padding topdoctor = Padding(
         padding: EdgeInsets.all(8),
-        child: Container(
-          height: 140,
-          width: 300,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: Color.fromARGB(255, 242, 241, 247)),
-          child: Row(
-            children: [
-              Container(
-                width: 150,
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage(doctorImg[i]), fit: BoxFit.cover)),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 25.0, left: 8),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      doctorImg[3 + i],
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
-                    ),
-                    Text(
-                      doctorImg[i + 6],
-                      style: TextStyle(
-                          overflow: TextOverflow.ellipsis,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16),
-                    ),
-                    Text(
-                      doctorImg[i + 9],
-                      style: TextStyle(fontSize: 12),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 2.0, top: 25),
-                      child: Row(
-                        children: [
-                          Icon(Icons.access_time_filled,
-                              size: 20,
-                              color: Color.fromARGB(255, 104, 85, 202)),
-                          Text(
-                            "04:30PM-07:00PM",
-                            style: TextStyle(
-                                fontSize: 12, fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
+        child: GestureDetector(
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DoctorDetail(),
+                ));
+          },
+          child: Container(
+            height: 140,
+            width: 300,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Color.fromARGB(255, 242, 241, 247)),
+            child: Row(
+              children: [
+                Container(
+                  width: 150,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage(doctorImg[i]), fit: BoxFit.cover)),
                 ),
-              )
-            ],
+                Padding(
+                  padding: const EdgeInsets.only(top: 25.0, left: 8),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        doctorImg[3 + i],
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 22),
+                      ),
+                      Text(
+                        doctorImg[i + 6],
+                        style: TextStyle(
+                            overflow: TextOverflow.ellipsis,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16),
+                      ),
+                      Text(
+                        doctorImg[i + 9],
+                        style: TextStyle(fontSize: 12),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 2.0, top: 25),
+                        child: Row(
+                          children: [
+                            Icon(Icons.access_time_filled,
+                                size: 20,
+                                color: Color.fromARGB(255, 104, 85, 202)),
+                            Text(
+                              "04:30PM-07:00PM",
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       );
