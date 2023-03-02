@@ -37,7 +37,7 @@ samples, guidance on mobile development, and a full API reference.
  <img src="images\todo2.png" width="350" title="hover text">
   <img src="images\todo1.png" width="350" alt="accessibility text">
 
-    <hr>
+  <hr>
   <h2>Doctor App UI</h2>
  <img src="images\doctordetaildone2.png" width="350" title="hover text">
   <img src="images\doctordetaildone1.png" width="350" alt="accessibility text">
