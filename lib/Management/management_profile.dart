@@ -1,0 +1,355 @@
+import 'package:flutter/material.dart';
+
+class ManagementProfile extends StatelessWidget {
+  const ManagementProfile({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      child: Column(
+        children: [
+          SizedBox(
+            height: 50,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(18.0),
+            child: Container(
+              height: 350,
+              width: 350,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                color: Color(0xff0d3571),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CircleAvatar(
+                    radius: 50,
+                    backgroundImage: AssetImage("./images/pot2.jpg"),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    "Rachard A.Backman",
+                    style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.white),
+                  ),
+                  Text(
+                    "Software Engineer",
+                    style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.white),
+                  ),
+                  SizedBox(
+                    height: 50,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Column(
+                        children: [
+                          Text(
+                            "75K",
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w800,
+                                color: Colors.white),
+                          ),
+                          Text(
+                            "Follower",
+                            style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Text(
+                            "16K",
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w800,
+                                color: Colors.white),
+                          ),
+                          Text(
+                            "Follower",
+                            style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Text(
+                            "600K",
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w800,
+                                color: Colors.white),
+                          ),
+                          Text(
+                            "Follower",
+                            style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(
+                top: 5, left: 20.0, right: 20, bottom: 15),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Folders",
+                  style: TextStyle(
+                      color: Color(0xff0d3571),
+                      fontSize: 14,
+                      fontWeight: FontWeight.w800),
+                ),
+                Text(
+                  "See all",
+                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+                )
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 120,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: createFolder(),
+            ),
+          ),
+          Padding(
+            padding:
+                const EdgeInsets.only(top: 5, bottom: 5, left: 20.0, right: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "My Team",
+                  style: TextStyle(
+                      color: Color(0xff0d3571),
+                      fontSize: 14,
+                      fontWeight: FontWeight.w800),
+                ),
+                Text(
+                  "See all",
+                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+                )
+              ],
+            ),
+          ),
+          Expanded(
+              child: ListView(
+            scrollDirection: Axis.vertical,
+            children: createTeam(),
+          )),
+        ],
+      ),
+    );
+  }
+
+  List<Widget> createFolder() {
+    List<Widget> folders = [];
+
+    List<String> projectdetail = [
+      './images/folder.png',
+      'Dribble share',
+      'Draw.io',
+      'Notion',
+      'FlatIcons',
+      'May 12,2023',
+      'March 24,2022',
+      'Sept 12,2021',
+      'Dec 12,2023',
+      '0xff0d3571'
+    ];
+    int i = 0;
+
+    while (i < 4) {
+      Padding folder = Padding(
+          padding: EdgeInsets.fromLTRB(18, 0, 18, 5),
+          child: Container(
+            width: 325,
+            height: 20,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                color: Color(0xffebf1fd)),
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 15, top: 5, left: 40),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  ImageIcon(
+                    AssetImage(projectdetail[0]),
+                    size: 50,
+                    color: Color(0xff0a3e7b),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20.0, bottom: 10),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Text(
+                          projectdetail[1 + i],
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w800,
+                              color: Color(0xff0a3e7b)),
+                        ),
+                        Text(
+                          "Project",
+                          style:
+                              TextStyle(fontSize: 8, color: Color(0xff0a3e7b)),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 15, left: 0.0),
+                          child: Container(
+                            width: 60,
+                            height: 20,
+                            child: Stack(
+                              children: [
+                                Positioned(
+                                  left: 0,
+                                  child: CircleAvatar(
+                                    radius: 10,
+                                    backgroundImage:
+                                        AssetImage("./images/pot1.jpg"),
+                                  ),
+                                ),
+                                Positioned(
+                                  left: 35,
+                                  child: CircleAvatar(
+                                    radius: 10,
+                                    backgroundImage:
+                                        AssetImage("./images/pot1.jpg"),
+                                  ),
+                                ),
+                                Positioned(
+                                  right: 20,
+                                  child: CircleAvatar(
+                                    radius: 12,
+                                    backgroundImage:
+                                        AssetImage("./images/pot1.jpg"),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ));
+
+      folders.add(folder);
+      i++;
+    }
+    return folders;
+  }
+
+  List<Widget> createTeam() {
+    List<Widget> folders = [];
+
+    List<String> projectdetail = [
+      './images/shopping.png',
+      './images/ai.png',
+      './images/dish.png',
+      'E-commerce  Application',
+      'Artifical Intelligence',
+      'Food',
+      'Project on Process',
+      "Complelte",
+      'Started',
+    ];
+    int i = 0;
+
+    while (i < 3) {
+      Padding folder = Padding(
+        padding: EdgeInsets.fromLTRB(18, 0, 18, 5),
+        child: Container(
+            width: 300,
+            height: 100,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                color: Color(0xffebf1fd)),
+            child: Center(
+              child: ListTile(
+                leading: CircleAvatar(
+                  backgroundColor: Color.fromARGB(255, 215, 223, 240),
+                  radius: 30,
+                  child: ImageIcon(AssetImage(projectdetail[i])),
+                ),
+                title: Text(
+                  projectdetail[3 + i],
+                  style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w800,
+                      color: Color(0xff0a3e7b)),
+                ),
+                subtitle: Text(
+                  projectdetail[6 + i],
+                  style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400,
+                      color: Color.fromARGB(255, 148, 148, 148)),
+                ),
+                trailing: Padding(
+                  padding: const EdgeInsets.only(top: 0, left: 0.0),
+                  child: Container(
+                    width: 60,
+                    height: 20,
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          child: CircleAvatar(
+                            radius: 10,
+                            backgroundImage: AssetImage("./images/pot1.jpg"),
+                          ),
+                        ),
+                        Positioned(
+                          left: 15,
+                          child: CircleAvatar(
+                            radius: 10,
+                            backgroundImage: AssetImage("./images/pot1.jpg"),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            )),
+      );
+
+      folders.add(folder);
+      i++;
+    }
+    return folders;
+  }
+}

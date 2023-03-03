@@ -8,14 +8,19 @@ class ManagementDashboard extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        leading: ImageIcon(NetworkImage(
-            "https://cdn-icons-png.flaticon.com/512/5191/5191354.png")),
+        leading: IconButton(
+            onPressed: () {},
+            icon: ImageIcon(AssetImage("./images/dd.png"),
+                size: 23, color: Color(0xff0a3e7b))),
         backgroundColor: Colors.white,
         elevation: 0,
         centerTitle: true,
         title: Text(
           "Home",
-          style: TextStyle(color: Color(0xff0a3e7b)),
+          style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w600,
+              color: Color(0xff0a3e7b)),
         ),
         actions: [
           IconButton(
@@ -30,7 +35,7 @@ class ManagementDashboard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.only(left: 20.0),
+            padding: const EdgeInsets.only(left: 25.0),
             child: Text(
               "Hi, Jenifer!",
               style: TextStyle(
@@ -40,7 +45,7 @@ class ManagementDashboard extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 20.0),
+            padding: const EdgeInsets.only(left: 25.0),
             child: Text(
               "Good Morning",
               style: TextStyle(
@@ -146,10 +151,10 @@ class ManagementDashboard extends StatelessWidget {
 
   Widget createProject(int index) {
     List<String> projectdetail = [
-      './images/ui.png',
-      './images/management.png',
+      './images/app.png',
       './images/dd.png',
       './images/announcement.png',
+      './images/ui.png',
       'Mobile App',
       'Dashboard',
       'Banner',
