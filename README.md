@@ -45,3 +45,8 @@ samples, guidance on mobile development, and a full API reference.
   <h2>Project Management</h2>
  <img src="images\projectpic2.png" width="350" title="hover text">
  <img src="images\projectpic1.png" width="350" alt="accessibility text">
+
+
+  <h2>Project Management</h2>
+ <img src="images\management1.png" width="350" title="hover text">
+ <img src="images\management2.png" width="350" alt="accessibility text">
