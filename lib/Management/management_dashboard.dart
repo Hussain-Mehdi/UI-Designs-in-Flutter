@@ -8,7 +8,8 @@ class ManagementDashboard extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        leading: ImageIcon(AssetImage("./images/dashboards.png")),
+        leading: ImageIcon(NetworkImage(
+            "https://cdn-icons-png.flaticon.com/512/5191/5191354.png")),
         backgroundColor: Colors.white,
         elevation: 0,
         centerTitle: true,
@@ -20,7 +21,7 @@ class ManagementDashboard extends StatelessWidget {
           IconButton(
               onPressed: () {},
               icon: Icon(
-                Icons.notification_important_rounded,
+                Icons.notifications,
                 color: Color(0xff0a3e7b),
               ))
         ],
@@ -147,7 +148,7 @@ class ManagementDashboard extends StatelessWidget {
     List<String> projectdetail = [
       './images/ui.png',
       './images/management.png',
-      './images/dashboards.png',
+      './images/dd.png',
       './images/announcement.png',
       'Mobile App',
       'Dashboard',
