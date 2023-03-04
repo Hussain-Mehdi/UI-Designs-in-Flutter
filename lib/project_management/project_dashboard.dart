@@ -6,23 +6,23 @@ class ProjectDashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Color(0xfffaf4f2),
+      color: const Color(0xfffaf4f2),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           Padding(
             padding: const EdgeInsets.only(left: 10.0),
             child: Row(
-              children: [
+              children: const [
                 CircleAvatar(
                   radius: 25,
                   backgroundImage: AssetImage("./images/pot5.jpg"),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 8.0),
+                  padding: EdgeInsets.only(left: 8.0),
                   child: Text(
                     "Hi,Kira",
                     style: TextStyle(fontSize: 14),
@@ -35,8 +35,8 @@ class ProjectDashboard extends StatelessWidget {
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 30.0, bottom: 5, left: 20),
+          const Padding(
+            padding: EdgeInsets.only(top: 30.0, bottom: 5, left: 20),
             child: Text(
               "Task for Today",
               style: TextStyle(
@@ -46,9 +46,9 @@ class ProjectDashboard extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+            padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
             child: Row(
-              children: [
+              children: const [
                 Icon(Icons.star_rounded, color: Color(0xfff8b916)),
                 Padding(padding: EdgeInsets.only(left: 5), child: Text("5")),
                 Padding(
@@ -72,7 +72,7 @@ class ProjectDashboard extends StatelessWidget {
                         icon: const Icon(Icons.search_outlined)),
                     hintText: "Search",
                     filled: true,
-                    fillColor: Color.fromARGB(255, 255, 255, 255),
+                    fillColor: const Color.fromARGB(255, 255, 255, 255),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide: BorderSide.none))),
@@ -81,7 +81,7 @@ class ProjectDashboard extends StatelessWidget {
             padding: const EdgeInsets.only(left: 20.0, top: 30, right: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
+              children: const [
                 Text(
                   "Last Connection",
                   style: TextStyle(
@@ -100,7 +100,7 @@ class ProjectDashboard extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(left: 15, top: 15),
+            margin: const EdgeInsets.only(left: 15, top: 15),
             height: 50,
             child: ListView(
                 scrollDirection: Axis.horizontal,
@@ -108,8 +108,8 @@ class ProjectDashboard extends StatelessWidget {
           ),
           Expanded(
             child: Container(
-              margin: EdgeInsets.only(top: 30),
-              decoration: BoxDecoration(
+              margin: const EdgeInsets.only(top: 30),
+              decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.elliptical(50, 50),
                       topRight: Radius.elliptical(50, 50)),
@@ -121,7 +121,7 @@ class ProjectDashboard extends StatelessWidget {
                         top: 18.0, left: 30, right: 30, bottom: 5),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
+                      children: const [
                         Text(
                           "Active Projects",
                           style: TextStyle(
@@ -136,10 +136,7 @@ class ProjectDashboard extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Expanded(
-                      child: Container(
-                    child: ListView(children: createActiveProjecct()),
-                  ))
+                  Expanded(child: ListView(children: createActiveProjecct()))
                 ],
               ),
             ),
@@ -169,7 +166,7 @@ class ProjectDashboard extends StatelessWidget {
 
       i++;
     }
-    profiles.add(CircleAvatar(
+    profiles.add(const CircleAvatar(
       backgroundColor: Color(0xfff2eded),
       radius: 30,
       child: Text("+5"),
@@ -209,7 +206,8 @@ class ProjectDashboard extends StatelessWidget {
           width: 250,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: Color.fromARGB(227, 192, 192, 192))),
+              border:
+                  Border.all(color: const Color.fromARGB(227, 192, 192, 192))),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -220,11 +218,11 @@ class ProjectDashboard extends StatelessWidget {
                   children: [
                     Text(
                       projectdetail[5 + i],
-                      style: TextStyle(fontSize: 14, color: Colors.grey),
+                      style: const TextStyle(fontSize: 14, color: Colors.grey),
                     ),
                     Text(
                       projectdetail[10 + i],
-                      style: TextStyle(fontSize: 14, color: Colors.grey),
+                      style: const TextStyle(fontSize: 14, color: Colors.grey),
                     )
                   ],
                 ),
@@ -233,7 +231,7 @@ class ProjectDashboard extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 18.0, top: 10),
                 child: Text(
                   projectdetail[i],
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Color(0xff3d3733),
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
@@ -244,13 +242,13 @@ class ProjectDashboard extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 18.0, top: 20, bottom: 15),
                 child: Row(
                   children: [
-                    Icon(Icons.error_outline_outlined),
-                    SizedBox(
+                    const Icon(Icons.error_outline_outlined),
+                    const SizedBox(
                       width: 5,
                     ),
                     Text(
                       projectdetail[15 + i],
-                      style: TextStyle(
+                      style: const TextStyle(
                           fontSize: 12,
                           color: Color(0xff3d3733),
                           fontWeight: FontWeight.w600),

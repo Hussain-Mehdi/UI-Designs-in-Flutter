@@ -10,12 +10,12 @@ class ManagementDashboard extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
             onPressed: () {},
-            icon: ImageIcon(AssetImage("./images/dd.png"),
+            icon: const ImageIcon(AssetImage("./images/dd.png"),
                 size: 23, color: Color(0xff0a3e7b))),
         backgroundColor: Colors.white,
         elevation: 0,
         centerTitle: true,
-        title: Text(
+        title: const Text(
           "Home",
           style: TextStyle(
               fontSize: 16,
@@ -25,7 +25,7 @@ class ManagementDashboard extends StatelessWidget {
         actions: [
           IconButton(
               onPressed: () {},
-              icon: Icon(
+              icon: const Icon(
                 Icons.notifications,
                 color: Color(0xff0a3e7b),
               ))
@@ -34,8 +34,8 @@ class ManagementDashboard extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 25.0),
+          const Padding(
+            padding: EdgeInsets.only(left: 25.0),
             child: Text(
               "Hi, Jenifer!",
               style: TextStyle(
@@ -44,8 +44,8 @@ class ManagementDashboard extends StatelessWidget {
                   fontWeight: FontWeight.w700),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 25.0),
+          const Padding(
+            padding: EdgeInsets.only(left: 25.0),
             child: Text(
               "Good Morning",
               style: TextStyle(
@@ -63,23 +63,23 @@ class ManagementDashboard extends StatelessWidget {
                         icon: const Icon(Icons.search_outlined)),
                     hintText: "Search",
                     filled: true,
-                    fillColor: Color(0xfff7f7f9),
+                    fillColor: const Color(0xfff7f7f9),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide: BorderSide.none))),
           ),
           Padding(
-            padding: EdgeInsets.all(20),
+            padding: const EdgeInsets.all(20),
             child: Container(
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: Color(0xff0a3e7b))),
+                  border: Border.all(color: const Color(0xff0a3e7b))),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const [
                       Text(
                         "Welcome",
                         style: TextStyle(
@@ -99,7 +99,7 @@ class ManagementDashboard extends StatelessWidget {
                   Container(
                     width: 130,
                     height: 130,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         image: DecorationImage(
                             image: AssetImage(
                               "./images/management.png",
@@ -114,7 +114,7 @@ class ManagementDashboard extends StatelessWidget {
             padding: const EdgeInsets.only(left: 20.0, right: 20, bottom: 5),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
+              children: const [
                 Text(
                   "Ongoing Project",
                   style: TextStyle(
@@ -134,10 +134,10 @@ class ManagementDashboard extends StatelessWidget {
           ),
           Expanded(
             child: Container(
-                margin: EdgeInsets.only(left: 10, right: 10),
+                margin: const EdgeInsets.only(left: 10, right: 10),
                 child: GridView.builder(
                   itemCount: 4,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2),
                   itemBuilder: (context, index) {
                     return createProject(index);
@@ -167,11 +167,12 @@ class ManagementDashboard extends StatelessWidget {
     ];
 
     return Padding(
-      padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+      padding: const EdgeInsets.fromLTRB(5, 5, 5, 5),
       child: Container(
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
-            color: index == 0 ? Color(0xff0a3e7b) : Color(0xffebf1fd)),
+            color:
+                index == 0 ? const Color(0xff0a3e7b) : const Color(0xffebf1fd)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -186,11 +187,13 @@ class ManagementDashboard extends StatelessWidget {
                     style: TextStyle(
                         fontSize: 10,
                         fontWeight: FontWeight.w400,
-                        color: index == 0 ? Colors.white : Color(0xff0a3e7b)),
+                        color: index == 0
+                            ? Colors.white
+                            : const Color(0xff0a3e7b)),
                   ),
                   Icon(
                     Icons.more_vert_rounded,
-                    color: index == 0 ? Colors.white : Color(0xff0a3e7b),
+                    color: index == 0 ? Colors.white : const Color(0xff0a3e7b),
                   )
                 ],
               ),
@@ -202,7 +205,7 @@ class ManagementDashboard extends StatelessWidget {
                   ImageIcon(
                     AssetImage(projectdetail[index]),
                     size: 30,
-                    color: index == 0 ? Colors.white : Color(0xff0a3e7b),
+                    color: index == 0 ? Colors.white : const Color(0xff0a3e7b),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 6.0),
@@ -216,7 +219,7 @@ class ManagementDashboard extends StatelessWidget {
                               fontWeight: FontWeight.w800,
                               color: index == 0
                                   ? Colors.white
-                                  : Color(0xff0a3e7b)),
+                                  : const Color(0xff0a3e7b)),
                         ),
                         Text(
                           "Project",
@@ -224,7 +227,7 @@ class ManagementDashboard extends StatelessWidget {
                               fontSize: 8,
                               color: index == 0
                                   ? Colors.white
-                                  : Color(0xff0a3e7b)),
+                                  : const Color(0xff0a3e7b)),
                         ),
                       ],
                     ),
@@ -237,7 +240,7 @@ class ManagementDashboard extends StatelessWidget {
               child: Text(
                 "Progress",
                 style: TextStyle(
-                    color: index == 0 ? Colors.white : Color(0xff0a3e7b),
+                    color: index == 0 ? Colors.white : const Color(0xff0a3e7b),
                     fontSize: 12),
               ),
             ),
@@ -252,14 +255,14 @@ class ManagementDashboard extends StatelessWidget {
                       height: 3,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
-                          color: Color.fromARGB(255, 199, 199, 199)),
+                          color: const Color.fromARGB(255, 199, 199, 199)),
                     ),
                     Container(
                       height: 3,
                       width: 60,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
-                          color: Color(0xff0f3776)),
+                          color: const Color(0xff0f3776)),
                     ),
                   ],
                 ),

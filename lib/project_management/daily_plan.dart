@@ -6,11 +6,11 @@ class DailyPlan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Color(0xffd1edbf),
+      color: const Color(0xffd1edbf),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           Padding(
@@ -27,7 +27,7 @@ class DailyPlan extends StatelessWidget {
                       child: Center(
                           child: IconButton(
                               onPressed: () {},
-                              icon: Icon(
+                              icon: const Icon(
                                 Icons.close,
                                 size: 20,
                                 weight: 0.6,
@@ -35,7 +35,7 @@ class DailyPlan extends StatelessWidget {
                   Center(
                       child: IconButton(
                           onPressed: () {},
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.more_horiz,
                             size: 25,
                             weight: 0.6,
@@ -49,13 +49,13 @@ class DailyPlan extends StatelessWidget {
               width: 100,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Color.fromARGB(255, 165, 165, 165)),
+                  color: const Color.fromARGB(255, 165, 165, 165)),
             ),
           ),
           Expanded(
             child: Container(
-              margin: EdgeInsets.only(top: 10),
-              decoration: BoxDecoration(
+              margin: const EdgeInsets.only(top: 10),
+              decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.elliptical(30, 30),
                       topRight: Radius.elliptical(30, 30)),
@@ -68,7 +68,7 @@ class DailyPlan extends StatelessWidget {
                         top: 48.0, left: 30, right: 30, bottom: 5),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
+                      children: const [
                         Text(
                           "Messaging ID",
                           style: TextStyle(
@@ -88,7 +88,7 @@ class DailyPlan extends StatelessWidget {
                         const EdgeInsets.only(left: 20.0, top: 30, right: 20),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
+                      children: const [
                         Text(
                           "Your daily plans",
                           style: TextStyle(
@@ -127,8 +127,8 @@ class DailyPlan extends StatelessWidget {
                           ),
                         ],
                       )),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20.0, top: 15),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 20.0, top: 15),
                     child: Text(
                       "4 of 6 completed",
                       style: TextStyle(color: Colors.black26),
@@ -144,13 +144,13 @@ class DailyPlan extends StatelessWidget {
                           width: 150,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
-                              color: Color(0xffffe7ab)),
+                              color: const Color(0xffffe7ab)),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Padding(
-                                padding: const EdgeInsets.only(left: 10.0),
+                              const Padding(
+                                padding: EdgeInsets.only(left: 10.0),
                                 child: Text(
                                   "17",
                                   style: TextStyle(
@@ -161,7 +161,7 @@ class DailyPlan extends StatelessWidget {
                               Padding(
                                 padding: const EdgeInsets.only(left: 10.0),
                                 child: Row(
-                                  children: [
+                                  children: const [
                                     ImageIcon(
                                       AssetImage("./images/task.png"),
                                       size: 12,
@@ -184,13 +184,13 @@ class DailyPlan extends StatelessWidget {
                           width: 150,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
-                              color: Color(0xffffe7ab)),
+                              color: const Color(0xffffe7ab)),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Padding(
-                                padding: const EdgeInsets.only(left: 10.0),
+                              const Padding(
+                                padding: EdgeInsets.only(left: 10.0),
                                 child: Text(
                                   "3,2",
                                   style: TextStyle(
@@ -201,7 +201,7 @@ class DailyPlan extends StatelessWidget {
                               Padding(
                                 padding: const EdgeInsets.only(left: 10.0),
                                 child: Row(
-                                  children: [
+                                  children: const [
                                     Icon(
                                       Icons.access_time_filled,
                                       size: 15,
@@ -222,9 +222,8 @@ class DailyPlan extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Padding(
-                    padding:
-                        const EdgeInsets.only(left: 20.0, top: 30, right: 20),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 20.0, top: 30, right: 20),
                     child: Text(
                       "Overview",
                       style: TextStyle(
@@ -233,18 +232,16 @@ class DailyPlan extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding:
-                        const EdgeInsets.only(left: 20.0, right: 20, top: 10),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 20.0, right: 20, top: 10),
                     child: Text(
                       "A messaging app is a platform or a chat application enabling users to send and receive instant messages and connect. Think of the most popular messaging apps like Facebook Messenger, WhatsApp, Telegram, Viber. Which one do you use?",
                       style:
                           TextStyle(color: Color.fromARGB(255, 124, 124, 124)),
                     ),
                   ),
-                  Padding(
-                    padding:
-                        const EdgeInsets.only(left: 20.0, top: 30, right: 20),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 20.0, top: 30, right: 20),
                     child: Text(
                       "Members Connected",
                       style: TextStyle(
@@ -255,7 +252,7 @@ class DailyPlan extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 10, top: 10),
-                    child: Container(
+                    child: SizedBox(
                       height: 60,
                       child: ListView(
                         scrollDirection: Axis.horizontal,
@@ -295,7 +292,7 @@ class DailyPlan extends StatelessWidget {
 
       i++;
     }
-    profiles.add(CircleAvatar(
+    profiles.add(const CircleAvatar(
       backgroundColor: Color(0xfff2eded),
       radius: 25,
       child: Text("+5"),
@@ -335,7 +332,8 @@ class DailyPlan extends StatelessWidget {
           width: 250,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: Color.fromARGB(227, 192, 192, 192))),
+              border:
+                  Border.all(color: const Color.fromARGB(227, 192, 192, 192))),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -346,11 +344,11 @@ class DailyPlan extends StatelessWidget {
                   children: [
                     Text(
                       projectdetail[5 + i],
-                      style: TextStyle(fontSize: 14, color: Colors.grey),
+                      style: const TextStyle(fontSize: 14, color: Colors.grey),
                     ),
                     Text(
                       projectdetail[10 + i],
-                      style: TextStyle(fontSize: 14, color: Colors.grey),
+                      style: const TextStyle(fontSize: 14, color: Colors.grey),
                     )
                   ],
                 ),
@@ -359,7 +357,7 @@ class DailyPlan extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 18.0, top: 10),
                 child: Text(
                   projectdetail[i],
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Color(0xff3d3733),
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
@@ -370,13 +368,13 @@ class DailyPlan extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 18.0, top: 20, bottom: 15),
                 child: Row(
                   children: [
-                    Icon(Icons.error_outline_outlined),
-                    SizedBox(
+                    const Icon(Icons.error_outline_outlined),
+                    const SizedBox(
                       width: 5,
                     ),
                     Text(
                       projectdetail[15 + i],
-                      style: TextStyle(
+                      style: const TextStyle(
                           fontSize: 12,
                           color: Color(0xff3d3733),
                           fontWeight: FontWeight.w600),

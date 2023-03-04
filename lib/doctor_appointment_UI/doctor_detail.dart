@@ -9,7 +9,7 @@ class DoctorDetail extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           Padding(
@@ -18,19 +18,19 @@ class DoctorDetail extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 25,
-                  backgroundColor: Color.fromARGB(66, 150, 150, 150),
+                  backgroundColor: const Color.fromARGB(66, 150, 150, 150),
                   child: IconButton(
                       color: Colors.black,
                       onPressed: () {
                         Navigator.pop(context);
                       },
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.arrow_back_ios,
                         size: 20,
                       )),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 68.0),
+                const Padding(
+                  padding: EdgeInsets.only(left: 68.0),
                   child: Text(
                     "Doctor Detail",
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -40,18 +40,18 @@ class DoctorDetail extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(top: 15, left: 20),
+            padding: const EdgeInsets.only(top: 15, left: 20),
             child: Container(
               height: 160,
               width: 320,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Color.fromARGB(255, 242, 241, 247)),
+                  color: const Color.fromARGB(255, 242, 241, 247)),
               child: Row(
                 children: [
                   Container(
                     width: 150,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         image: DecorationImage(
                             image: AssetImage('./images/doctor2.png'),
                             fit: BoxFit.cover)),
@@ -60,7 +60,7 @@ class DoctorDetail extends StatelessWidget {
                     padding: const EdgeInsets.only(top: 25.0, left: 8),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
+                      children: const [
                         Text(
                           "Dr.Bingamin",
                           style: TextStyle(
@@ -88,7 +88,7 @@ class DoctorDetail extends StatelessWidget {
             padding: const EdgeInsets.only(top: 15, left: 18.0, right: 18),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
+              children: const [
                 Text(
                   "About",
                   style: TextStyle(
@@ -107,8 +107,8 @@ class DoctorDetail extends StatelessWidget {
               ],
             ),
           ),
-          Divider(),
-          Padding(
+          const Divider(),
+          const Padding(
             padding: EdgeInsets.only(left: 18, right: 18),
             child: Text(
               "Robert Mcbane is a Cardiologist in Rochester, Minnesota. Mcbane has been practicing medicine for over 35 years and is highly rated in 8 conditions, according to our data. His top areas of expertise are Venous Thromboembolism (VTE), Thoracic Aortic Aneurysm, Varicose Veins, and Arterial Insufficiency. Mcbane is currently accepting new patients.",
@@ -123,13 +123,13 @@ class DoctorDetail extends StatelessWidget {
               height: 160,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  image: DecorationImage(
+                  image: const DecorationImage(
                       fit: BoxFit.cover,
                       image: AssetImage("./images/location.png"))),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 20.0),
+          const Padding(
+            padding: EdgeInsets.only(left: 20.0),
             child: Text(
               "About",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -140,7 +140,7 @@ class DoctorDetail extends StatelessWidget {
               left: 20.0,
             ),
             child: Row(
-              children: [
+              children: const [
                 Icon(Icons.access_time_filled,
                     size: 20, color: Color.fromARGB(255, 104, 85, 202)),
                 Text(
@@ -151,14 +151,14 @@ class DoctorDetail extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(left: 35, top: 10),
+            margin: const EdgeInsets.only(left: 35, top: 10),
             height: 60,
             width: 300,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              color: Color(0xff7d57c1),
+              color: const Color(0xff7d57c1),
             ),
-            child: Center(
+            child: const Center(
                 child: Text(
               "Book an Appointment",
               style: TextStyle(

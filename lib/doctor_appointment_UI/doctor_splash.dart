@@ -15,7 +15,7 @@ class DoctorSplash extends StatelessWidget {
             Container(
               height: 600,
               width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: Color.fromARGB(0, 107, 104, 94),
                   image: DecorationImage(
                       image: AssetImage("./images/doctor.png"),
@@ -27,7 +27,7 @@ class DoctorSplash extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
+                  children: const [
                     CircleAvatar(
                       backgroundColor: Color.fromARGB(255, 238, 238, 238),
                       child: Icon(
@@ -38,11 +38,11 @@ class DoctorSplash extends StatelessWidget {
                       // backgroundColor: Color(0xfff6f6f6),
                     ),
                     CircleAvatar(
+                      backgroundColor: Color.fromARGB(255, 238, 238, 238),
                       child: Icon(
                         Icons.settings_outlined,
                         color: Color.fromARGB(255, 156, 156, 156),
                       ),
-                      backgroundColor: Color.fromARGB(255, 238, 238, 238),
                     )
                   ],
                 ),
@@ -59,10 +59,10 @@ class DoctorSplash extends StatelessWidget {
                   height: 260,
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.white.withOpacity(0.13)),
-                      borderRadius: BorderRadius.only(
+                      borderRadius: const BorderRadius.only(
                           topRight: Radius.elliptical(30, 30),
                           topLeft: Radius.elliptical(30, 30)),
-                      gradient: LinearGradient(
+                      gradient: const LinearGradient(
                           begin: Alignment.topCenter,
                           end: Alignment.bottomCenter,
                           colors: [
