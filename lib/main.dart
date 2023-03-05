@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'Drone App/drone_dashboard.dart';
 import 'shoes_App/shoes_dashboard.dart';
 import 'shoes_App/shoes_detail.dart';
 
@@ -13,7 +14,7 @@ class Dashboard extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       color: const Color(0xff12151e),
-      home: ShoesDashboard(),
+      home: DroneDashboard(),
     );
   }
 }
