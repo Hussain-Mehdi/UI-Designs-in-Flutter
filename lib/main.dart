@@ -139,11 +139,11 @@ class MyApp extends StatelessWidget {
   List<Widget> createFoodCard(BuildContext context) {
     List<Widget> foodCards = [];
     List<String> foodImages = [
-      './images/1.jpg',
-      './images/2.jpg',
-      './images/3.jpg',
-      './images/4.jpg',
-      './images/5.jpg',
+      './images/foodimages/1.jpg',
+      './images/foodimages/2.jpg',
+      './images/foodimages/3.jpg',
+      './images/foodimages/4.jpg',
+      './images/foodimages/5.jpg',
     ];
 
     int i = 0;
@@ -348,11 +348,11 @@ class MyApp extends StatelessWidget {
   List<Widget> recommendList() {
     List<Widget> foodList = [];
     List<String> foodImages = [
-      './images/1.jpg',
-      './images/2.jpg',
-      './images/3.jpg',
-      './images/4.jpg',
-      './images/5.jpg',
+      './images/foodimages/1.jpg',
+      './images/foodimages/2.jpg',
+      './images/foodimages/3.jpg',
+      './images/foodimages/4.jpg',
+      './images/foodimages/5.jpg',
     ];
 
     int i = 0;

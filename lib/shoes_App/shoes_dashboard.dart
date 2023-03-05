@@ -27,7 +27,7 @@ class _ShoesDashboardState extends State<ShoesDashboard> {
               children: [
                 IconButton(
                     onPressed: () {},
-                    icon: ImageIcon(AssetImage("./images/menu.png"))),
+                    icon: ImageIcon(AssetImage("./images/shoesapp/menu.png"))),
                 IconButton(onPressed: () {}, icon: Icon(Icons.search_outlined))
               ],
             ),
@@ -46,7 +46,8 @@ class _ShoesDashboardState extends State<ShoesDashboard> {
                 ),
                 CircleAvatar(
                   backgroundColor: Color(0xff0a3e7b),
-                  child: ImageIcon(AssetImage("./images/selective.png")),
+                  child:
+                      ImageIcon(AssetImage("./images/shoesapp/selective.png")),
                 )
               ],
             ),
@@ -117,10 +118,10 @@ class _ShoesDashboardState extends State<ShoesDashboard> {
       'Kyrie',
       'Zoom',
       'Cosmic',
-      './images/s0.png',
-      './images/boot1.png',
-      './images/s2.png',
-      './images/s3.png',
+      './images/shoesapp/s0.png',
+      './images/shoesapp/boot1.png',
+      './images/shoesapp/s2.png',
+      './images/shoesapp/s3.png',
     ];
     int i = 0;
     while (i < 4) {
@@ -174,8 +175,9 @@ class _ShoesDashboardState extends State<ShoesDashboard> {
                       });
                     },
                     icon: likepressed == true
-                        ? ImageIcon(AssetImage("./images/heartfill.png"))
-                        : ImageIcon(AssetImage("./images/heart.png"))),
+                        ? ImageIcon(
+                            AssetImage("./images/shoesapp/heartfill.png"))
+                        : ImageIcon(AssetImage("./images/shoesapp/heart.png"))),
               ),
             ),
             AnimatedContainer(

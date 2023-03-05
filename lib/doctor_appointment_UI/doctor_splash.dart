@@ -18,7 +18,7 @@ class DoctorSplash extends StatelessWidget {
               decoration: const BoxDecoration(
                   color: Color.fromARGB(0, 107, 104, 94),
                   image: DecorationImage(
-                      image: AssetImage("./images/doctor.png"),
+                      image: AssetImage("./images/doctorappimages/doctor.png"),
                       fit: BoxFit.cover)),
             ),
             Positioned(

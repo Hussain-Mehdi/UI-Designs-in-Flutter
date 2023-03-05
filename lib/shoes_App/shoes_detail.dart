@@ -29,7 +29,7 @@ class _ShoesDetailState extends State<ShoesDetail> {
               children: [
                 IconButton(
                     onPressed: () {},
-                    icon: ImageIcon(AssetImage("./images/menu.png"))),
+                    icon: ImageIcon(AssetImage("./images/shoesapp/menu.png"))),
                 IconButton(onPressed: () {}, icon: Icon(Icons.search_outlined))
               ],
             ),
@@ -94,7 +94,8 @@ class _ShoesDetailState extends State<ShoesDetail> {
                 children: [
                   IconButton(
                       onPressed: () {},
-                      icon: ImageIcon(AssetImage("./images/heart.png"))),
+                      icon:
+                          ImageIcon(AssetImage("./images/shoesapp/heart.png"))),
                   Column(
                     children: [
                       Text(
@@ -129,10 +130,10 @@ class _ShoesDetailState extends State<ShoesDetail> {
       'Kyrie',
       'Zoom',
       'Cosmic',
-      './images/s0.png',
-      './images/boot1.png',
-      './images/s2.png',
-      './images/s3.png',
+      './images/shoesapp/s0.png',
+      './images/shoesapp/boot1.png',
+      './images/shoesapp/s2.png',
+      './images/shoesapp/s3.png',
     ];
     int i = 0;
     while (i < 4) {

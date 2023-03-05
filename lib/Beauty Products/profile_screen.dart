@@ -52,7 +52,8 @@ class UserProfile extends StatelessWidget {
           const CircleAvatar(
             radius: 130,
             backgroundColor: Color.fromARGB(255, 252, 225, 240),
-            backgroundImage: AssetImage("./images/woman.jpg"),
+            backgroundImage:
+                AssetImage("./images/beautyproductimages/woman.jpg"),
           ),
           const SizedBox(
             height: 10,

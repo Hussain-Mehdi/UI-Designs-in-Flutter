@@ -163,7 +163,8 @@ class DailyPlan extends StatelessWidget {
                                 child: Row(
                                   children: const [
                                     ImageIcon(
-                                      AssetImage("./images/task.png"),
+                                      AssetImage(
+                                          "./images/managementapp/task.png"),
                                       size: 12,
                                     ),
                                     Text(
@@ -273,10 +274,10 @@ class DailyPlan extends StatelessWidget {
     List<Widget> profiles = [];
     int i = 0;
     List<String> users = [
-      './images/pot1.jpg',
-      './images/pot2.jpg',
-      './images/pot3.jpg',
-      './images/pot4.jpg',
+      './images/managementapp/pot1.jpg',
+      './images/managementapp/pot2.jpg',
+      './images/managementapp/pot3.jpg',
+      './images/managementapp/pot4.jpg',
     ];
 
     while (i < 4) {

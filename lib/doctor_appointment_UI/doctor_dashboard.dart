@@ -20,7 +20,8 @@ class DoctorDashboard extends StatelessWidget {
               children: const [
                 CircleAvatar(
                   radius: 35,
-                  backgroundImage: AssetImage("./images/pot1.jpg"),
+                  backgroundImage:
+                      AssetImage("./images/doctorappimages/pot1.jpg"),
                 ),
                 CircleAvatar(
                   radius: 26,
@@ -147,9 +148,9 @@ class DoctorDashboard extends StatelessWidget {
   List<Widget> createTopDoctor(BuildContext context) {
     List<Widget> topdoctors = [];
     List<String> doctorImg = [
-      './images/doctor2.png',
-      './images/doctor1.png',
-      './images/doctor.png',
+      './images/doctorappimages/doctor2.png',
+      './images/doctorappimages/doctor1.png',
+      './images/doctorappimages/doctor.png',
       'Dr.Benjamin',
       'Dr.Amelia',
       'Dr.Lucas',
@@ -258,20 +259,23 @@ class Doctors {
             children: const [
               CircleAvatar(
                 radius: 15,
-                backgroundImage: AssetImage("./images/doctor.png"),
+                backgroundImage:
+                    AssetImage("./images/doctorappimages/doctor.png"),
               ),
               Positioned(
                 left: 20,
                 child: CircleAvatar(
                   radius: 15,
-                  backgroundImage: AssetImage("./images/doctor1.png"),
+                  backgroundImage:
+                      AssetImage("./images/doctorappimages/doctor1.png"),
                 ),
               ),
               Positioned(
                 left: 40,
                 child: CircleAvatar(
                   radius: 15,
-                  backgroundImage: AssetImage("./images/doctor2.png"),
+                  backgroundImage:
+                      AssetImage("./images/doctorappimages/doctor2.png"),
                 ),
               )
             ],
@@ -290,20 +294,23 @@ class Doctors {
             children: const [
               CircleAvatar(
                 radius: 15,
-                backgroundImage: AssetImage("./images/doctor.png"),
+                backgroundImage:
+                    AssetImage("./images/doctorappimages/doctor.png"),
               ),
               Positioned(
                 left: 20,
                 child: CircleAvatar(
                   radius: 15,
-                  backgroundImage: AssetImage("./images/doctor1.png"),
+                  backgroundImage:
+                      AssetImage("./images/doctorappimages/doctor1.png"),
                 ),
               ),
               Positioned(
                 left: 40,
                 child: CircleAvatar(
                   radius: 15,
-                  backgroundImage: AssetImage("./images/doctor2.png"),
+                  backgroundImage:
+                      AssetImage("./images/doctorappimages/doctor2.png"),
                 ),
               )
             ],
@@ -311,7 +318,7 @@ class Doctors {
         ),
         const CircleAvatar(
           radius: 25,
-          child: ImageIcon(AssetImage("./images/tooth.png")),
+          child: ImageIcon(AssetImage("./images/doctorappimages/tooth.png")),
         )));
     doctorList.add(Doctors(
         "Neurosurgery",
@@ -322,27 +329,32 @@ class Doctors {
             children: const [
               CircleAvatar(
                 radius: 15,
-                backgroundImage: AssetImage("./images/doctor.png"),
+                backgroundImage:
+                    AssetImage("./images/doctorappimages/doctor.png"),
               ),
               Positioned(
                 left: 20,
                 child: CircleAvatar(
                   radius: 15,
-                  backgroundImage: AssetImage("./images/doctor1.png"),
+                  backgroundImage:
+                      AssetImage("./images/doctorappimages/doctor1.png"),
                 ),
               ),
               Positioned(
                 left: 40,
                 child: CircleAvatar(
                   radius: 15,
-                  backgroundImage: AssetImage("./images/doctor2.png"),
+                  backgroundImage:
+                      AssetImage("./images/doctorappimages/doctor2.png"),
                 ),
               )
             ],
           ),
         ),
         const CircleAvatar(
-            radius: 25, child: ImageIcon(AssetImage("./images/brain.png")))));
+            radius: 25,
+            child:
+                ImageIcon(AssetImage("./images/doctorappimages/brain.png")))));
 
     doctorList.add(Doctors(
         "Pediatrics",
@@ -353,20 +365,23 @@ class Doctors {
             children: const [
               CircleAvatar(
                 radius: 15,
-                backgroundImage: AssetImage("./images/doctor.png"),
+                backgroundImage:
+                    AssetImage("./images/doctorappimages/doctor.png"),
               ),
               Positioned(
                 left: 20,
                 child: CircleAvatar(
                   radius: 15,
-                  backgroundImage: AssetImage("./images/doctor1.png"),
+                  backgroundImage:
+                      AssetImage("./images/doctorappimages/doctor1.png"),
                 ),
               ),
               Positioned(
                 left: 40,
                 child: CircleAvatar(
                   radius: 15,
-                  backgroundImage: AssetImage("./images/doctor2.png"),
+                  backgroundImage:
+                      AssetImage("./images/doctorappimages/doctor2.png"),
                 ),
               )
             ],
@@ -374,7 +389,8 @@ class Doctors {
         ),
         const CircleAvatar(
             radius: 25,
-            child: ImageIcon(AssetImage("./images/pediatrics.png")))));
+            child: ImageIcon(
+                AssetImage("./images/doctorappimages/pediatrics.png")))));
     doctorList.add(Doctors(
         "Pulmonology",
         "12 doctors",
@@ -384,20 +400,22 @@ class Doctors {
             children: const [
               CircleAvatar(
                 radius: 15,
-                backgroundImage: AssetImage("./images/doctor.png"),
+                backgroundImage:
+                    AssetImage("./images/doctorappimages/doctor.png"),
               ),
               Positioned(
                 left: 20,
                 child: CircleAvatar(
                   radius: 15,
-                  backgroundImage: AssetImage("./images/doctor1.png"),
+                  // backgroundImage: AssetImage("./images/doctorappimagesdoctor1.png"),
                 ),
               ),
               Positioned(
                 left: 40,
                 child: CircleAvatar(
                   radius: 15,
-                  backgroundImage: AssetImage("./images/doctor2.png"),
+                  backgroundImage:
+                      AssetImage("./images/doctorappimages/doctor2.png"),
                 ),
               )
             ],
@@ -405,7 +423,8 @@ class Doctors {
         ),
         const CircleAvatar(
             radius: 25,
-            child: ImageIcon(AssetImage("./images/pulmonology.png")))));
+            child: ImageIcon(
+                AssetImage("./images/doctorappimages/pulmonology.png")))));
     doctorList.add(Doctors(
         "Opthalmology",
         "12 doctors",
@@ -415,27 +434,31 @@ class Doctors {
             children: const [
               CircleAvatar(
                 radius: 15,
-                backgroundImage: AssetImage("./images/doctor.png"),
+                backgroundImage:
+                    AssetImage("./images/doctorappimages/doctor.png"),
               ),
               Positioned(
                 left: 20,
                 child: CircleAvatar(
                   radius: 15,
-                  backgroundImage: AssetImage("./images/doctor1.png"),
+                  backgroundImage:
+                      AssetImage("./images/doctorappimages/doctor1.png"),
                 ),
               ),
               Positioned(
                 left: 40,
                 child: CircleAvatar(
                   radius: 15,
-                  backgroundImage: AssetImage("./images/doctor2.png"),
+                  backgroundImage:
+                      AssetImage("./images/doctorappimages/doctor2.png"),
                 ),
               )
             ],
           ),
         ),
         const CircleAvatar(
-            radius: 25, child: ImageIcon(AssetImage("./images/eye.png")))));
+            radius: 25,
+            child: ImageIcon(AssetImage("./images/doctorappimages/eye.png")))));
 
     return doctorList;
   }

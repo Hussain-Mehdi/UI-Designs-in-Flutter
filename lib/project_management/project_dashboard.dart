@@ -19,7 +19,8 @@ class ProjectDashboard extends StatelessWidget {
               children: const [
                 CircleAvatar(
                   radius: 25,
-                  backgroundImage: AssetImage("./images/pot5.jpg"),
+                  backgroundImage:
+                      AssetImage("./images/managementapp/pot5.jpg"),
                 ),
                 Padding(
                   padding: EdgeInsets.only(left: 8.0),
@@ -150,10 +151,10 @@ class ProjectDashboard extends StatelessWidget {
     List<Widget> profiles = [];
     int i = 0;
     List<String> users = [
-      './images/pot1.jpg',
-      './images/pot2.jpg',
-      './images/pot3.jpg',
-      './images/pot4.jpg',
+      './images/managementapp/pot1.jpg',
+      './images/managementapp/pot2.jpg',
+      './images/managementapp/pot3.jpg',
+      './images/managementapp/pot4.jpg',
     ];
 
     while (i < 4) {

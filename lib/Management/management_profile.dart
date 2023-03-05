@@ -25,7 +25,8 @@ class ManagementProfile extends StatelessWidget {
                 children: [
                   const CircleAvatar(
                     radius: 50,
-                    backgroundImage: AssetImage("./images/pot2.jpg"),
+                    backgroundImage:
+                        AssetImage("./images/managementapp/pot2.jpg"),
                   ),
                   const SizedBox(
                     height: 10,
@@ -171,7 +172,7 @@ class ManagementProfile extends StatelessWidget {
     List<Widget> folders = [];
 
     List<String> projectdetail = [
-      './images/folder.png',
+      './images/managementapp/folder.png',
       'Dribble share',
       'Draw.io',
       'Notion',
@@ -235,24 +236,24 @@ class ManagementProfile extends StatelessWidget {
                                   left: 0,
                                   child: CircleAvatar(
                                     radius: 10,
-                                    backgroundImage:
-                                        AssetImage("./images/pot1.jpg"),
+                                    backgroundImage: AssetImage(
+                                        "./images/managementapp/pot1.jpg"),
                                   ),
                                 ),
                                 Positioned(
                                   left: 35,
                                   child: CircleAvatar(
                                     radius: 10,
-                                    backgroundImage:
-                                        AssetImage("./images/pot1.jpg"),
+                                    backgroundImage: AssetImage(
+                                        "./images/managementapp/pot1.jpg"),
                                   ),
                                 ),
                                 Positioned(
                                   right: 20,
                                   child: CircleAvatar(
                                     radius: 12,
-                                    backgroundImage:
-                                        AssetImage("./images/pot1.jpg"),
+                                    backgroundImage: AssetImage(
+                                        "./images/managementapp/pot1.jpg"),
                                   ),
                                 )
                               ],
@@ -277,9 +278,9 @@ class ManagementProfile extends StatelessWidget {
     List<Widget> folders = [];
 
     List<String> projectdetail = [
-      './images/shopping.png',
-      './images/ai.png',
-      './images/dish.png',
+      './images/managementapp/shopping.png',
+      './images/managementapp/ai.png',
+      './images/managementapp/dish.png',
       'E-commerce  Application',
       'Artifical Intelligence',
       'Food',
@@ -329,14 +330,16 @@ class ManagementProfile extends StatelessWidget {
                         Positioned(
                           child: CircleAvatar(
                             radius: 10,
-                            backgroundImage: AssetImage("./images/pot1.jpg"),
+                            backgroundImage:
+                                AssetImage("./images/managementapp/pot1.jpg"),
                           ),
                         ),
                         Positioned(
                           left: 15,
                           child: CircleAvatar(
                             radius: 10,
-                            backgroundImage: AssetImage("./images/pot1.jpg"),
+                            backgroundImage:
+                                AssetImage("./images/managementapp/pot1.jpg"),
                           ),
                         ),
                       ],

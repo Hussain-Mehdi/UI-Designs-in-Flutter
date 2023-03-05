@@ -186,7 +186,7 @@ class ProjectDashBoard extends StatelessWidget {
               left: 15,
               child: CircleAvatar(
                 radius: 15,
-                backgroundImage: AssetImage("./images/pot1.jpg"),
+                backgroundImage: AssetImage("./images/todoapp/pot1.jpg"),
               ),
             ),
             const Positioned(
@@ -194,7 +194,7 @@ class ProjectDashBoard extends StatelessWidget {
               left: 28,
               child: CircleAvatar(
                 radius: 15,
-                backgroundImage: AssetImage("./images/pot2.jpg"),
+                backgroundImage: AssetImage("./images/todoapp/pot2.jpg"),
               ),
             ),
             const Positioned(
@@ -202,7 +202,7 @@ class ProjectDashBoard extends StatelessWidget {
               left: 45,
               child: CircleAvatar(
                 radius: 15,
-                backgroundImage: AssetImage("./images/pot3.jpg"),
+                backgroundImage: AssetImage("./images/todoapp/pot3.jpg"),
               ),
             ),
             Positioned(

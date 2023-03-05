@@ -53,7 +53,8 @@ class DoctorDetail extends StatelessWidget {
                     width: 150,
                     decoration: const BoxDecoration(
                         image: DecorationImage(
-                            image: AssetImage('./images/doctor2.png'),
+                            image: AssetImage(
+                                './images/doctorappimages/doctor2.png'),
                             fit: BoxFit.cover)),
                   ),
                   Padding(
@@ -125,7 +126,8 @@ class DoctorDetail extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   image: const DecorationImage(
                       fit: BoxFit.cover,
-                      image: AssetImage("./images/location.png"))),
+                      image:
+                          AssetImage("./images/doctorappimages/location.png"))),
             ),
           ),
           const Padding(

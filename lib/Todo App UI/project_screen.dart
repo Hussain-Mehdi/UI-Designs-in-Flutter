@@ -19,7 +19,7 @@ class MyProject extends StatelessWidget {
                 padding: EdgeInsets.all(8.0),
                 child: CircleAvatar(
                   radius: 30,
-                  backgroundImage: AssetImage("./images/pot1.jpg"),
+                  backgroundImage: AssetImage("./images/todoapp/pot1.jpg"),
                 ),
               ),
               Padding(
@@ -176,25 +176,25 @@ class MyProject extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.only(left: 10.0, right: 10),
                     child: CircleAvatar(
-                      backgroundImage: AssetImage("./images/pot1.jpg"),
+                      backgroundImage: AssetImage("./images/todoapp/pot1.jpg"),
                     ),
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: 10.0, right: 10),
                     child: CircleAvatar(
-                      backgroundImage: AssetImage("./images/pot2.jpg"),
+                      backgroundImage: AssetImage("./images/todoapp/pot2.jpg"),
                     ),
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: 10.0, right: 10),
                     child: CircleAvatar(
-                      backgroundImage: AssetImage("./images/pot3.jpg"),
+                      backgroundImage: AssetImage("./images/todoapp/pot3.jpg"),
                     ),
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: 10.0, right: 10),
                     child: CircleAvatar(
-                      backgroundImage: AssetImage("./images/pot4.jpg"),
+                      backgroundImage: AssetImage("./images/todoapp/pot4.jpg"),
                     ),
                   ),
                 ],
@@ -285,7 +285,7 @@ class MyProject extends StatelessWidget {
               left: 15,
               child: CircleAvatar(
                 radius: 15,
-                backgroundImage: AssetImage("./images/pot1.jpg"),
+                backgroundImage: AssetImage("./images/todoapp/pot1.jpg"),
               ),
             ),
             const Positioned(
@@ -293,7 +293,7 @@ class MyProject extends StatelessWidget {
               left: 28,
               child: CircleAvatar(
                 radius: 15,
-                backgroundImage: AssetImage("./images/pot2.jpg"),
+                backgroundImage: AssetImage("./images/todoapp/pot2.jpg"),
               ),
             ),
             const Positioned(
@@ -301,7 +301,7 @@ class MyProject extends StatelessWidget {
               left: 45,
               child: CircleAvatar(
                 radius: 15,
-                backgroundImage: AssetImage("./images/pot3.jpg"),
+                backgroundImage: AssetImage("./images/todoapp/pot3.jpg"),
               ),
             ),
             Positioned(

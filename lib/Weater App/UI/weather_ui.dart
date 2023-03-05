@@ -25,7 +25,7 @@ class WeatherUI extends StatelessWidget {
                   image: DecorationImage(
                 fit: BoxFit.contain,
                 image: AssetImage(
-                  "./images/27.png",
+                  "./images/weatherimages/27.png",
                 ),
               )),
             )),
@@ -90,14 +90,14 @@ class WeatherUI extends StatelessWidget {
   }
 
   List<String> images = [
-    './images/4.png',
-    './images/6.png',
-    './images/8.png',
-    './images/13.png',
-    './images/16.png',
-    './images/26.png',
-    './images/28.png',
-    './images/30.png',
+    './images/weatherimages/4.png',
+    './images/weatherimages/6.png',
+    './images/weatherimages/8.png',
+    './images/weatherimages/13.png',
+    './images/weatherimages/16.png',
+    './images/weatherimages/26.png',
+    './images/weatherimages/28.png',
+    './images/weatherimages/30.png',
   ];
 
   Widget weatherDetail(BuildContext context) {
@@ -204,7 +204,8 @@ class WeatherUI extends StatelessWidget {
                         margin: const EdgeInsets.fromLTRB(150, 0, 0, 10),
                         decoration: const BoxDecoration(
                             image: DecorationImage(
-                                image: AssetImage("./images/27.png"))),
+                                image: AssetImage(
+                                    "./images/weatherimages/27.png"))),
                       ),
                     ),
                     Positioned(
@@ -440,7 +441,8 @@ class WeatherUI extends StatelessWidget {
           margin: const EdgeInsets.only(bottom: 30),
           decoration: const BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage("./images/graph.png"), fit: BoxFit.cover)),
+                  image: AssetImage("./images/weatherimages/graph.png"),
+                  fit: BoxFit.cover)),
         )
       ],
     );

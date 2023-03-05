@@ -10,7 +10,7 @@ class ManagementDashboard extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
             onPressed: () {},
-            icon: const ImageIcon(AssetImage("./images/dd.png"),
+            icon: const ImageIcon(AssetImage("./images/managementapp/dd.png"),
                 size: 23, color: Color(0xff0a3e7b))),
         backgroundColor: Colors.white,
         elevation: 0,
@@ -102,7 +102,7 @@ class ManagementDashboard extends StatelessWidget {
                     decoration: const BoxDecoration(
                         image: DecorationImage(
                             image: AssetImage(
-                              "./images/management.png",
+                              "./images/managementapp/management.png",
                             ),
                             fit: BoxFit.cover)),
                   )
@@ -151,10 +151,10 @@ class ManagementDashboard extends StatelessWidget {
 
   Widget createProject(int index) {
     List<String> projectdetail = [
-      './images/app.png',
-      './images/dd.png',
-      './images/announcement.png',
-      './images/ui.png',
+      './images/managementapp/app.png',
+      './images/managementapp/dd.png',
+      './images/managementapp/announcement.png',
+      './images/managementapp/ui.png',
       'Mobile App',
       'Dashboard',
       'Banner',
