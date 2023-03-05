@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'shoes_App/shoes_dashboard.dart';
+import 'shoes_App/shoes_detail.dart';
 
 void main() {
   runApp(Dashboard());
