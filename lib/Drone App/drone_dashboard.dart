@@ -180,6 +180,7 @@ class DroneDashboard extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
                 color: Color.fromARGB(255, 241, 241, 241)),
             child: InkWell(
+                borderRadius: BorderRadius.circular(10),
                 onTap: () {},
                 child: Column(children: [
                   Container(
