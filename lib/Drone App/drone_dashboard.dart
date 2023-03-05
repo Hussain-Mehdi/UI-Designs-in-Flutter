@@ -59,7 +59,7 @@ class DroneDashboard extends StatelessWidget {
                     Text(
                       "Athletic",
                       style: TextStyle(
-                          color: Color(0xff0a3e7b),
+                          color: Color.fromARGB(255, 66, 112, 165),
                           fontSize: 14,
                           fontWeight: FontWeight.w600),
                     ),
@@ -172,35 +172,39 @@ class DroneDashboard extends StatelessWidget {
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2, mainAxisSpacing: 12, crossAxisSpacing: 12),
       itemBuilder: (context, index) {
-        return Container(
+        return Material(
+          child: Ink(
             width: 130,
             height: 50,
             decoration: BoxDecoration(
-              color: Color.fromARGB(255, 235, 235, 235),
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: Column(children: [
-              Container(
-                margin: EdgeInsets.only(top: 20),
-                height: 80,
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        fit: BoxFit.contain,
-                        image: AssetImage(droneDetail[index]))),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Text(
-                droneDetail[5 + index],
-                style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
-              ),
-              Text(
-                droneDetail[9 + index],
-                style: TextStyle(
-                    fontSize: 12, color: Color.fromARGB(118, 0, 0, 0)),
-              ),
-            ]));
+                borderRadius: BorderRadius.circular(10),
+                color: Color.fromARGB(255, 241, 241, 241)),
+            child: InkWell(
+                onTap: () {},
+                child: Column(children: [
+                  Container(
+                    margin: EdgeInsets.only(top: 20),
+                    height: 80,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            fit: BoxFit.contain,
+                            image: AssetImage(droneDetail[index]))),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    droneDetail[5 + index],
+                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    droneDetail[9 + index],
+                    style: TextStyle(
+                        fontSize: 12, color: Color.fromARGB(118, 0, 0, 0)),
+                  ),
+                ])),
+          ),
+        );
       },
     );
   }
