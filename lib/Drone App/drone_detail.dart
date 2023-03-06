@@ -90,7 +90,7 @@ class DroneDetail extends StatelessWidget {
           Container(
             margin: EdgeInsets.only(left: 20, right: 20, bottom: 20, top: 10),
             child: Text(
-              "Plant stand count is an essential task in yield management. It allows growers to estimate the plant population, density, germination rate, and plant health and make timely decisions that finally affect the yield.",
+              "The DJI Mavic 2 Pro is a modern classic thanks to being the first consumer drone featuring a 1-inch sensor and adjustable aperture. With multiple flight modes, intelligent safety features and the ability to capture professional-quality stills and video.",
               style:
                   TextStyle(fontSize: 12, color: Color.fromARGB(118, 0, 0, 0)),
             ),
