@@ -1,8 +1,7 @@
-# simple_food_ui
+# UI Designs in Flutter
+ <img src="images/flutter.webp" width="350" title="hover text">
 
-A new Flutter project.
-
-## Getting Started
+This repository contains multiple arractive and eye catching MobileApp UIs design in Flutter/Dart. Every UI code and images are boxed in separate folder with its name.
 
 This project is a starting point for a Flutter application.
 
@@ -14,6 +13,9 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+
+
 
  <h2>Food App</h2>
   <img src="images\foodimages/mainscreen.png" width="350" title="hover text">
