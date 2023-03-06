@@ -59,28 +59,28 @@ class DroneDashboard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Athletic",
+                      "Phantom",
                       style: TextStyle(
                           color: Color.fromARGB(255, 66, 112, 165),
                           fontSize: 14,
                           fontWeight: FontWeight.w600),
                     ),
                     Text(
-                      "Casual",
+                      "Mavic",
                       style: TextStyle(
                           color: Color.fromARGB(255, 98, 109, 122),
                           fontSize: 12,
                           fontWeight: FontWeight.w500),
                     ),
                     Text(
-                      "Loafers",
+                      "Raven",
                       style: TextStyle(
                           color: Color.fromARGB(255, 98, 109, 122),
                           fontSize: 12,
                           fontWeight: FontWeight.w500),
                     ),
                     Text(
-                      "Sneakers",
+                      "Arial",
                       style: TextStyle(
                           color: Color.fromARGB(255, 98, 109, 122),
                           fontSize: 12,
