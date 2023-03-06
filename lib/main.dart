@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'Drone App/drone_dashboard.dart';
+import 'car app/car_dashboard.dart';
+import 'car app/car_detail.dart';
 import 'shoes_App/shoes_dashboard.dart';
 import 'shoes_App/shoes_detail.dart';
 
@@ -14,7 +16,7 @@ class Dashboard extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       color: const Color(0xff12151e),
-      home: DroneDashboard(),
+      home: CarDashboard(),
     );
   }
 }
