@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'drone_detail.dart';
+
 class DroneDashboard extends StatelessWidget {
   const DroneDashboard({super.key});
 
@@ -181,7 +183,14 @@ class DroneDashboard extends StatelessWidget {
                 color: Color.fromARGB(255, 241, 241, 241)),
             child: InkWell(
                 borderRadius: BorderRadius.circular(10),
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => DroneDetail(
+                            droneDetail[index], droneDetail[5 + index]),
+                      ));
+                },
                 child: Column(children: [
                   Container(
                     margin: EdgeInsets.only(top: 20),
