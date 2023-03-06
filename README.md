@@ -59,4 +59,5 @@ samples, guidance on mobile development, and a full API reference.
  <hr>
  <h2>Drone App</h2>
  <img src="images\droneimages/dronedashboard.png" width="350" title="hover text">
+ <img src="images\droneimages/dronedetail.png" width="350" title="hover text">
  
