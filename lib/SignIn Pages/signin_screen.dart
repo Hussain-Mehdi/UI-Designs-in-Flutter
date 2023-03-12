@@ -95,7 +95,7 @@ class SigninScreen extends StatelessWidget {
                             child: Text(
                               "Forgot Password?",
                               style: TextStyle(
-                                  color: Colors.black87, fontSize: 14),
+                                  color: Colors.black87, fontSize: 12),
                             )),
                       ),
                       Padding(
@@ -123,7 +123,7 @@ class SigninScreen extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(top: 100.0),
+                        padding: const EdgeInsets.only(top: 70.0),
                         child: Container(
                           height: 60,
                           decoration: BoxDecoration(
