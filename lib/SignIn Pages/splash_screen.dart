@@ -22,7 +22,7 @@ class SplashScreen extends StatelessWidget {
             ),
             Positioned(
               left: -130,
-              bottom: -80,
+              bottom: -70,
               child: Container(
                 height: 350,
                 width: 350,
@@ -32,13 +32,37 @@ class SplashScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-                top: 220,
-                left: 110,
-                child: Container(
-                  color: Colors.black,
-                  height: 200,
-                  width: 150,
-                ))
+              top: 290,
+              left: 100,
+              child: Container(
+                height: 200,
+                child: Column(
+                  children: [
+                    Container(
+                        height: 90,
+                        width: 100,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("./images/sigin/beer.png")))),
+                    Text(
+                      "Deeps",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 30,
+                          fontWeight: FontWeight.w800),
+                    ),
+                    Text(
+                      "BEERCAFE",
+                      style: TextStyle(
+                          color: Colors.black87,
+                          letterSpacing: 10,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500),
+                    )
+                  ],
+                ),
+              ),
+            )
           ],
         ),
       ),
