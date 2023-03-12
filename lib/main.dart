@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'Drone App/drone_dashboard.dart';
+import 'SignIn Pages/splash_screen.dart';
 import 'car app/car_dashboard.dart';
 import 'car app/car_detail.dart';
 import 'shoes_App/shoes_dashboard.dart';
@@ -16,7 +17,7 @@ class Dashboard extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       color: const Color(0xff12151e),
-      home: CarDashboard(),
+      home: SplashScreen(),
     );
   }
 }
