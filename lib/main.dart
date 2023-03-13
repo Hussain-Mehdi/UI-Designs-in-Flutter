@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'Drone App/drone_dashboard.dart';
+import 'MindScap/dashboard.dart';
 import 'SignIn Pages/dashboard_screen.dart';
 import 'SignIn Pages/signin_screen.dart';
 import 'SignIn Pages/splash_screen.dart';
@@ -19,75 +20,13 @@ class Dashboard extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       color: const Color(0xff12151e),
-      home: SigninDashboard(),
+      home: MindScapeDashboard(),
     );
   }
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: const Color(0xff12151e),
-        body: Column(
-          children: [
-            const SizedBox(
-              height: 70,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 15),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Text(
-                    "Hello,\nKristen",
-                    style: TextStyle(
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white),
-                  ),
-                  CircleAvatar(
-                    radius: 30,
-                    backgroundImage: NetworkImage(
-                        "https://images.pexels.com/photos/15545223/pexels-photo-15545223.jpeg"),
-                  )
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 50,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: createRecommend(),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 15, left: 8.0, right: 8.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Text(
-                    "Popular 3253",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  ImageIcon(
-                    NetworkImage(
-                        "https://cdn-icons-png.flaticon.com/512/9702/9702724.png"),
-                    color: Colors.white,
-                  )
-                ],
-              ),
-            ),
-            Expanded(
-              child: ListView(
-                children: createFoodCard(context),
-              ),
-            )
-          ],
-        ));
-  }
 
   List<Widget> createRecommend() {
     List<Widget> pills = [];
@@ -436,6 +375,68 @@ class MyApp extends StatelessWidget {
         child: SizedBox(
           width: width,
           child: Image(image: AssetImage(path)),
+        ));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: const Color(0xff12151e),
+        body: Column(
+          children: [
+            const SizedBox(
+              height: 70,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 15),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Text(
+                    "Hello,\nKristen",
+                    style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                  ),
+                  CircleAvatar(
+                    radius: 30,
+                    backgroundImage: NetworkImage(
+                        "https://images.pexels.com/photos/15545223/pexels-photo-15545223.jpeg"),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 50,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: createRecommend(),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 15, left: 8.0, right: 8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Text(
+                    "Popular 3253",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  ImageIcon(
+                    NetworkImage(
+                        "https://cdn-icons-png.flaticon.com/512/9702/9702724.png"),
+                    color: Colors.white,
+                  )
+                ],
+              ),
+            ),
+            Expanded(
+              child: ListView(
+                children: createFoodCard(context),
+              ),
+            )
+          ],
         ));
   }
 }
