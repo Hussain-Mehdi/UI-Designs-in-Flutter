@@ -15,55 +15,80 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 
-
-
- <h2>Food App</h2>
-  <img src="images\foodimages/mainscreen.png" width="350" title="hover text">
-  <img src="images\foodimages/secondscreen.png" width="350" alt="accessibility text">
-  <hr>
-  <p>
+<h2>Food App</h2>
+<p>
+ 
+  <img src="images\foodimages/mainscreen.png" width="270" >
+  <img src="images\foodimages/secondscreen.png" width="270">
+  </p>
   <h2>Weather App Design</h2>
+  <p>
+  
  <img src="images\weatherimages/weather1.png" width="350" title="hover text">
   <img src="images\weatherimages/weather2.png" width="350" alt="accessibility text">
   </p>
   
   <hr>
-  <h2>Woman Beauty Product</h2>
+   <h2>Woman Beauty Product</h2>
+  <p>
+ 
  <img src="images\beautyproductimages/normal1.png" width="350" title="hover text">
   <img src="images\beautyproductimages/normal2.png" width="350" alt="accessibility text">
-  
+  </p>
 
   
   <hr>
-  <h2>Todo App UI</h2>
+   <h2>Todo App UI</h2>
+  <p>
+ 
  <img src="images\todoapp/todo2.png" width="350" title="hover text">
   <img src="images\todoapp/todo1.png" width="350" alt="accessibility text">
-
+</p>
   <hr>
-  <h2>Doctor App UI</h2>
+   <h2>Doctor App UI</h2>
+  <p>
+ 
  <img src="images\doctorappimages/doctordetaildone2.png" width="350" title="hover text">
   <img src="images\doctorappimages/doctordetaildone1.png" width="350" alt="accessibility text">
-  
-  <h2>Project Management</h2>
+  </p>
+   <h2>Project Management</h2>
+  <p>
+ 
  <img src="images\managementapp/projectpic2.png" width="350" title="hover text">
  <img src="images\managementapp/projectpic1.png" width="350" alt="accessibility text">
-
-
+</p>
   <h2>Project Management</h2>
+<p>
+
  <img src="images\projectmanagement/management1.png" width="350" title="hover text">
  <img src="images\projectmanagement/management2.png" width="350" alt="accessibility text">
+ </p>
  
   <h2>Shoes App</h2>
- <img src="images\shoesapp/shoesdashboard1.png" width="350" title="hover text">
-  <img src="images\shoesapp/shoesdashboard2.png" width="350" title="hover text">
- <img src="images\shoesapp/shoesdetail.png" width="350" alt="accessibility text">
+ <p>
  
+ <img src="images\shoesapp/shoesdashboard1.png" width="330" title="hover text">
+  <img src="images\shoesapp/shoesdashboard2.png" width="330" title="hover text">
+ <img src="images\shoesapp/shoesdetail.png" width="330" alt="accessibility text">
+ </p>
  <h2>Drone Store App</h2>
+ <p>
+ 
   <img src="images\droneimages/dronedashboard.png" width="350" title="hover text">
  <img src="images\droneimages/dronedetail.png" width="350" alt="accessibility text">
- 
+ </p>
   <h2>Car App</h2>
+ <p>
+ 
   <img src="images\carapp/cardashboard.png" width="350" title="hover text">
  <img src="images\carapp/cardetail.png" width="350" alt="accessibility text">
+ </p>
  
+  <h2>Cafe</h2>
+ <p>
+ 
+ <img src="images\sigin/splash.png" width="330" title="hover text">
+  <img src="images\sigin/dashboard.png" width="330" title="hover text">
+ <img src="images\sigin/signin.png" width="330" alt="accessibility text">
+ </p>
  
