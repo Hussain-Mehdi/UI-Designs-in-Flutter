@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'moneyhome_screen.dart';
+
 class MoneyDashboard extends StatelessWidget {
   const MoneyDashboard({super.key});
 
@@ -47,26 +49,35 @@ class MoneyDashboard extends StatelessWidget {
                           AssetImage("./images/moneymanagement/dashboard.png"),
                       fit: BoxFit.cover)),
             ),
-            Container(
-              margin: EdgeInsets.only(top: 650, left: 100),
-              height: 60,
-              width: 160,
-              decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                        color: Color.fromARGB(193, 117, 74, 255),
-                        blurRadius: 30,
-                        spreadRadius: 2)
-                  ],
-                  color: Color(0xff492ab3),
-                  borderRadius: BorderRadius.all(Radius.circular(30))),
-              child: Center(
-                child: Text(
-                  "Get Started",
-                  style: TextStyle(
-                      color: Color.fromARGB(255, 228, 228, 228),
-                      fontSize: 14,
-                      fontWeight: FontWeight.w700),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MoneyHomeScreen(),
+                    ));
+              },
+              child: Container(
+                margin: EdgeInsets.only(top: 650, left: 100),
+                height: 60,
+                width: 160,
+                decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                          color: Color.fromARGB(193, 117, 74, 255),
+                          blurRadius: 30,
+                          spreadRadius: 2)
+                    ],
+                    color: Color(0xff492ab3),
+                    borderRadius: BorderRadius.all(Radius.circular(30))),
+                child: Center(
+                  child: Text(
+                    "Get Started",
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 228, 228, 228),
+                        fontSize: 14,
+                        fontWeight: FontWeight.w700),
+                  ),
                 ),
               ),
             ),
