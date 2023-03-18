@@ -23,7 +23,7 @@ class Dashboard extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       color: const Color(0xff12151e),
-      home: BankDashboard(),
+      home: TransactionDone(),
     );
   }
 }

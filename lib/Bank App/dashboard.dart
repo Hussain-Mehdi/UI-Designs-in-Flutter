@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class BankDashboard extends StatelessWidget {
-  const BankDashboard({super.key});
+class TransactionDone extends StatelessWidget {
+  const TransactionDone({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,12 +22,11 @@ class BankDashboard extends StatelessWidget {
                 children: [
                   Positioned(
                       left: 90,
-                      top: 20,
-                      child: Icon(
-                        Icons.check,
-                        weight: 1,
+                      top: 35,
+                      child: ImageIcon(
+                        AssetImage("./images/bankapp/check.png"),
                         color: Colors.black45,
-                        size: 50,
+                        size: 40,
                       )),
                   Positioned(
                       left: 80,
@@ -169,17 +168,24 @@ class BankDashboard extends StatelessWidget {
                     Positioned(
                       top: 290,
                       left: 90,
-                      child: Container(
-                        width: 180,
-                        height: 60,
-                        decoration: BoxDecoration(
-                            color: Color(0xfffbd282),
-                            borderRadius: BorderRadius.circular(30)),
-                        child: Center(
-                          child: Text(
-                            "Ok",
-                            style:
-                                TextStyle(color: Color.fromARGB(209, 0, 0, 0)),
+                      child: Material(
+                        borderRadius: BorderRadius.circular(30),
+                        child: InkWell(
+                          borderRadius: BorderRadius.circular(30),
+                          onTap: () {},
+                          child: Ink(
+                            width: 180,
+                            height: 60,
+                            decoration: BoxDecoration(
+                                color: Color(0xfffbd282),
+                                borderRadius: BorderRadius.circular(30)),
+                            child: Center(
+                              child: Text(
+                                "Ok",
+                                style: TextStyle(
+                                    color: Color.fromARGB(209, 56, 56, 56)),
+                              ),
+                            ),
                           ),
                         ),
                       ),
