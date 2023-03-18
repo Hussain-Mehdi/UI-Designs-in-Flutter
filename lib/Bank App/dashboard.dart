@@ -67,13 +67,12 @@ class BankDashboard extends StatelessWidget {
                     Positioned(
                       top: 100,
                       left: 60,
-                      child: Text(
-                        "Amount".toUpperCase(),
-                        style: TextStyle(
+                      child: Text("Amount".toUpperCase(),
+                          style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w400,
-                            color: Color.fromARGB(167, 0, 0, 0)),
-                      ),
+                            color: Color(0xff8b8d8c),
+                          )),
                     ),
                     Container(
                       child: Stack(
@@ -132,13 +131,12 @@ class BankDashboard extends StatelessWidget {
                     Positioned(
                       top: 100,
                       left: 210,
-                      child: Text(
-                        "withdraw".toUpperCase(),
-                        style: TextStyle(
+                      child: Text("withdraw".toUpperCase(),
+                          style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w400,
-                            color: Color.fromARGB(167, 0, 0, 0)),
-                      ),
+                            color: Color(0xff8b8d8c),
+                          )),
                     ),
                     Positioned(
                       top: 180,
@@ -158,7 +156,8 @@ class BankDashboard extends StatelessWidget {
                           children: [
                             ImageIcon(
                               AssetImage("./images/bankapp/share.png"),
-                              size: 20,
+                              size: 30,
+                              color: Colors.black,
                             ),
                             ImageIcon(
                                 AssetImage("./images/bankapp/download.png")),
