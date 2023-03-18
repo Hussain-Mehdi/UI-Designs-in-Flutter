@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'Bank App/bankhome_screen.dart';
 import 'Bank App/dashboard.dart';
 import 'Drone App/drone_dashboard.dart';
 import 'MindScap/dashboard.dart';
@@ -23,7 +24,7 @@ class Dashboard extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       color: const Color(0xff12151e),
-      home: TransactionDone(),
+      home: BankHomeScreen(),
     );
   }
 }
