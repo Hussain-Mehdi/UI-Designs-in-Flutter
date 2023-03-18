@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'Bank App/dashboard.dart';
 import 'Drone App/drone_dashboard.dart';
 import 'MindScap/dashboard.dart';
 import 'SignIn Pages/dashboard_screen.dart';
@@ -22,7 +23,7 @@ class Dashboard extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       color: const Color(0xff12151e),
-      home: MoneyDashboard(),
+      home: BankDashboard(),
     );
   }
 }
