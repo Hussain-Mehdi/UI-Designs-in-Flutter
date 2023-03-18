@@ -13,10 +13,13 @@ class BankHomeScreen extends StatelessWidget {
               height: 70,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Icon(Icons.add_outlined),
-                CircleAvatar(),
+                CircleAvatar(
+                  backgroundColor: Colors.white,
+                  backgroundImage: AssetImage("./images/bankapp/pot2.jpg"),
+                ),
                 Icon(Icons.settings_outlined)
               ],
             ),
@@ -98,7 +101,103 @@ class BankHomeScreen extends StatelessWidget {
                         topLeft: Radius.elliptical(40, 40),
                         topRight: Radius.elliptical(40, 40))),
                 child: Stack(
-                  children: [],
+                  fit: StackFit.expand,
+                  children: [
+                    Positioned(
+                      left: 0,
+                      top: 120,
+                      child: AnimatedPadding(
+                        duration: Duration(milliseconds: 5),
+                        padding: EdgeInsets.only(left: 50),
+                        child: CircleAvatar(
+                          radius: 30,
+                          backgroundColor: Color(0xff4e5255),
+                          child: ImageIcon(
+                            AssetImage("./images/bankapp/gas.png"),
+                            color: Colors.white,
+                            size: 25,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      top: 40,
+                      left: 20,
+                      child: AnimatedPadding(
+                        duration: Duration(milliseconds: 5),
+                        padding: EdgeInsets.only(left: 50),
+                        child: CircleAvatar(
+                          radius: 30,
+                          backgroundColor: Color(0xff4e5255),
+                          child: ImageIcon(
+                            AssetImage("./images/bankapp/withdraw.png"),
+                            color: Colors.white,
+                            size: 25,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      left: 100,
+                      child: AnimatedPadding(
+                        duration: Duration(milliseconds: 5),
+                        padding: EdgeInsets.only(left: 50),
+                        child: CircleAvatar(
+                          radius: 30,
+                          backgroundColor: Color(0xff4e5255),
+                          child: ImageIcon(
+                            AssetImage("./images/bankapp/report.png"),
+                            color: Colors.white,
+                            size: 25,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      top: 40,
+                      left: 180,
+                      child: AnimatedPadding(
+                        duration: Duration(milliseconds: 5),
+                        padding: EdgeInsets.only(left: 50),
+                        child: CircleAvatar(
+                          radius: 30,
+                          backgroundColor: Color(0xff4e5255),
+                          child: ImageIcon(
+                            AssetImage("./images/bankapp/request.png"),
+                            color: Colors.white,
+                            size: 25,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      top: 120,
+                      left: 210,
+                      child: AnimatedPadding(
+                        duration: Duration(milliseconds: 5),
+                        padding: EdgeInsets.only(left: 50),
+                        child: CircleAvatar(
+                          radius: 30,
+                          backgroundColor: Color(0xff4e5255),
+                          child: ImageIcon(
+                            AssetImage("./images/bankapp/bill.png"),
+                            color: Colors.white,
+                            size: 25,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      top: 110,
+                      left: 150,
+                      child: CircleAvatar(
+                        radius: 30,
+                        backgroundColor: Colors.transparent,
+                        backgroundImage:
+                            AssetImage("./images/bankapp/close.png"),
+                      ),
+                    )
+                  ],
                 ),
               ),
             )
