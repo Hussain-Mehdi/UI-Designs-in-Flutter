@@ -63,7 +63,6 @@ class BankDashboard extends StatelessWidget {
                         topLeft: Radius.elliptical(40, 40),
                         topRight: Radius.elliptical(40, 40))),
                 child: Stack(
-                  fit: StackFit.expand,
                   children: [
                     Positioned(
                       top: 100,
@@ -150,10 +149,41 @@ class BankDashboard extends StatelessWidget {
                             letterSpacing: 5, fontWeight: FontWeight.w400),
                       ),
                     ),
-                    Row(
-                      children: [
-                        ImageIcon(AssetImage("./images/bankapp/download"))
-                      ],
+                    Positioned(
+                      top: 230,
+                      child: Container(
+                        width: MediaQuery.of(context).size.width,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            ImageIcon(
+                              AssetImage("./images/bankapp/share.png"),
+                              size: 20,
+                            ),
+                            ImageIcon(
+                                AssetImage("./images/bankapp/download.png")),
+                            ImageIcon(AssetImage("./images/bankapp/print.png")),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      top: 290,
+                      left: 90,
+                      child: Container(
+                        width: 180,
+                        height: 60,
+                        decoration: BoxDecoration(
+                            color: Color(0xfffbd282),
+                            borderRadius: BorderRadius.circular(30)),
+                        child: Center(
+                          child: Text(
+                            "Ok",
+                            style:
+                                TextStyle(color: Color.fromARGB(209, 0, 0, 0)),
+                          ),
+                        ),
+                      ),
                     )
                   ],
                 ),
