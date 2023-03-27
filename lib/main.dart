@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'Advanture app/advanture_home.dart';
+import 'Advanture app/advanture_splash.dart';
 import 'Bank App/bankhome_screen.dart';
 import 'Bank App/dashboard.dart';
 import 'Drone App/drone_dashboard.dart';
@@ -24,7 +26,7 @@ class Dashboard extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       color: const Color(0xff12151e),
-      home: BankHomeScreen(),
+      home: AdventureHome(),
     );
   }
 }

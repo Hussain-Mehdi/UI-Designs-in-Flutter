@@ -66,6 +66,7 @@ flutter:
     - images/mindscape/
     - images/moneymanagement/
     - images/bankapp/
+    - images/adventure/
   
 
   # An image asset can refer to one or more resolution-specific "variants", see
