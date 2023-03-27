@@ -17,6 +17,7 @@ class AdventureHome extends StatelessWidget {
         ],
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             "Ready for your next\nadventure?",
@@ -25,16 +26,22 @@ class AdventureHome extends StatelessWidget {
                 fontSize: 25,
                 fontWeight: FontWeight.w900),
           ),
-          Row(
-            children: [
-              TextField(
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(5))),
-              ),
-              Icon(Icons.mic)
-            ],
-          )
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 10, 20, 30),
+            child: TextField(
+              decoration: InputDecoration(
+                  contentPadding: EdgeInsets.zero,
+                  prefixIcon: Icon(Icons.search),
+                  hintText: "Search destination",
+                  hintStyle:
+                      TextStyle(color: Color.fromARGB(255, 172, 172, 172)),
+                  filled: true,
+                  fillColor: Color(0xffedebee),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: BorderSide.none)),
+            ),
+          ),
         ],
       ),
     );
