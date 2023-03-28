@@ -1,26 +1,45 @@
 import 'package:flutter/material.dart';
 
-class AdventureHome extends StatelessWidget {
+import 'model.dart';
+
+class AdventureHome extends StatefulWidget {
   const AdventureHome({super.key});
 
   @override
+  State<AdventureHome> createState() => _AdventureHomeState();
+}
+
+class _AdventureHomeState extends State<AdventureHome> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const Drawer(),
       backgroundColor: Colors.white,
       appBar: AppBar(
+        centerTitle: true,
+        iconTheme: const IconThemeData(color: Colors.black87),
         backgroundColor: Colors.white,
         elevation: 0,
-        actions: [
-          CircleAvatar(
-            backgroundImage: const AssetImage("./images/adventure/pot1.jpg"),
+        actions: const [
+          Padding(
+            padding: EdgeInsets.only(right: 18.0, top: 10),
+            child: CircleAvatar(
+              radius: 25,
+              backgroundImage: AssetImage("./images/adventure/pot1.jpg"),
+            ),
           )
         ],
+        title: Text(
+          "Home",
+          style: TextStyle(
+              fontSize: 16, fontWeight: FontWeight.w800, color: Colors.black87),
+        ),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
+          const Padding(
+            padding: EdgeInsets.only(top: 25.0, left: 8, right: 8, bottom: 15),
             child: Text(
               "Ready for your next\nadventure?",
               style: TextStyle(
@@ -30,14 +49,15 @@ class AdventureHome extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(20, 10, 20, 30),
+            padding: const EdgeInsets.fromLTRB(10, 15, 10, 20),
             child: TextField(
               decoration: InputDecoration(
                   contentPadding: EdgeInsets.zero,
                   prefixIcon: Icon(Icons.search),
+                  suffixIcon: Icon(Icons.mic),
                   hintText: "Search destination",
-                  hintStyle:
-                      TextStyle(color: Color.fromARGB(255, 172, 172, 172)),
+                  hintStyle: const TextStyle(
+                      color: Color.fromARGB(255, 172, 172, 172)),
                   filled: true,
                   fillColor: Color(0xffedebee),
                   border: OutlineInputBorder(
@@ -52,24 +72,21 @@ class AdventureHome extends StatelessWidget {
               children: recommendChips(),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
+          const Padding(
+            padding: EdgeInsets.all(8.0),
             child: Text(
               "Recommend for you",
               style: TextStyle(
                   color: Color.fromARGB(197, 0, 0, 0),
-                  fontSize: 22,
+                  fontSize: 20,
                   fontWeight: FontWeight.w900),
             ),
           ),
           Expanded(
-            child: Container(
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: recommendCards(),
-              ),
+            child: SizedBox(
+              child: recommendCards(),
             ),
-          )
+          ),
         ],
       ),
     );
@@ -100,7 +117,7 @@ class AdventureHome extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              color: i == 2 ? Color(0xff963bf8) : Colors.white,
+              color: i == 2 ? const Color(0xff963bf8) : Colors.white,
               border: Border.all(
                   color: i == 2 ? Colors.transparent : Colors.black54)),
           child: Padding(
@@ -113,7 +130,7 @@ class AdventureHome extends StatelessWidget {
                   size: 30,
                   color: i == 2 ? Colors.white : Colors.black,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 5,
                 ),
                 Text(
@@ -135,114 +152,125 @@ class AdventureHome extends StatelessWidget {
     return chipsList;
   }
 
-  List<Widget> recommendCards() {
-    List<Widget> cardList = [];
-    List<String> cardData = [];
-    int i = 0;
-    while (i < 5) {
-      Padding card = Padding(
-        padding: const EdgeInsets.all(12),
-        child: Container(
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
-          height: 370,
-          width: 290,
-          child: Stack(
-            children: [
-              Container(
-                height: 370,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.amber,
-                    image: const DecorationImage(
-                        image: NetworkImage(
-                            "https://images.unsplash.com/photo-1522611471186-922142b0bf8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"),
-                        fit: BoxFit.cover,
-                        scale: 20)),
-              ),
-              Positioned(
-                bottom: 15,
-                left: 10,
-                child: Container(
-                  width: 270,
-                  height: 80,
+  Widget recommendCards() {
+    return ListView.builder(
+      scrollDirection: Axis.horizontal,
+      itemCount: mountainData.length,
+      itemBuilder: (context, index) {
+        return Padding(
+          padding: const EdgeInsets.all(12),
+          child: Container(
+            decoration: BoxDecoration(
+                color: Colors.black54, borderRadius: BorderRadius.circular(10)),
+            width: 290,
+            child: Stack(
+              children: [
+                Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: const Color.fromARGB(101, 2, 2, 2)),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
-                          "Mount Everst",
-                          style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w700,
-                              color: Colors.white),
-                        ),
-                        const Text(
-                          "Mountain in Asia",
-                          style: TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.white),
-                        ),
-                        Row(
-                          children: const [
-                            Icon(
-                              Icons.star_border_outlined,
-                              color: Colors.white,
-                              size: 15,
-                            ),
-                            Text(
-                              "4.2",
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            SizedBox(
-                              width: 50,
-                            ),
-                            Icon(
-                              Icons.place_rounded,
-                              color: Colors.white,
-                              size: 15,
-                            ),
-                            Text(
-                              "Mahalangur Himal",
-                              style: TextStyle(color: Colors.white),
-                            ),
-                          ],
-                        )
-                      ],
+                      color: Colors.white10,
+                      image: DecorationImage(
+                          image: AssetImage(mountainData[index].image),
+                          fit: BoxFit.cover,
+                          scale: 20)),
+                ),
+                Positioned(
+                  bottom: 25,
+                  left: 10,
+                  child: Container(
+                    width: 270,
+                    height: 80,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: const Color.fromARGB(101, 2, 2, 2)),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            mountainData[index].name,
+                            style: const TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w700,
+                                color: Colors.white),
+                          ),
+                          Text(
+                            mountainData[index].location,
+                            style: const TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
+                                color: Colors.white),
+                          ),
+                          Row(
+                            children: [
+                              const Icon(
+                                Icons.star_border_outlined,
+                                color: Colors.white,
+                                size: 15,
+                              ),
+                              Text(
+                                mountainData[index].rating,
+                                style: const TextStyle(color: Colors.white),
+                              ),
+                              const SizedBox(
+                                width: 30,
+                              ),
+                              const Icon(
+                                Icons.place_rounded,
+                                color: Colors.white,
+                                size: 15,
+                              ),
+                              Text(
+                                mountainData[index].place,
+                                style: const TextStyle(color: Colors.white),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
-              ),
-              const Positioned(
-                  right: 20,
-                  bottom: 40,
-                  child: Text(
-                    "\$80",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 30,
-                        fontWeight: FontWeight.w700),
-                  )),
-              const Positioned(
-                right: 10,
-                top: 10,
-                child: Icon(
-                  Icons.favorite_border_rounded,
-                  color: Colors.white,
-                ),
-              )
-            ],
+                Positioned(
+                    right: 20,
+                    bottom: 50,
+                    child: Text(
+                      mountainData[index].price,
+                      style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 30,
+                          fontWeight: FontWeight.w700),
+                    )),
+                Positioned(
+                  right: 10,
+                  top: 10,
+                  child: IconButton(
+                    onPressed: () {
+                      print("======================icon is pressed");
+                      print(mountainData[index].favourite);
+                      if (mountainData[index].favourite == true) {
+                        mountainData[index].favourite = false;
+                      } else {
+                        mountainData[index].favourite = true;
+                      }
+                      setState(() {});
+                    },
+                    icon: mountainData[index].favourite == true
+                        ? Icon(Icons.favorite_rounded)
+                        : Icon(Icons.favorite_border_rounded),
+                    color: mountainData[index].favourite == true
+                        ? Colors.red
+                        : Colors.white,
+                    focusColor: Colors.red,
+                  ),
+                )
+              ],
+            ),
           ),
-        ),
-      );
-      cardList.add(card);
-      i++;
-    }
-    return cardList;
+        );
+      },
+    );
   }
 }

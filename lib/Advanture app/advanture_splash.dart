@@ -6,7 +6,7 @@ class AdvantureSplash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Color(0xff963bf8),
+      color: const Color(0xff963bf8),
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
