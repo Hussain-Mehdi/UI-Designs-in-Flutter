@@ -102,9 +102,8 @@ samples, guidance on mobile development, and a full API reference.
  
   <h2>Bank App</h2>
  <p>
- 
+ <img src="images\bankapp/home.png" width="330" title="hover text">
  <img src="images\bankapp/transaction.png" width="330" title="hover text">
- 
  </p>
  
   <h2>Adventure App</h2>
