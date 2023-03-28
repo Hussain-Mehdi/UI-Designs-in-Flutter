@@ -8,10 +8,10 @@ class BankHomeScreen extends StatefulWidget {
 }
 
 class _BankHomeScreenState extends State<BankHomeScreen> {
-  double leftPadding = 210;
+  List<double> leftPadding = [50, 50, 50, 50, 210];
 
   List<double> leftPosition = [
-    160, //gas
+    150, //gas
     40, //widthdraw
     100, //report
     180, //request
@@ -20,6 +20,7 @@ class _BankHomeScreenState extends State<BankHomeScreen> {
   List<double> topPosition = [
     120, //gas
     40, //widthdraw
+    0,
     40, //request
     120, //bill
   ];
@@ -125,7 +126,7 @@ class _BankHomeScreenState extends State<BankHomeScreen> {
                   fit: StackFit.expand,
                   children: [
                     Positioned(
-                      //left: leftPosition[0].toDouble(),
+                      right: leftPosition[0].toDouble(),
                       top: topPosition[0].toDouble(),
                       child: AnimatedPadding(
                         curve: Curves.bounceInOut,
@@ -149,7 +150,7 @@ class _BankHomeScreenState extends State<BankHomeScreen> {
                         curve: Curves.bounceInOut,
                         duration: Duration(milliseconds: 5),
                         padding:
-                            EdgeInsets.only(left: leftPosition[3].toDouble()),
+                            EdgeInsets.only(left: leftPadding[0].toDouble()),
                         child: CircleAvatar(
                           radius: 30,
                           backgroundColor: Color(0xff4e5255),
@@ -163,34 +164,31 @@ class _BankHomeScreenState extends State<BankHomeScreen> {
                     ),
                     Positioned(
                       left: leftPosition[2].toDouble(),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          AnimatedPadding(
-                            curve: Curves.bounceInOut,
-                            duration: Duration(milliseconds: 5),
-                            padding: EdgeInsets.only(left: 50),
-                            child: CircleAvatar(
-                              radius: 30,
-                              backgroundColor: Color(0xff4e5255),
-                              child: ImageIcon(
-                                AssetImage("./images/bankapp/report.png"),
-                                color: Colors.white,
-                                size: 25,
-                              ),
-                            ),
+                      top: topPosition[2].toDouble(),
+                      child: AnimatedPadding(
+                        curve: Curves.bounceInOut,
+                        duration: Duration(milliseconds: 5),
+                        padding:
+                            EdgeInsets.only(left: leftPadding[0].toDouble()),
+                        child: CircleAvatar(
+                          radius: 30,
+                          backgroundColor: Color(0xff4e5255),
+                          child: ImageIcon(
+                            AssetImage("./images/bankapp/report.png"),
+                            color: Colors.white,
+                            size: 25,
                           ),
-                          Text("Hello")
-                        ],
+                        ),
                       ),
                     ),
                     Positioned(
-                      top: topPosition[2].toDouble(),
+                      top: topPosition[3].toDouble(),
                       left: leftPosition[3].toDouble(),
                       child: AnimatedPadding(
                         curve: Curves.bounceInOut,
                         duration: Duration(milliseconds: 5),
-                        padding: EdgeInsets.only(left: 50),
+                        padding:
+                            EdgeInsets.only(left: leftPadding[0].toDouble()),
                         child: CircleAvatar(
                           radius: 30,
                           backgroundColor: Color(0xff4e5255),
@@ -203,12 +201,13 @@ class _BankHomeScreenState extends State<BankHomeScreen> {
                       ),
                     ),
                     Positioned(
-                      top: topPosition[3].toDouble(),
+                      top: topPosition[4].toDouble(),
                       left: leftPosition[4].toDouble(),
                       child: AnimatedPadding(
-                        duration: Duration(milliseconds: 250),
-                        curve: Curves.bounceInOut,
-                        padding: EdgeInsets.only(left: 210),
+                        duration: Duration(seconds: 2),
+                        curve: Curves.decelerate,
+                        padding:
+                            EdgeInsets.only(left: leftPadding[4].toDouble()),
                         child: CircleAvatar(
                           radius: 30,
                           backgroundColor: leftPosition[3].toDouble() == 150
@@ -216,7 +215,7 @@ class _BankHomeScreenState extends State<BankHomeScreen> {
                               : Color(0xff4e5255),
                           child: ImageIcon(
                             AssetImage("./images/bankapp/bill.png"),
-                            color: leftPosition == 150
+                            color: leftPosition[0] == 160
                                 ? Colors.transparent
                                 : Colors.white,
                             size: 25,
@@ -229,12 +228,33 @@ class _BankHomeScreenState extends State<BankHomeScreen> {
                       left: 150,
                       child: InkWell(
                         onTap: () {
-                          if (leftPadding == 50 && leftPosition == 210) {
-                            leftPadding = 0;
+                          if (leftPadding[0].toDouble() == 50 &&
+                              leftPosition[4].toDouble() == 50) {
+                            leftPadding[0] = 0;
+
+                            leftPosition[0] = 150;
+                            leftPosition[1] = 150;
+                            leftPosition[2] = 150;
                             leftPosition[3] = 150;
+                            leftPosition[4] = 150;
+                            topPosition[0] = 120;
+                            topPosition[1] = 120;
+                            topPosition[2] = 120;
+                            topPosition[3] = 120;
                           } else {
-                            leftPadding = 50;
-                            leftPosition[0] = 210;
+                            leftPadding[0] = 50;
+
+                            leftPosition[0] = 250;
+                            leftPosition[1] = 40;
+                            leftPosition[2] = 100;
+                            leftPosition[3] = 180;
+                            leftPosition[4] = 50;
+
+                            topPosition[0] = 120;
+                            topPosition[1] = 40;
+                            topPosition[2] = 0;
+                            topPosition[3] = 40;
+                            topPosition[4] = 120;
                           }
                           setState(() {});
                         },
