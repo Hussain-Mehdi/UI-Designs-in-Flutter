@@ -13,6 +13,7 @@ import 'car app/car_dashboard.dart';
 import 'car app/car_detail.dart';
 import 'money management/checking_screen.dart';
 import 'money management/dashboard_screen.dart';
+import 'sadapay/home_screen.dart';
 import 'shoes_App/shoes_dashboard.dart';
 import 'shoes_App/shoes_detail.dart';
 
@@ -26,7 +27,7 @@ class Dashboard extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       color: const Color(0xff12151e),
-      home: BankHomeScreen(),
+      home: SadaPayScreen(),
     );
   }
 }
