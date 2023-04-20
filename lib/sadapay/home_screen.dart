@@ -164,8 +164,8 @@ class SadaPayScreen extends StatelessWidget {
                     ),
                   ]),
                 ]),
-            Padding(
-              padding: const EdgeInsets.only(left: 10.0, bottom: 12, top: 15),
+            const Padding(
+              padding: EdgeInsets.only(left: 10.0, bottom: 12, top: 15),
               child: Text(
                 "Today",
                 style: TextStyle(

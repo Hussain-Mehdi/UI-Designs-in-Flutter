@@ -11,6 +11,7 @@ import 'SignIn Pages/signin_screen.dart';
 import 'SignIn Pages/splash_screen.dart';
 import 'car app/car_dashboard.dart';
 import 'car app/car_detail.dart';
+import 'easypaisa/home_screen.dart';
 import 'money management/checking_screen.dart';
 import 'money management/dashboard_screen.dart';
 import 'sadapay/home_screen.dart';
@@ -24,10 +25,10 @@ void main() {
 class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      color: const Color(0xff12151e),
-      home: SadaPayScreen(),
+      color: Color(0xff12151e),
+      home: HomeScreen(),
     );
   }
 }

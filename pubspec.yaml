@@ -68,6 +68,7 @@ flutter:
     - images/bankapp/
     - images/adventure/
     - images/sadapay/
+    - images/easypaisa/
   
 
   # An image asset can refer to one or more resolution-specific "variants", see
