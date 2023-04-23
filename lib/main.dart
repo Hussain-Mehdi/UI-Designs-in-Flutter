@@ -12,6 +12,8 @@ import 'SignIn Pages/splash_screen.dart';
 import 'car app/car_dashboard.dart';
 import 'car app/car_detail.dart';
 import 'easypaisa/home_screen.dart';
+import 'fitness app/fitness_homescreen.dart';
+import 'fitness app/fitness_splash.dart';
 import 'money management/checking_screen.dart';
 import 'money management/dashboard_screen.dart';
 import 'sadapay/home_screen.dart';
@@ -28,7 +30,7 @@ class Dashboard extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       color: Color(0xff12151e),
-      home: HomeScreen(),
+      home: FitnessHomeScreen(),
     );
   }
 }
