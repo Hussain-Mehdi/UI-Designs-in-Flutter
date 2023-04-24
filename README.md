@@ -121,3 +121,12 @@ samples, guidance on mobile development, and a full API reference.
 
  </p>
  
+   <h2>Fitness App</h2>
+ <p>
+ 
+ <img src="images\fitness/splash.png" width="330" title="hover text">
+  <img src="images\fitness/home.png" width="330" title="hover text">
+   <img src="images\fitness/open.png" width="330" title="hover text">
+
+ </p>
+ 
