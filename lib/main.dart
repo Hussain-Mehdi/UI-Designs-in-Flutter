@@ -6,6 +6,7 @@ import 'Bank App/bankhome_screen.dart';
 import 'Bank App/dashboard.dart';
 import 'Drone App/drone_dashboard.dart';
 import 'MindScap/dashboard.dart';
+import 'On Boarding Screen/onboarding_screen.dart';
 import 'SignIn Pages/dashboard_screen.dart';
 import 'SignIn Pages/signin_screen.dart';
 import 'SignIn Pages/splash_screen.dart';
@@ -30,7 +31,7 @@ class Dashboard extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       color: Color(0xff12151e),
-      home: FitnessHomeScreen(),
+      home: onboarding(),
     );
   }
 }
