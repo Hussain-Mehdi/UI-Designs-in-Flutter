@@ -1,7 +1,7 @@
 # UI Designs in Flutter
  <img src="images/flutter.webp" width="350" title="hover text">
 
-This repository contains multiple arractive and eye catching MobileApp UIs design in Flutter/Dart. Every UI code and images are boxed in separate folder with its name.
+This repository contains multiple attractive and eye catching MobileApp UIs design in Flutter/Dart. Every UI code and images are boxed in separate folder with its name.
 
 This project is a starting point for a Flutter application.
 
