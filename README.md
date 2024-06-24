@@ -1,18 +1,14 @@
-# UI Designs in Flutter
+# Flutter UI Collection
  <img src="images/flutter.webp" width="350" title="hover text">
 
-This repository contains multiple arractive and eye catching MobileApp UIs design in Flutter/Dart. Every UI code and images are boxed in separate folder with its name.
+Welcome to the Flutter UI Collection! This repository features a diverse range of mobile app UIs, all meticulously crafted using Flutter. Each design showcases unique functionalities and aesthetics, providing a valuable resource for developers and designers looking to enhance their Flutter projects.
 
-This project is a starting point for a Flutter application.
+## Highlights
+- **Variety**: Includes UIs for different domains such as food delivery, weather updates, beauty products, task management, healthcare, e-commerce, financial services, adventure activities, and fitness tracking.
+- **Modern Design**: Each UI is built with a modern and user-friendly approach, ensuring an optimal user experience.
+- **Reusable Components**: Well-structured code and reusable components to help streamline your development process.
+- **Snapshots Included**: Visual previews of each app are included to give you a quick glance at the designs.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
 
 
 <h2>Food App</h2>
