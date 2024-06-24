@@ -6,17 +6,17 @@ class CarDashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Color.fromARGB(255, 236, 237, 238),
+      color: const Color.fromARGB(255, 236, 237, 238),
       child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           Padding(
             padding: const EdgeInsets.only(left: 18.0, right: 18),
             child: Container(
-              height: 80,
-              decoration: BoxDecoration(
+              height: 85,
+              decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.all(Radius.circular(5))),
               child: Padding(
@@ -24,7 +24,7 @@ class CarDashboard extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Column(
+                    const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
@@ -35,7 +35,7 @@ class CarDashboard extends StatelessWidget {
                               fontWeight: FontWeight.bold),
                         ),
                         Text(
-                          "Hussain Birmani",
+                          "Hussain",
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
@@ -56,7 +56,7 @@ class CarDashboard extends StatelessWidget {
                       width: 50,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
-                          image: DecorationImage(
+                          image: const DecorationImage(
                               fit: BoxFit.cover,
                               image: AssetImage('./images/carapp/pot1.jpg'))),
                     )
@@ -102,16 +102,16 @@ class CarDashboard extends StatelessWidget {
         child: Container(
           height: 165,
           width: 250,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Color.fromARGB(255, 236, 237, 238),
           ),
           child: Stack(
             children: [
               Container(
-                margin: EdgeInsets.only(top: 88),
+                margin: const EdgeInsets.only(top: 88),
                 height: 80,
                 // width: 330,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(10),
                       topRight: Radius.circular(10),
@@ -124,7 +124,7 @@ class CarDashboard extends StatelessWidget {
                 left: 20,
                 child: Text(
                   carDetail[5 + i],
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
               ),
               Positioned(
@@ -132,7 +132,7 @@ class CarDashboard extends StatelessWidget {
                 left: 20,
                 child: Text(
                   carDetail[10 + i],
-                  style: TextStyle(
+                  style: const TextStyle(
                       color: Color.fromARGB(255, 136, 136, 136), fontSize: 12),
                 ),
               ),
@@ -144,11 +144,11 @@ class CarDashboard extends StatelessWidget {
                     Container(
                       height: 35,
                       width: 100,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         borderRadius:
                             BorderRadius.only(topLeft: Radius.circular(10)),
                       ),
-                      child: Center(
+                      child: const Center(
                           child: Text(
                         "Buy",
                         style: TextStyle(
@@ -159,12 +159,12 @@ class CarDashboard extends StatelessWidget {
                     Container(
                       height: 35,
                       width: 100,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         borderRadius:
                             BorderRadius.only(topLeft: Radius.circular(10)),
                         color: Color.fromARGB(230, 0, 0, 0),
                       ),
-                      child: Center(
+                      child: const Center(
                         child: Text(
                           "View",
                           style: TextStyle(
@@ -180,7 +180,7 @@ class CarDashboard extends StatelessWidget {
               Positioned(
                 bottom: 26,
                 child: Container(
-                    margin: EdgeInsets.only(left: 100),
+                    margin: const EdgeInsets.only(left: 100),
                     height: 170,
                     width: 230,
                     decoration: BoxDecoration(

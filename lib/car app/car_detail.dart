@@ -10,7 +10,7 @@ class CarDetail extends StatelessWidget {
         children: [
           Container(
             height: 400,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 image: DecorationImage(
                     fit: BoxFit.cover,
                     image: AssetImage('./images/carapp/location.png'))),
@@ -19,15 +19,15 @@ class CarDetail extends StatelessWidget {
             child: Container(
               height: 300,
               width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Color.fromARGB(255, 236, 236, 236),
               ),
               child: Stack(
                 children: [
                   Expanded(
                     child: Container(
-                      margin: EdgeInsets.only(top: 120),
-                      decoration: BoxDecoration(
+                      margin: const EdgeInsets.only(top: 120),
+                      decoration: const BoxDecoration(
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.elliptical(30, 30),
                           topRight: Radius.elliptical(30, 30),
@@ -39,13 +39,13 @@ class CarDetail extends StatelessWidget {
                   Positioned(
                     top: 130,
                     child: Container(
-                      margin: EdgeInsets.only(left: 18, right: 18),
+                      margin: const EdgeInsets.only(left: 18, right: 18),
                       width: 330,
                       height: 40,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
+                          const Text(
                             "Volkswagen",
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 20),
@@ -56,7 +56,7 @@ class CarDetail extends StatelessWidget {
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(3),
                                 color: Colors.black),
-                            child: Center(
+                            child: const Center(
                               child: Text(
                                 "Purchase",
                                 style: TextStyle(
@@ -71,10 +71,10 @@ class CarDetail extends StatelessWidget {
                   Positioned(
                     bottom: 155,
                     child: Container(
-                        margin: EdgeInsets.only(left: 40),
+                        margin: const EdgeInsets.only(left: 40),
                         height: 280,
                         width: 280,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             image: DecorationImage(
                                 image:
                                     AssetImage('./images/carapp/car1.png')))),
@@ -88,8 +88,8 @@ class CarDetail extends StatelessWidget {
                       decoration: BoxDecoration(
                           border: Border.all(),
                           borderRadius: BorderRadius.circular(10)),
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 18.0, left: 15),
+                      child: const Padding(
+                        padding: EdgeInsets.only(top: 18.0, left: 15),
                         child: Text("Enter Username"),
                       ),
                     ),
@@ -103,7 +103,7 @@ class CarDetail extends StatelessWidget {
                       decoration: BoxDecoration(
                           color: Colors.black,
                           borderRadius: BorderRadius.circular(10)),
-                      child: Center(
+                      child: const Center(
                         child: Text(
                           "Next",
                           style: TextStyle(

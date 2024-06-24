@@ -7,83 +7,88 @@ class DoctorDashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const SizedBox(
-            height: 70,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 18.0, right: 18),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
-                CircleAvatar(
-                  radius: 35,
-                  backgroundImage:
-                      AssetImage("./images/doctorappimages/pot1.jpg"),
-                ),
-                CircleAvatar(
-                  radius: 26,
-                  backgroundColor: Color.fromARGB(255, 231, 231, 231),
-                  child: Icon(
-                    Icons.notifications_outlined,
-                    color: Colors.black54,
-                    size: 25,
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(
+              height: 20,
+            ),
+             Padding(
+              padding: const EdgeInsets.only(left: 18.0, right: 18),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const CircleAvatar(
+                    radius: 30,
+                    backgroundImage:
+                        NetworkImage("https://static.bhphotovideo.com/explora/sites/default/files/tsc/dof1.jpg"),
                   ),
-                ),
-              ],
-            ),
-          ),
-          const Padding(
-            padding: EdgeInsets.only(top: 18.0, left: 18, right: 18),
-            child: Text(
-              "Let's find\nyour suitable doctor",
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(
-              left: 5.0,
-              right: 5,
-            ),
-            child: SizedBox(
-              height: 200,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: createDoctors(),
+                  CircleAvatar(
+                    radius: 20,
+                    backgroundColor: const Color.fromARGB(255, 231, 231, 231),
+                    child: IconButton(
+                      icon: const Icon(Icons.notifications_outlined),
+                      onPressed: (){
+
+                      },
+                      color: Colors.black54,
+                  
+                    ),
+                  ),
+                ],
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 18, right: 18),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
-                Text(
-                  "Top Doctors",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-                ),
-                Text(
-                  "See All",
-                  style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w800,
-                      color: Colors.grey),
-                ),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(18.0),
-            child: SizedBox(
-              height: 279,
-              child: ListView(
-                children: createTopDoctor(context),
+            const Padding(
+              padding: EdgeInsets.only(top: 18.0, left: 18, right: 18),
+              child: Text(
+                "Let's find\nyour suitable doctor",
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
             ),
-          )
-        ],
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 5.0,
+                right: 5,
+              ),
+              child: SizedBox(
+                height: 200,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: createDoctors(),
+                ),
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(left: 18, right: 18),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Top Doctors",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                  ),
+                  Text(
+                    "See All",
+                    style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w800,
+                        color: Colors.grey),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left:18.0,right:18,top: 5),
+              child: SizedBox(
+                height: 457,
+                child: ListView(
+                  children: createTopDoctor(context),
+                ),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
@@ -164,70 +169,81 @@ class DoctorDashboard extends StatelessWidget {
 
     int i = 0;
     while (i < 3) {
-      Padding topdoctor = Padding(
-        padding: const EdgeInsets.all(8),
-        child: GestureDetector(
-          onTap: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const DoctorDetail(),
-                ));
-          },
-          child: Container(
-            height: 140,
-            width: 300,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: const Color.fromARGB(255, 242, 241, 247)),
-            child: Row(
-              children: [
-                Container(
-                  width: 150,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage(doctorImg[i]), fit: BoxFit.cover)),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 25.0, left: 8),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        doctorImg[3 + i],
-                        style: const TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 22),
-                      ),
-                      Text(
-                        doctorImg[i + 6],
-                        style: const TextStyle(
-                            overflow: TextOverflow.ellipsis,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16),
-                      ),
-                      Text(
-                        doctorImg[i + 9],
-                        style: const TextStyle(fontSize: 12),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 2.0, top: 25),
-                        child: Row(
-                          children: const [
-                            Icon(Icons.access_time_filled,
-                                size: 20,
-                                color: Color.fromARGB(255, 104, 85, 202)),
-                            Text(
-                              "04:30PM-07:00PM",
-                              style: TextStyle(
-                                  fontSize: 12, fontWeight: FontWeight.bold),
+      SizedBox topdoctor = SizedBox( 
+        child: Padding( 
+          padding: const EdgeInsets.only(bottom: 10),
+          child: Material(
+            child: InkWell(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const DoctorDetail(),
+                    ));
+              },
+              child: Container(
+                height: 140,
+                width: 300,
+                decoration: BoxDecoration(
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Color.fromARGB(31, 116, 116, 116), 
+                      blurRadius: 3, 
+                      spreadRadius: 1
+                    )
+                  ],
+                    borderRadius: BorderRadius.circular(10),
+                    color: const Color.fromARGB(255, 242, 241, 247)),
+                child: Row(
+                  children: [
+                    Container(
+                      width: 150,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage(doctorImg[i]), fit: BoxFit.cover)),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 20.0, left: 20),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            doctorImg[3 + i],
+                            style: const TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 22),
+                          ),
+                          Text(
+                            doctorImg[i + 6],
+                            style: const TextStyle(
+                                overflow: TextOverflow.ellipsis,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16),
+                          ),
+                          Text(
+                            doctorImg[i + 9],
+                            style: const TextStyle(fontSize: 12),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.only(left: 2.0, top: 10),
+                            child: Row(
+                              children: [
+                                Icon(Icons.access_time_filled,
+                                    size: 20,
+                                    color: Color.fromARGB(255, 104, 85, 202)),
+                                Text(
+                                  "04:30PM-07:00PM",
+                                  style: TextStyle(
+                                      fontSize: 12, fontWeight: FontWeight.bold),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
-                )
-              ],
+                    )
+                  ],
+                ),
+              ),
             ),
           ),
         ),
@@ -253,10 +269,10 @@ class Doctors {
     doctorList.add(Doctors(
         "Cardio",
         "12 doctors",
-        SizedBox(
+        const SizedBox(
           width: 200,
           child: Stack(
-            children: const [
+            children: [
               CircleAvatar(
                 radius: 15,
                 backgroundImage:
@@ -288,10 +304,10 @@ class Doctors {
     doctorList.add(Doctors(
         "Dentist",
         "12 doctors",
-        SizedBox(
+        const SizedBox(
           width: 200,
           child: Stack(
-            children: const [
+            children: [
               CircleAvatar(
                 radius: 15,
                 backgroundImage:
@@ -323,10 +339,10 @@ class Doctors {
     doctorList.add(Doctors(
         "Neurosurgery",
         "12 doctors",
-        SizedBox(
+        const SizedBox(
           width: 200,
           child: Stack(
-            children: const [
+            children: [
               CircleAvatar(
                 radius: 15,
                 backgroundImage:
@@ -359,10 +375,10 @@ class Doctors {
     doctorList.add(Doctors(
         "Pediatrics",
         "12 doctors",
-        SizedBox(
+        const SizedBox(
           width: 200,
           child: Stack(
-            children: const [
+            children: [
               CircleAvatar(
                 radius: 15,
                 backgroundImage:
@@ -394,10 +410,10 @@ class Doctors {
     doctorList.add(Doctors(
         "Pulmonology",
         "12 doctors",
-        SizedBox(
+        const SizedBox(
           width: 200,
           child: Stack(
-            children: const [
+            children: [
               CircleAvatar(
                 radius: 15,
                 backgroundImage:
@@ -428,10 +444,10 @@ class Doctors {
     doctorList.add(Doctors(
         "Opthalmology",
         "12 doctors",
-        SizedBox(
+        const SizedBox(
           width: 200,
           child: Stack(
-            children: const [
+            children: [
               CircleAvatar(
                 radius: 15,
                 backgroundImage:
@@ -462,4 +478,14 @@ class Doctors {
 
     return doctorList;
   }
+}
+
+Route _createRoute(Widget screen,Offset offset) {
+  return PageRouteBuilder(pageBuilder: (context, animation, secondaryAnimation,) {
+    final begin=offset;
+    final end=Offset.zero;
+    const curve = Curves.ease;
+    var tween = Tween(begin: begin,end: end).chain(CurveTween(curve: curve));
+    return SlideTransition(position: animation.drive(tween),child: ,)
+  },)
 }

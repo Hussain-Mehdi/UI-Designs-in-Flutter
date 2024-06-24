@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-
+import 'package:simple_food_ui/Bank%20App/bankhome_screen.dart';
+import 'package:simple_food_ui/Weater%20App/UI/weather_ui.dart';
+import 'package:simple_food_ui/doctor_appointment_UI/doctor_dashboard.dart';
+import 'package:simple_food_ui/doctor_appointment_UI/doctor_splash.dart';
 import 'Advanture app/advanture_home.dart';
 import 'Advanture app/advanture_splash.dart';
-import 'Bank App/bankhome_screen.dart';
+//import 'Bank App/bankhome_screen.dart';
 import 'Bank App/dashboard.dart';
 import 'Drone App/drone_dashboard.dart';
 import 'MindScap/dashboard.dart';
@@ -12,14 +15,15 @@ import 'SignIn Pages/signin_screen.dart';
 import 'SignIn Pages/splash_screen.dart';
 import 'car app/car_dashboard.dart';
 import 'car app/car_detail.dart';
-import 'easypaisa/home_screen.dart';
+//import 'easypaisa/home_screen.dart';
 import 'fitness app/fitness_homescreen.dart';
 import 'fitness app/fitness_splash.dart';
 import 'money management/checking_screen.dart';
 import 'money management/dashboard_screen.dart';
-import 'sadapay/home_screen.dart';
+//import 'sadapay/home_screen.dart';
 import 'shoes_App/shoes_dashboard.dart';
 import 'shoes_App/shoes_detail.dart';
+import './CorporateWellness/HomeScreen.dart';
 
 void main() {
   runApp(Dashboard());
@@ -28,10 +32,10 @@ void main() {
 class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  const MaterialApp(
       debugShowCheckedModeBanner: false,
       color: Color(0xff12151e),
-      home: onboarding(),
+      home: DoctorDashboard(),
     );
   }
 }
@@ -135,12 +139,12 @@ class MyApp extends StatelessWidget {
                     const SizedBox(
                       width: 10,
                     ),
-                    Column(
+                    const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: const [
+                          children: [
                             Text(
                               "60kcl",
                               style: TextStyle(
@@ -154,7 +158,7 @@ class MyApp extends StatelessWidget {
                                     color: Color(0xffd1f64f), fontSize: 12))
                           ],
                         ),
-                        const Padding(
+                        Padding(
                           padding: EdgeInsets.only(top: 5, bottom: 5),
                           child: Text("Slicing with Fruit",
                               style: TextStyle(
@@ -162,7 +166,7 @@ class MyApp extends StatelessWidget {
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold)),
                         ),
-                        const Text(
+                        Text(
                             "This is good food to eat\n Food with lots of benifits\n Try this out now",
                             style: TextStyle(
                                 fontSize: 12,
@@ -212,14 +216,14 @@ class MyApp extends StatelessWidget {
                 borderRadius: BorderRadius.circular(15),
                 border: Border.all(
                     color: const Color.fromARGB(255, 187, 187, 187))),
-            child: Padding(
-              padding: const EdgeInsets.all(12.0),
+            child: const Padding(
+              padding: EdgeInsets.all(12.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: const [
+                    children: [
                       Text(
                         "799",
                         style: TextStyle(color: Colors.white, fontSize: 12),
@@ -232,7 +236,7 @@ class MyApp extends StatelessWidget {
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: const [
+                    children: [
                       Text(
                         "799",
                         style: TextStyle(color: Colors.white),
@@ -245,7 +249,7 @@ class MyApp extends StatelessWidget {
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: const [
+                    children: [
                       Text(
                         "799",
                         style: TextStyle(color: Colors.white),
@@ -258,7 +262,7 @@ class MyApp extends StatelessWidget {
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: const [
+                    children: [
                       Text(
                         "799",
                         style: TextStyle(color: Colors.white),
@@ -271,7 +275,7 @@ class MyApp extends StatelessWidget {
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: const [
+                    children: [
                       Text(
                         "799",
                         style: TextStyle(color: Colors.white),
@@ -335,12 +339,12 @@ class MyApp extends StatelessWidget {
                 const SizedBox(
                   width: 10,
                 ),
-                Column(
+                const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: const [
+                      children: [
                         Text(
                           "60kcl",
                           style:
@@ -354,7 +358,7 @@ class MyApp extends StatelessWidget {
                                 color: Color(0xffd1f64f), fontSize: 12))
                       ],
                     ),
-                    const Padding(
+                    Padding(
                       padding: EdgeInsets.only(top: 5, bottom: 5),
                       child: Text("Slicing with Fruit",
                           style: TextStyle(
@@ -362,7 +366,7 @@ class MyApp extends StatelessWidget {
                               fontSize: 16,
                               fontWeight: FontWeight.bold)),
                     ),
-                    const Text(
+                    Text(
                         "This is good food to eat\n Food with lots of benifits\n Try this out now",
                         style: TextStyle(
                             fontSize: 12,
@@ -398,11 +402,11 @@ class MyApp extends StatelessWidget {
             const SizedBox(
               height: 70,
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 15),
+            const Padding(
+              padding: EdgeInsets.only(left: 8.0, right: 8.0, bottom: 15),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   Text(
                     "Hello,\nKristen",
                     style: TextStyle(
@@ -425,11 +429,11 @@ class MyApp extends StatelessWidget {
                 children: createRecommend(),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 15, left: 8.0, right: 8.0),
+            const Padding(
+              padding: EdgeInsets.only(bottom: 15, left: 8.0, right: 8.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   Text(
                     "Popular 3253",
                     style: TextStyle(color: Colors.white),

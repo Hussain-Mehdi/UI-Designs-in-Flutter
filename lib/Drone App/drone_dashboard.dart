@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simple_food_ui/Drone%20App/drone_model.dart';
 
 import 'drone_detail.dart';
 
@@ -12,7 +13,7 @@ class DroneDashboard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           Padding(
@@ -21,7 +22,7 @@ class DroneDashboard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  child: Row(
+                  child: const Row(
                     children: [
                       ImageIcon(
                         AssetImage("./images/droneimages/drone.png"),
@@ -39,10 +40,10 @@ class DroneDashboard extends StatelessWidget {
                   height: 35,
                   width: 35,
                   decoration: BoxDecoration(
-                      border:
-                          Border.all(color: Color.fromARGB(255, 165, 165, 165)),
+                      border: Border.all(
+                          color: const Color.fromARGB(255, 165, 165, 165)),
                       borderRadius: BorderRadius.circular(20)),
-                  child: Icon(
+                  child: const Icon(
                       color: Colors.black,
                       size: 15,
                       Icons.shopping_cart_outlined),
@@ -54,7 +55,7 @@ class DroneDashboard extends StatelessWidget {
             padding: const EdgeInsets.only(top: 20, left: 18.0, right: 18),
             child: Container(
                 height: 30,
-                child: Row(
+                child: const Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -89,23 +90,25 @@ class DroneDashboard extends StatelessWidget {
                   ],
                 )),
           ),
-          Container(
-            margin: EdgeInsets.only(left: 35, top: 20),
-            height: 150,
-            width: 300,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("./images/droneimages/drone1.png"))),
+          Center(
+            child: Container(
+              margin: EdgeInsets.only(top: 10),
+              height: 190,
+              width: 300,
+              decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("./images/droneimages/drone1.png"))),
+            ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 50.0),
+          const Padding(
+            padding: EdgeInsets.only(left: 50.0),
             child: Text(
               "Agriculture Drone",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 50.0),
+          const Padding(
+            padding: EdgeInsets.only(left: 50.0),
             child: Text(
               "Version 2.0",
               style: TextStyle(
@@ -113,8 +116,8 @@ class DroneDashboard extends StatelessWidget {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 18.0, top: 10),
+          const Padding(
+            padding: EdgeInsets.only(left: 18.0, top: 10),
             child: CircleAvatar(
               radius: 15,
               backgroundColor: Color(0xff66a3ea),
@@ -125,8 +128,8 @@ class DroneDashboard extends StatelessWidget {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 18.0, right: 18, bottom: 10),
+          const Padding(
+            padding: EdgeInsets.only(left: 18.0, right: 18, bottom: 10),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -153,25 +156,10 @@ class DroneDashboard extends StatelessWidget {
   }
 
   Widget createDroneCard() {
-    List<String> droneDetail = [
-      "./images/droneimages/drone6.png",
-      "./images/droneimages/drone2.png",
-      "./images/droneimages/drone3.png",
-      "./images/droneimages/drone4.png",
-      "./images/droneimages/drone5.png",
-      "Film Drone",
-      "Mavic Pro 2",
-      "DJI Mavic Pro Drone",
-      "Xiaomi Drone",
-      'version 2.01',
-      'version 3.34',
-      'version 1.21',
-      'version 5.0',
-    ];
     return GridView.builder(
-      padding: EdgeInsets.only(left: 18, right: 18),
-      itemCount: 4,
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      padding: const EdgeInsets.only(left: 18, right: 18),
+      itemCount: droneList.length,
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2, mainAxisSpacing: 12, crossAxisSpacing: 12),
       itemBuilder: (context, index) {
         return Material(
@@ -180,36 +168,39 @@ class DroneDashboard extends StatelessWidget {
             height: 50,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: Color.fromARGB(255, 241, 241, 241)),
+                color: const Color.fromARGB(255, 241, 241, 241)),
             child: InkWell(
                 borderRadius: BorderRadius.circular(10),
                 onTap: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => DroneDetail(
-                            droneDetail[index], droneDetail[5 + index]),
+                        builder: (context) => DroneDetail(droneList[index]),
                       ));
                 },
                 child: Column(children: [
-                  Container(
-                    margin: EdgeInsets.only(top: 20),
-                    height: 80,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            fit: BoxFit.contain,
-                            image: AssetImage(droneDetail[index]))),
+                  Hero(
+                    tag: "DRONE",
+                    child: Container(
+                      margin: const EdgeInsets.only(top: 20),
+                      height: 80,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              fit: BoxFit.contain,
+                              image: AssetImage(droneList[index].image))),
+                    ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Text(
-                    droneDetail[5 + index],
-                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                    droneList[index].name,
+                    style: const TextStyle(
+                        fontSize: 12, fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    droneDetail[9 + index],
-                    style: TextStyle(
+                    "Version ${droneList[index].version}",
+                    style: const TextStyle(
                         fontSize: 12, color: Color.fromARGB(118, 0, 0, 0)),
                   ),
                 ])),

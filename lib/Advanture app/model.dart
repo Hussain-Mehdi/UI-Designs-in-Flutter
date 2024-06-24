@@ -23,7 +23,7 @@ List<AdventureModel> mountainData = [
       location: "Mountain in Asia",
       place: "Mahalangur Himal",
       rating: '4.2',
-      image: './images/adventure/mount.jpg',
+      image: 'https://media.cnn.com/api/v1/images/stellar/prod/220203135111-mount-everest-2020-restricted.jpg',
       price: "\$80",
       favourite: false),
   AdventureModel(
@@ -31,7 +31,7 @@ List<AdventureModel> mountainData = [
       location: "Mountain in Asia",
       place: "Karakoram range",
       rating: '4.5',
-      image: './images/adventure/k2.jpg',
+      image: 'https://trangoadventure.com/wp-content/uploads/2021/07/k2-mountain-e1627507801774.jpeg',
       price: "\$180",
       favourite: false),
   AdventureModel(

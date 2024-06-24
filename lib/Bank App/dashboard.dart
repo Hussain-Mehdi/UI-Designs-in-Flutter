@@ -6,10 +6,10 @@ class TransactionDone extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-        color: Color(0xffdef2f0),
+        color: const Color(0xffdef2f0),
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 100,
             ),
             Container(
@@ -20,7 +20,7 @@ class TransactionDone extends StatelessWidget {
                   color: Colors.white),
               child: Stack(
                 children: [
-                  Positioned(
+                  const Positioned(
                       left: 90,
                       top: 35,
                       child: ImageIcon(
@@ -28,7 +28,7 @@ class TransactionDone extends StatelessWidget {
                         color: Colors.black45,
                         size: 40,
                       )),
-                  Positioned(
+                  const Positioned(
                       left: 80,
                       top: 90,
                       child: Text(
@@ -41,7 +41,7 @@ class TransactionDone extends StatelessWidget {
                       top: 150,
                       child: Container(
                         width: 140,
-                        child: Text(
+                        child: const Text(
                           "You successfully have refilled the car.",
                           textAlign: TextAlign.center,
                           style: TextStyle(
@@ -55,8 +55,8 @@ class TransactionDone extends StatelessWidget {
             ),
             Expanded(
               child: Container(
-                margin: EdgeInsets.only(top: 100),
-                decoration: BoxDecoration(
+                margin: const EdgeInsets.only(top: 100),
+                decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.elliptical(40, 40),
@@ -67,7 +67,7 @@ class TransactionDone extends StatelessWidget {
                       top: 100,
                       left: 60,
                       child: Text("Amount".toUpperCase(),
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w400,
                             color: Color(0xff8b8d8c),
@@ -81,7 +81,7 @@ class TransactionDone extends StatelessWidget {
                             left: 70,
                             child: Text(
                               "25".toUpperCase(),
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontSize: 25,
                                   fontWeight: FontWeight.w600,
                                   color: Color.fromARGB(167, 0, 0, 0)),
@@ -92,7 +92,7 @@ class TransactionDone extends StatelessWidget {
                             left: 100,
                             child: Text(
                               "Ltr".toUpperCase(),
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w400,
                                   color: Color.fromARGB(167, 0, 0, 0)),
@@ -108,7 +108,7 @@ class TransactionDone extends StatelessWidget {
                           left: 210,
                           child: Text(
                             "34.45".toUpperCase(),
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontSize: 25,
                                 fontWeight: FontWeight.w600,
                                 color: Color.fromARGB(167, 0, 0, 0)),
@@ -119,7 +119,7 @@ class TransactionDone extends StatelessWidget {
                           left: 275,
                           child: Text(
                             "\$".toUpperCase(),
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w400,
                                 color: Color.fromARGB(167, 0, 0, 0)),
@@ -131,13 +131,13 @@ class TransactionDone extends StatelessWidget {
                       top: 100,
                       left: 210,
                       child: Text("withdraw".toUpperCase(),
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w400,
                             color: Color(0xff8b8d8c),
                           )),
                     ),
-                    Positioned(
+                    const Positioned(
                       top: 180,
                       left: 53,
                       child: Text(
@@ -150,7 +150,7 @@ class TransactionDone extends StatelessWidget {
                       top: 230,
                       child: Container(
                         width: MediaQuery.of(context).size.width,
-                        child: Row(
+                        child: const Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             ImageIcon(
@@ -177,9 +177,9 @@ class TransactionDone extends StatelessWidget {
                             width: 180,
                             height: 60,
                             decoration: BoxDecoration(
-                                color: Color(0xfffbd282),
+                                color: const Color(0xfffbd282),
                                 borderRadius: BorderRadius.circular(30)),
-                            child: Center(
+                            child: const Center(
                               child: Text(
                                 "Ok",
                                 style: TextStyle(

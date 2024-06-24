@@ -28,13 +28,13 @@ class _BankHomeScreenState extends State<BankHomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Material(
-        color: Color(0xfffbfbfb),
+        color: const Color(0xfffbfbfb),
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 70,
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Icon(Icons.add_outlined),
@@ -46,12 +46,12 @@ class _BankHomeScreenState extends State<BankHomeScreen> {
               ],
             ),
             Container(
-              margin: EdgeInsets.only(top: 40),
+              margin: const EdgeInsets.only(top: 40),
               width: 220,
               height: 230,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(135),
-                  gradient: LinearGradient(
+                  gradient: const LinearGradient(
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                       colors: [
@@ -59,7 +59,7 @@ class _BankHomeScreenState extends State<BankHomeScreen> {
                         //Color(0xffdaeeef),
                         Color.fromARGB(255, 249, 252, 253),
                       ])),
-              child: Stack(
+              child: const Stack(
                 children: [
                   Positioned(
                       left: 60,
@@ -117,8 +117,8 @@ class _BankHomeScreenState extends State<BankHomeScreen> {
             ),
             Expanded(
               child: Container(
-                margin: EdgeInsets.only(top: 100),
-                decoration: BoxDecoration(
+                margin: const EdgeInsets.only(top: 100),
+                decoration: const BoxDecoration(
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.elliptical(40, 40),
                         topRight: Radius.elliptical(40, 40))),
@@ -130,9 +130,9 @@ class _BankHomeScreenState extends State<BankHomeScreen> {
                       top: topPosition[0].toDouble(),
                       child: AnimatedPadding(
                         curve: Curves.bounceInOut,
-                        duration: Duration(milliseconds: 5),
-                        padding: EdgeInsets.only(left: 50),
-                        child: CircleAvatar(
+                        duration: const Duration(milliseconds: 5),
+                        padding: const EdgeInsets.only(left: 50),
+                        child: const CircleAvatar(
                           radius: 30,
                           backgroundColor: Color(0xff4e5255),
                           child: ImageIcon(
@@ -148,10 +148,10 @@ class _BankHomeScreenState extends State<BankHomeScreen> {
                       left: leftPosition[1].toDouble(),
                       child: AnimatedPadding(
                         curve: Curves.bounceInOut,
-                        duration: Duration(milliseconds: 5),
+                        duration: const Duration(milliseconds: 5),
                         padding:
                             EdgeInsets.only(left: leftPadding[0].toDouble()),
-                        child: CircleAvatar(
+                        child: const CircleAvatar(
                           radius: 30,
                           backgroundColor: Color(0xff4e5255),
                           child: ImageIcon(
@@ -167,10 +167,10 @@ class _BankHomeScreenState extends State<BankHomeScreen> {
                       top: topPosition[2].toDouble(),
                       child: AnimatedPadding(
                         curve: Curves.bounceInOut,
-                        duration: Duration(milliseconds: 5),
+                        duration: const Duration(milliseconds: 5),
                         padding:
                             EdgeInsets.only(left: leftPadding[0].toDouble()),
-                        child: CircleAvatar(
+                        child: const CircleAvatar(
                           radius: 30,
                           backgroundColor: Color(0xff4e5255),
                           child: ImageIcon(
@@ -186,10 +186,10 @@ class _BankHomeScreenState extends State<BankHomeScreen> {
                       left: leftPosition[3].toDouble(),
                       child: AnimatedPadding(
                         curve: Curves.bounceInOut,
-                        duration: Duration(milliseconds: 5),
+                        duration: const Duration(milliseconds: 5),
                         padding:
                             EdgeInsets.only(left: leftPadding[0].toDouble()),
-                        child: CircleAvatar(
+                        child: const CircleAvatar(
                           radius: 30,
                           backgroundColor: Color(0xff4e5255),
                           child: ImageIcon(
@@ -204,7 +204,7 @@ class _BankHomeScreenState extends State<BankHomeScreen> {
                       top: topPosition[4].toDouble(),
                       left: leftPosition[4].toDouble(),
                       child: AnimatedPadding(
-                        duration: Duration(seconds: 2),
+                        duration: const Duration(seconds: 2),
                         curve: Curves.decelerate,
                         padding:
                             EdgeInsets.only(left: leftPadding[4].toDouble()),
@@ -212,9 +212,9 @@ class _BankHomeScreenState extends State<BankHomeScreen> {
                           radius: 30,
                           backgroundColor: leftPosition[3].toDouble() == 150
                               ? Colors.transparent
-                              : Color(0xff4e5255),
+                              : const Color(0xff4e5255),
                           child: ImageIcon(
-                            AssetImage("./images/bankapp/bill.png"),
+                            const AssetImage("./images/bankapp/bill.png"),
                             color: leftPosition[0] == 160
                                 ? Colors.transparent
                                 : Colors.white,
@@ -258,7 +258,7 @@ class _BankHomeScreenState extends State<BankHomeScreen> {
                           }
                           setState(() {});
                         },
-                        child: CircleAvatar(
+                        child: const CircleAvatar(
                           radius: 30,
                           backgroundColor: Colors.transparent,
                           backgroundImage:

@@ -21,13 +21,13 @@ class DoctorSplash extends StatelessWidget {
                       image: AssetImage("./images/doctorappimages/doctor.png"),
                       fit: BoxFit.cover)),
             ),
-            Positioned(
+            const Positioned(
               top: 200,
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(8.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
+                  children: [
                     CircleAvatar(
                       backgroundColor: Color.fromARGB(255, 238, 238, 238),
                       child: Icon(

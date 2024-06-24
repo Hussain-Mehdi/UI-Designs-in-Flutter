@@ -1,7 +1,24 @@
-import 'package:flutter/material.dart';
+import 'dart:async';
 
-class AdvantureSplash extends StatelessWidget {
+import 'package:flutter/material.dart';
+import 'package:simple_food_ui/Advanture%20app/advanture_home.dart';
+
+class AdvantureSplash extends StatefulWidget {
   const AdvantureSplash({super.key});
+
+  @override
+  State<AdvantureSplash> createState() => _AdvantureSplashState();
+}
+
+class _AdvantureSplashState extends State<AdvantureSplash> {
+
+@override
+  void initState() {
+    Timer(const Duration(milliseconds: 2000), () {
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const AdventureHome(),));
+    });
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -13,15 +30,15 @@ class AdvantureSplash extends StatelessWidget {
           children: [
             Container(
               height: 50,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage("./images/adventure/hill.png"),
                       invertColors: true)),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
-            Text(
+            const Text(
               "GlobeTrot",
               style: TextStyle(
                   fontSize: 20,

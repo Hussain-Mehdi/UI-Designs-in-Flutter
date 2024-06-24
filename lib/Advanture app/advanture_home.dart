@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import 'model.dart';
@@ -29,7 +30,7 @@ class _AdventureHomeState extends State<AdventureHome> {
             ),
           )
         ],
-        title: Text(
+        title: const Text(
           "Home",
           style: TextStyle(
               fontSize: 16, fontWeight: FontWeight.w800, color: Colors.black87),
@@ -53,13 +54,13 @@ class _AdventureHomeState extends State<AdventureHome> {
             child: TextField(
               decoration: InputDecoration(
                   contentPadding: EdgeInsets.zero,
-                  prefixIcon: Icon(Icons.search),
-                  suffixIcon: Icon(Icons.mic),
+                  prefixIcon: const Icon(Icons.search),
+                  suffixIcon: const Icon(Icons.mic),
                   hintText: "Search destination",
                   hintStyle: const TextStyle(
                       color: Color.fromARGB(255, 172, 172, 172)),
                   filled: true,
-                  fillColor: Color(0xffedebee),
+                  fillColor: const Color(0xffedebee),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide.none)),
@@ -169,17 +170,15 @@ class _AdventureHomeState extends State<AdventureHome> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.white10,
-                      image: DecorationImage(
-                          image: AssetImage(mountainData[index].image),
-                          fit: BoxFit.cover,
-                          scale: 20)),
+                     ) ,
+                     child:CachedNetworkImage(imageUrl: mountainData[index].image,) ,
                 ),
                 Positioned(
                   bottom: 25,
                   left: 10,
                   child: Container(
                     width: 270,
-                    height: 80,
+                    height: 90,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: const Color.fromARGB(101, 2, 2, 2)),
@@ -258,8 +257,8 @@ class _AdventureHomeState extends State<AdventureHome> {
                       setState(() {});
                     },
                     icon: mountainData[index].favourite == true
-                        ? Icon(Icons.favorite_rounded)
-                        : Icon(Icons.favorite_border_rounded),
+                        ? const Icon(Icons.favorite_rounded)
+                        : const Icon(Icons.favorite_border_rounded),
                     color: mountainData[index].favourite == true
                         ? Colors.red
                         : Colors.white,
